@@ -12,6 +12,16 @@
 		076E051F2072AAFB00554F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076E051E2072AAFB00554F97 /* Assets.xcassets */; };
 		076E05222072AAFB00554F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076E05202072AAFB00554F97 /* LaunchScreen.storyboard */; };
 		076E052D2072AAFB00554F97 /* fisioappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E052C2072AAFB00554F97 /* fisioappTests.swift */; };
+		07BAE7BA2072BEB500BDA03E /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7B12072BEB500BDA03E /* domain.framework */; };
+		07BAE7C12072BEB500BDA03E /* domainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE7C02072BEB500BDA03E /* domainTests.swift */; };
+		07BAE7C32072BEB500BDA03E /* domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7B32072BEB500BDA03E /* domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07BAE7C62072BEB500BDA03E /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7B12072BEB500BDA03E /* domain.framework */; };
+		07BAE7C72072BEB500BDA03E /* domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7B12072BEB500BDA03E /* domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07BAE7DE2072BF9600BDA03E /* repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; };
+		07BAE7E52072BF9600BDA03E /* repositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE7E42072BF9600BDA03E /* repositoryTests.swift */; };
+		07BAE7E72072BF9600BDA03E /* repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7D72072BF9600BDA03E /* repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; };
+		07BAE7EB2072BF9600BDA03E /* repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +32,64 @@
 			remoteGlobalIDString = 076E05152072AAFB00554F97;
 			remoteInfo = fisioapp;
 		};
+		07BAE7BB2072BEB500BDA03E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E050E2072AAFB00554F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BAE7B02072BEB500BDA03E;
+			remoteInfo = domain;
+		};
+		07BAE7BD2072BEB500BDA03E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E050E2072AAFB00554F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076E05152072AAFB00554F97;
+			remoteInfo = fisioapp;
+		};
+		07BAE7C42072BEB500BDA03E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E050E2072AAFB00554F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BAE7B02072BEB500BDA03E;
+			remoteInfo = domain;
+		};
+		07BAE7DF2072BF9600BDA03E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E050E2072AAFB00554F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BAE7D42072BF9600BDA03E;
+			remoteInfo = repository;
+		};
+		07BAE7E12072BF9600BDA03E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E050E2072AAFB00554F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076E05152072AAFB00554F97;
+			remoteInfo = fisioapp;
+		};
+		07BAE7E82072BF9600BDA03E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E050E2072AAFB00554F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BAE7D42072BF9600BDA03E;
+			remoteInfo = repository;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07BAE7CD2072BEB500BDA03E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07BAE7EB2072BF9600BDA03E /* repository.framework in Embed Frameworks */,
+				07BAE7C72072BEB500BDA03E /* domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		076E05162072AAFB00554F97 /* fisioapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisioapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +101,18 @@
 		076E05282072AAFB00554F97 /* fisioappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fisioappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		076E052C2072AAFB00554F97 /* fisioappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisioappTests.swift; sourceTree = "<group>"; };
 		076E052E2072AAFB00554F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BAE7B12072BEB500BDA03E /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAE7B32072BEB500BDA03E /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; };
+		07BAE7B42072BEB500BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BAE7B92072BEB500BDA03E /* domainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = domainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAE7C02072BEB500BDA03E /* domainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domainTests.swift; sourceTree = "<group>"; };
+		07BAE7C22072BEB500BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BAE7D52072BF9600BDA03E /* repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAE7D72072BF9600BDA03E /* repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = repository.h; sourceTree = "<group>"; };
+		07BAE7D82072BF9600BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BAE7DD2072BF9600BDA03E /* repositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = repositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAE7E42072BF9600BDA03E /* repositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repositoryTests.swift; sourceTree = "<group>"; };
+		07BAE7E62072BF9600BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */,
+				07BAE7C62072BEB500BDA03E /* domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +129,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7AD2072BEB500BDA03E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7B62072BEB500BDA03E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAE7BA2072BEB500BDA03E /* domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7D12072BF9600BDA03E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7DA2072BF9600BDA03E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAE7DE2072BF9600BDA03E /* repository.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +170,10 @@
 			children = (
 				076E05182072AAFB00554F97 /* fisioapp */,
 				076E052B2072AAFB00554F97 /* fisioappTests */,
+				07BAE7B22072BEB500BDA03E /* domain */,
+				07BAE7BF2072BEB500BDA03E /* domainTests */,
+				07BAE7D62072BF9600BDA03E /* repository */,
+				07BAE7E32072BF9600BDA03E /* repositoryTests */,
 				076E05172072AAFB00554F97 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +183,10 @@
 			children = (
 				076E05162072AAFB00554F97 /* fisioapp.app */,
 				076E05282072AAFB00554F97 /* fisioappTests.xctest */,
+				07BAE7B12072BEB500BDA03E /* domain.framework */,
+				07BAE7B92072BEB500BDA03E /* domainTests.xctest */,
+				07BAE7D52072BF9600BDA03E /* repository.framework */,
+				07BAE7DD2072BF9600BDA03E /* repositoryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +212,62 @@
 			path = fisioappTests;
 			sourceTree = "<group>";
 		};
+		07BAE7B22072BEB500BDA03E /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				07BAE7B32072BEB500BDA03E /* domain.h */,
+				07BAE7B42072BEB500BDA03E /* Info.plist */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		07BAE7BF2072BEB500BDA03E /* domainTests */ = {
+			isa = PBXGroup;
+			children = (
+				07BAE7C02072BEB500BDA03E /* domainTests.swift */,
+				07BAE7C22072BEB500BDA03E /* Info.plist */,
+			);
+			path = domainTests;
+			sourceTree = "<group>";
+		};
+		07BAE7D62072BF9600BDA03E /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				07BAE7D72072BF9600BDA03E /* repository.h */,
+				07BAE7D82072BF9600BDA03E /* Info.plist */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		07BAE7E32072BF9600BDA03E /* repositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				07BAE7E42072BF9600BDA03E /* repositoryTests.swift */,
+				07BAE7E62072BF9600BDA03E /* Info.plist */,
+			);
+			path = repositoryTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		07BAE7AE2072BEB500BDA03E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAE7C32072BEB500BDA03E /* domain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7D22072BF9600BDA03E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAE7E72072BF9600BDA03E /* repository.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		076E05152072AAFB00554F97 /* fisioapp */ = {
@@ -103,10 +277,13 @@
 				076E05122072AAFB00554F97 /* Sources */,
 				076E05132072AAFB00554F97 /* Frameworks */,
 				076E05142072AAFB00554F97 /* Resources */,
+				07BAE7CD2072BEB500BDA03E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				07BAE7C52072BEB500BDA03E /* PBXTargetDependency */,
+				07BAE7E92072BF9600BDA03E /* PBXTargetDependency */,
 			);
 			name = fisioapp;
 			productName = fisioapp;
@@ -131,6 +308,80 @@
 			productReference = 076E05282072AAFB00554F97 /* fisioappTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		07BAE7B02072BEB500BDA03E /* domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BAE7CC2072BEB500BDA03E /* Build configuration list for PBXNativeTarget "domain" */;
+			buildPhases = (
+				07BAE7AC2072BEB500BDA03E /* Sources */,
+				07BAE7AD2072BEB500BDA03E /* Frameworks */,
+				07BAE7AE2072BEB500BDA03E /* Headers */,
+				07BAE7AF2072BEB500BDA03E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = domain;
+			productName = domain;
+			productReference = 07BAE7B12072BEB500BDA03E /* domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		07BAE7B82072BEB500BDA03E /* domainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BAE7CE2072BEB500BDA03E /* Build configuration list for PBXNativeTarget "domainTests" */;
+			buildPhases = (
+				07BAE7B52072BEB500BDA03E /* Sources */,
+				07BAE7B62072BEB500BDA03E /* Frameworks */,
+				07BAE7B72072BEB500BDA03E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BAE7BC2072BEB500BDA03E /* PBXTargetDependency */,
+				07BAE7BE2072BEB500BDA03E /* PBXTargetDependency */,
+			);
+			name = domainTests;
+			productName = domainTests;
+			productReference = 07BAE7B92072BEB500BDA03E /* domainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07BAE7D42072BF9600BDA03E /* repository */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BAE7EC2072BF9600BDA03E /* Build configuration list for PBXNativeTarget "repository" */;
+			buildPhases = (
+				07BAE7D02072BF9600BDA03E /* Sources */,
+				07BAE7D12072BF9600BDA03E /* Frameworks */,
+				07BAE7D22072BF9600BDA03E /* Headers */,
+				07BAE7D32072BF9600BDA03E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = repository;
+			productName = repository;
+			productReference = 07BAE7D52072BF9600BDA03E /* repository.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		07BAE7DC2072BF9600BDA03E /* repositoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BAE7EF2072BF9600BDA03E /* Build configuration list for PBXNativeTarget "repositoryTests" */;
+			buildPhases = (
+				07BAE7D92072BF9600BDA03E /* Sources */,
+				07BAE7DA2072BF9600BDA03E /* Frameworks */,
+				07BAE7DB2072BF9600BDA03E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BAE7E02072BF9600BDA03E /* PBXTargetDependency */,
+				07BAE7E22072BF9600BDA03E /* PBXTargetDependency */,
+			);
+			name = repositoryTests;
+			productName = repositoryTests;
+			productReference = 07BAE7DD2072BF9600BDA03E /* repositoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,6 +397,24 @@
 						ProvisioningStyle = Automatic;
 					};
 					076E05272072AAFB00554F97 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 076E05152072AAFB00554F97;
+					};
+					07BAE7B02072BEB500BDA03E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					07BAE7B82072BEB500BDA03E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 076E05152072AAFB00554F97;
+					};
+					07BAE7D42072BF9600BDA03E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					07BAE7DC2072BF9600BDA03E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 076E05152072AAFB00554F97;
@@ -167,6 +436,10 @@
 			targets = (
 				076E05152072AAFB00554F97 /* fisioapp */,
 				076E05272072AAFB00554F97 /* fisioappTests */,
+				07BAE7B02072BEB500BDA03E /* domain */,
+				07BAE7B82072BEB500BDA03E /* domainTests */,
+				07BAE7D42072BF9600BDA03E /* repository */,
+				07BAE7DC2072BF9600BDA03E /* repositoryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +455,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		076E05262072AAFB00554F97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7AF2072BEB500BDA03E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7B72072BEB500BDA03E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7D32072BF9600BDA03E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7DB2072BF9600BDA03E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,6 +509,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07BAE7AC2072BEB500BDA03E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7B52072BEB500BDA03E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAE7C12072BEB500BDA03E /* domainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7D02072BF9600BDA03E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAE7D92072BF9600BDA03E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAE7E52072BF9600BDA03E /* repositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -215,6 +546,36 @@
 			isa = PBXTargetDependency;
 			target = 076E05152072AAFB00554F97 /* fisioapp */;
 			targetProxy = 076E05292072AAFB00554F97 /* PBXContainerItemProxy */;
+		};
+		07BAE7BC2072BEB500BDA03E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BAE7B02072BEB500BDA03E /* domain */;
+			targetProxy = 07BAE7BB2072BEB500BDA03E /* PBXContainerItemProxy */;
+		};
+		07BAE7BE2072BEB500BDA03E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076E05152072AAFB00554F97 /* fisioapp */;
+			targetProxy = 07BAE7BD2072BEB500BDA03E /* PBXContainerItemProxy */;
+		};
+		07BAE7C52072BEB500BDA03E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BAE7B02072BEB500BDA03E /* domain */;
+			targetProxy = 07BAE7C42072BEB500BDA03E /* PBXContainerItemProxy */;
+		};
+		07BAE7E02072BF9600BDA03E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BAE7D42072BF9600BDA03E /* repository */;
+			targetProxy = 07BAE7DF2072BF9600BDA03E /* PBXContainerItemProxy */;
+		};
+		07BAE7E22072BF9600BDA03E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076E05152072AAFB00554F97 /* fisioapp */;
+			targetProxy = 07BAE7E12072BF9600BDA03E /* PBXContainerItemProxy */;
+		};
+		07BAE7E92072BF9600BDA03E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BAE7D42072BF9600BDA03E /* repository */;
+			targetProxy = 07BAE7E82072BF9600BDA03E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -397,6 +758,158 @@
 			};
 			name = Release;
 		};
+		07BAE7C82072BEB500BDA03E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = domain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp.domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07BAE7C92072BEB500BDA03E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = domain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp.domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		07BAE7CA2072BEB500BDA03E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = domainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp.domainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fisioapp.app/fisioapp";
+			};
+			name = Debug;
+		};
+		07BAE7CB2072BEB500BDA03E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = domainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp.domainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fisioapp.app/fisioapp";
+			};
+			name = Release;
+		};
+		07BAE7ED2072BF9600BDA03E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = repository/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp.repository;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07BAE7EE2072BF9600BDA03E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = repository/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp.repository;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		07BAE7F02072BF9600BDA03E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = repositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp.repositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fisioapp.app/fisioapp";
+			};
+			name = Debug;
+		};
+		07BAE7F12072BF9600BDA03E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = repositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp.repositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fisioapp.app/fisioapp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +936,42 @@
 			buildConfigurations = (
 				076E05352072AAFB00554F97 /* Debug */,
 				076E05362072AAFB00554F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BAE7CC2072BEB500BDA03E /* Build configuration list for PBXNativeTarget "domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BAE7C82072BEB500BDA03E /* Debug */,
+				07BAE7C92072BEB500BDA03E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BAE7CE2072BEB500BDA03E /* Build configuration list for PBXNativeTarget "domainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BAE7CA2072BEB500BDA03E /* Debug */,
+				07BAE7CB2072BEB500BDA03E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BAE7EC2072BF9600BDA03E /* Build configuration list for PBXNativeTarget "repository" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BAE7ED2072BF9600BDA03E /* Debug */,
+				07BAE7EE2072BF9600BDA03E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BAE7EF2072BF9600BDA03E /* Build configuration list for PBXNativeTarget "repositoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BAE7F02072BF9600BDA03E /* Debug */,
+				07BAE7F12072BF9600BDA03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
