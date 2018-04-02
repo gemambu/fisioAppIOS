@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E05192072AAFB00554F97 /* AppDelegate.swift */; };
+		076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */; };
+		076E051F2072AAFB00554F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076E051E2072AAFB00554F97 /* Assets.xcassets */; };
+		076E05222072AAFB00554F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076E05202072AAFB00554F97 /* LaunchScreen.storyboard */; };
+		076E052D2072AAFB00554F97 /* fisioappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E052C2072AAFB00554F97 /* fisioappTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		076E05292072AAFB00554F97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E050E2072AAFB00554F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076E05152072AAFB00554F97;
+			remoteInfo = fisioapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		076E05162072AAFB00554F97 /* fisioapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisioapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		076E05192072AAFB00554F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		076E051C2072AAFB00554F97 /* fisioapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fisioapp.xcdatamodel; sourceTree = "<group>"; };
+		076E051E2072AAFB00554F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		076E05212072AAFB00554F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		076E05232072AAFB00554F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		076E05282072AAFB00554F97 /* fisioappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fisioappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		076E052C2072AAFB00554F97 /* fisioappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisioappTests.swift; sourceTree = "<group>"; };
+		076E052E2072AAFB00554F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		076E05132072AAFB00554F97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E05252072AAFB00554F97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		076E050D2072AAFB00554F97 = {
+			isa = PBXGroup;
+			children = (
+				076E05182072AAFB00554F97 /* fisioapp */,
+				076E052B2072AAFB00554F97 /* fisioappTests */,
+				076E05172072AAFB00554F97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		076E05172072AAFB00554F97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				076E05162072AAFB00554F97 /* fisioapp.app */,
+				076E05282072AAFB00554F97 /* fisioappTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		076E05182072AAFB00554F97 /* fisioapp */ = {
+			isa = PBXGroup;
+			children = (
+				076E05192072AAFB00554F97 /* AppDelegate.swift */,
+				076E051E2072AAFB00554F97 /* Assets.xcassets */,
+				076E05202072AAFB00554F97 /* LaunchScreen.storyboard */,
+				076E05232072AAFB00554F97 /* Info.plist */,
+				076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */,
+			);
+			path = fisioapp;
+			sourceTree = "<group>";
+		};
+		076E052B2072AAFB00554F97 /* fisioappTests */ = {
+			isa = PBXGroup;
+			children = (
+				076E052C2072AAFB00554F97 /* fisioappTests.swift */,
+				076E052E2072AAFB00554F97 /* Info.plist */,
+			);
+			path = fisioappTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		076E05152072AAFB00554F97 /* fisioapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076E05312072AAFB00554F97 /* Build configuration list for PBXNativeTarget "fisioapp" */;
+			buildPhases = (
+				076E05122072AAFB00554F97 /* Sources */,
+				076E05132072AAFB00554F97 /* Frameworks */,
+				076E05142072AAFB00554F97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fisioapp;
+			productName = fisioapp;
+			productReference = 076E05162072AAFB00554F97 /* fisioapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		076E05272072AAFB00554F97 /* fisioappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076E05342072AAFB00554F97 /* Build configuration list for PBXNativeTarget "fisioappTests" */;
+			buildPhases = (
+				076E05242072AAFB00554F97 /* Sources */,
+				076E05252072AAFB00554F97 /* Frameworks */,
+				076E05262072AAFB00554F97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076E052A2072AAFB00554F97 /* PBXTargetDependency */,
+			);
+			name = fisioappTests;
+			productName = fisioappTests;
+			productReference = 076E05282072AAFB00554F97 /* fisioappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		076E050E2072AAFB00554F97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = ProjectX;
+				TargetAttributes = {
+					076E05152072AAFB00554F97 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					076E05272072AAFB00554F97 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 076E05152072AAFB00554F97;
+					};
+				};
+			};
+			buildConfigurationList = 076E05112072AAFB00554F97 /* Build configuration list for PBXProject "fisioapp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 076E050D2072AAFB00554F97;
+			productRefGroup = 076E05172072AAFB00554F97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				076E05152072AAFB00554F97 /* fisioapp */,
+				076E05272072AAFB00554F97 /* fisioappTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		076E05142072AAFB00554F97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E051F2072AAFB00554F97 /* Assets.xcassets in Resources */,
+				076E05222072AAFB00554F97 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E05262072AAFB00554F97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		076E05122072AAFB00554F97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */,
+				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E05242072AAFB00554F97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E052D2072AAFB00554F97 /* fisioappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		076E052A2072AAFB00554F97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076E05152072AAFB00554F97 /* fisioapp */;
+			targetProxy = 076E05292072AAFB00554F97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		076E05202072AAFB00554F97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076E05212072AAFB00554F97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		076E052F2072AAFB00554F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		076E05302072AAFB00554F97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		076E05322072AAFB00554F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fisioapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		076E05332072AAFB00554F97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fisioapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		076E05352072AAFB00554F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fisioappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fisioapp.app/fisioapp";
+			};
+			name = Debug;
+		};
+		076E05362072AAFB00554F97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fisioappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fisioapp.app/fisioapp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		076E05112072AAFB00554F97 /* Build configuration list for PBXProject "fisioapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E052F2072AAFB00554F97 /* Debug */,
+				076E05302072AAFB00554F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076E05312072AAFB00554F97 /* Build configuration list for PBXNativeTarget "fisioapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E05322072AAFB00554F97 /* Debug */,
+				076E05332072AAFB00554F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076E05342072AAFB00554F97 /* Build configuration list for PBXNativeTarget "fisioappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E05352072AAFB00554F97 /* Debug */,
+				076E05362072AAFB00554F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				076E051C2072AAFB00554F97 /* fisioapp.xcdatamodel */,
+			);
+			currentVersion = 076E051C2072AAFB00554F97 /* fisioapp.xcdatamodel */;
+			path = fisioapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 076E050E2072AAFB00554F97 /* Project object */;
+}
