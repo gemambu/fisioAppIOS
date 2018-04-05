@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.orange
         self.window?.makeKeyAndVisible()
         
-        let rootVC = UIViewController()
+        let rootVC = LoginAndRegisterController()
         window?.rootViewController = rootVC
         
         return true
