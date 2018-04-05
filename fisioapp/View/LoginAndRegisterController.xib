@@ -61,7 +61,7 @@
                         <action selector="registerSegmentedController:" destination="-1" eventType="valueChanged" id="6mK-5j-bzK"/>
                     </connections>
                 </segmentedControl>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameofthrones_splash" translatesAutoresizingMaskIntoConstraints="NO" id="mAe-yj-l8U">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="mAe-yj-l8U">
                     <rect key="frame" x="60" y="40" width="255" height="153"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="mAe-yj-l8U" secondAttribute="height" multiplier="5:3" id="1U9-UH-5xS"/>
@@ -126,6 +126,6 @@
         </view>
     </objects>
     <resources>
-        <image name="gameofthrones_splash" width="440" height="330"/>
+        <image name="no-image" width="150" height="150"/>
     </resources>
 </document>

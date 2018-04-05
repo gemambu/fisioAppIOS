@@ -22,8 +22,29 @@
 		07BAE7E72072BF9600BDA03E /* repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7D72072BF9600BDA03E /* repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; };
 		07BAE7EB2072BF9600BDA03E /* repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8120760F8400CB3756 /* ProductViewController.swift */; };
+		51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8220760F8400CB3756 /* ProductViewController.xib */; };
+		51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8520760F9500CB3756 /* ServiceViewController.swift */; };
+		51266D8820760F9500CB3756 /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8620760F9500CB3756 /* ServiceViewController.xib */; };
+		51266D8B20760FBE00CB3756 /* AppoitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8920760FBE00CB3756 /* AppoitmentViewController.swift */; };
+		51266D8C20760FBE00CB3756 /* AppoitmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8A20760FBE00CB3756 /* AppoitmentViewController.xib */; };
+		51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8D20760FD700CB3756 /* EditProfileViewController.swift */; };
+		51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8E20760FD700CB3756 /* EditProfileViewController.xib */; };
 		516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */; };
 		516474A2207609A900DCFA9B /* LoginAndRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */; };
+		51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461320769AD4005F317F /* ProductsViewController.swift */; };
+		51FA461620769AD4005F317F /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA461420769AD4005F317F /* ProductsViewController.xib */; };
+		51FA461920769B24005F317F /* ProductsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461720769B24005F317F /* ProductsViewCell.swift */; };
+		51FA461A20769B24005F317F /* ProductsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA461820769B24005F317F /* ProductsViewCell.xib */; };
+		51FA461C20769BC5005F317F /* DummyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461B20769BC5005F317F /* DummyModel.swift */; };
+		51FA461F20769DB6005F317F /* ServicesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461D20769DB6005F317F /* ServicesViewCell.swift */; };
+		51FA462020769DB6005F317F /* ServicesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA461E20769DB6005F317F /* ServicesViewCell.xib */; };
+		51FA462320769E07005F317F /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA462120769E07005F317F /* ServicesViewController.swift */; };
+		51FA462420769E07005F317F /* ServicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA462220769E07005F317F /* ServicesViewController.xib */; };
+		51FA46272076A139005F317F /* AppoitmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA46252076A139005F317F /* AppoitmentsViewController.swift */; };
+		51FA46282076A139005F317F /* AppoitmentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA46262076A139005F317F /* AppoitmentsViewController.xib */; };
+		51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */; };
+		51FA462C2076A15E005F317F /* AppoitmentsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,8 +136,29 @@
 		07BAE7DD2072BF9600BDA03E /* repositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = repositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7E42072BF9600BDA03E /* repositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repositoryTests.swift; sourceTree = "<group>"; };
 		07BAE7E62072BF9600BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51266D8120760F8400CB3756 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		51266D8220760F8400CB3756 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
+		51266D8520760F9500CB3756 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		51266D8620760F9500CB3756 /* ServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceViewController.xib; sourceTree = "<group>"; };
+		51266D8920760FBE00CB3756 /* AppoitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentViewController.swift; sourceTree = "<group>"; };
+		51266D8A20760FBE00CB3756 /* AppoitmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentViewController.xib; sourceTree = "<group>"; };
+		51266D8D20760FD700CB3756 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		51266D8E20760FD700CB3756 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterController.swift; sourceTree = "<group>"; };
 		516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAndRegisterController.xib; sourceTree = "<group>"; };
+		51FA461320769AD4005F317F /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		51FA461420769AD4005F317F /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
+		51FA461720769B24005F317F /* ProductsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewCell.swift; sourceTree = "<group>"; };
+		51FA461820769B24005F317F /* ProductsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewCell.xib; sourceTree = "<group>"; };
+		51FA461B20769BC5005F317F /* DummyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyModel.swift; sourceTree = "<group>"; };
+		51FA461D20769DB6005F317F /* ServicesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewCell.swift; sourceTree = "<group>"; };
+		51FA461E20769DB6005F317F /* ServicesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesViewCell.xib; sourceTree = "<group>"; };
+		51FA462120769E07005F317F /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		51FA462220769E07005F317F /* ServicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesViewController.xib; sourceTree = "<group>"; };
+		51FA46252076A139005F317F /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewController.swift; sourceTree = "<group>"; };
+		51FA46262076A139005F317F /* AppoitmentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewController.xib; sourceTree = "<group>"; };
+		51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewCell.swift; sourceTree = "<group>"; };
+		51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,11 +242,11 @@
 			children = (
 				076E05192072AAFB00554F97 /* AppDelegate.swift */,
 				076E051E2072AAFB00554F97 /* Assets.xcassets */,
-				076E05202072AAFB00554F97 /* LaunchScreen.storyboard */,
-				5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */,
-				516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */,
+				51266D9120760FF600CB3756 /* View */,
+				51266D922076100A00CB3756 /* Controllers */,
 				076E05232072AAFB00554F97 /* Info.plist */,
 				076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */,
+				51FA461B20769BC5005F317F /* DummyModel.swift */,
 			);
 			path = fisioapp;
 			sourceTree = "<group>";
@@ -252,6 +294,43 @@
 				07BAE7E62072BF9600BDA03E /* Info.plist */,
 			);
 			path = repositoryTests;
+			sourceTree = "<group>";
+		};
+		51266D9120760FF600CB3756 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				076E05202072AAFB00554F97 /* LaunchScreen.storyboard */,
+				516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */,
+				51266D8E20760FD700CB3756 /* EditProfileViewController.xib */,
+				51FA461420769AD4005F317F /* ProductsViewController.xib */,
+				51266D8220760F8400CB3756 /* ProductViewController.xib */,
+				51266D8A20760FBE00CB3756 /* AppoitmentViewController.xib */,
+				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
+				51FA462220769E07005F317F /* ServicesViewController.xib */,
+				51266D8620760F9500CB3756 /* ServiceViewController.xib */,
+				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
+				51FA461820769B24005F317F /* ProductsViewCell.xib */,
+				51FA461E20769DB6005F317F /* ServicesViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51266D922076100A00CB3756 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */,
+				51FA461320769AD4005F317F /* ProductsViewController.swift */,
+				51FA461720769B24005F317F /* ProductsViewCell.swift */,
+				51FA46252076A139005F317F /* AppoitmentsViewController.swift */,
+				51FA462120769E07005F317F /* ServicesViewController.swift */,
+				51266D8D20760FD700CB3756 /* EditProfileViewController.swift */,
+				51266D8120760F8400CB3756 /* ProductViewController.swift */,
+				51266D8920760FBE00CB3756 /* AppoitmentViewController.swift */,
+				51266D8520760F9500CB3756 /* ServiceViewController.swift */,
+				51FA461D20769DB6005F317F /* ServicesViewCell.swift */,
+				51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,8 +534,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */,
+				51FA462020769DB6005F317F /* ServicesViewCell.xib in Resources */,
+				51266D8820760F9500CB3756 /* ServiceViewController.xib in Resources */,
+				51FA461620769AD4005F317F /* ProductsViewController.xib in Resources */,
+				51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */,
 				076E051F2072AAFB00554F97 /* Assets.xcassets in Resources */,
+				51FA462420769E07005F317F /* ServicesViewController.xib in Resources */,
+				51FA462C2076A15E005F317F /* AppoitmentsViewCell.xib in Resources */,
 				516474A2207609A900DCFA9B /* LoginAndRegisterController.xib in Resources */,
+				51266D8C20760FBE00CB3756 /* AppoitmentViewController.xib in Resources */,
+				51FA46282076A139005F317F /* AppoitmentsViewController.xib in Resources */,
+				51FA461A20769B24005F317F /* ProductsViewCell.xib in Resources */,
 				076E05222072AAFB00554F97 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,9 +592,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51FA461920769B24005F317F /* ProductsViewCell.swift in Sources */,
 				516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */,
+				51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */,
 				076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */,
+				51FA461C20769BC5005F317F /* DummyModel.swift in Sources */,
+				51FA46272076A139005F317F /* AppoitmentsViewController.swift in Sources */,
+				51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */,
+				51FA462320769E07005F317F /* ServicesViewController.swift in Sources */,
+				51266D8B20760FBE00CB3756 /* AppoitmentViewController.swift in Sources */,
+				51FA461F20769DB6005F317F /* ServicesViewCell.swift in Sources */,
+				51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */,
+				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
+				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
