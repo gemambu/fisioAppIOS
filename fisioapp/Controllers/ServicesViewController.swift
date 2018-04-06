@@ -20,64 +20,66 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
     let Cami: DummyModel = DummyModel(name: "Cami", comment: "Camaleon", image: #imageLiteral(resourceName: "camaleon"))
     
     override func viewDidLoad() {
-    super.viewDidLoad()
-    title = "Servicios"
-    
-    arrayOfAnimal.append(Juancho)
-    arrayOfAnimal.append(Pepe)
-    arrayOfAnimal.append(Cami)
-    arrayOfAnimal.append(Juancho)
-    arrayOfAnimal.append(Pepe)
-    arrayOfAnimal.append(Cami)
-    arrayOfAnimal.append(Juancho)
-    arrayOfAnimal.append(Pepe)
-    arrayOfAnimal.append(Cami)
-    arrayOfAnimal.append(Juancho)
-    arrayOfAnimal.append(Pepe)
-    arrayOfAnimal.append(Cami)
-    arrayOfAnimal.append(Juancho)
-    arrayOfAnimal.append(Pepe)
-    arrayOfAnimal.append(Cami)
-    arrayOfAnimal.append(Juancho)
-    arrayOfAnimal.append(Pepe)
-    arrayOfAnimal.append(Cami)
-    
-    let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-    layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: view.frame.width - 20, height: 150)
-
-    collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-    collectionView.dataSource = self
-    collectionView.delegate = self
-    collectionView!.register(UINib(nibName: "ServicesViewCell", bundle: nil), forCellWithReuseIdentifier: serviceCellID)
-    collectionView.backgroundColor = UIColor.yellow
-    self.view.addSubview(collectionView)
-    
+        super.viewDidLoad()
+        title = "Servicios"
+        
+        arrayOfAnimal.append(Juancho)
+        arrayOfAnimal.append(Pepe)
+        arrayOfAnimal.append(Cami)
+        arrayOfAnimal.append(Juancho)
+        arrayOfAnimal.append(Pepe)
+        arrayOfAnimal.append(Cami)
+        arrayOfAnimal.append(Juancho)
+        arrayOfAnimal.append(Pepe)
+        arrayOfAnimal.append(Cami)
+        arrayOfAnimal.append(Juancho)
+        arrayOfAnimal.append(Pepe)
+        arrayOfAnimal.append(Cami)
+        arrayOfAnimal.append(Juancho)
+        arrayOfAnimal.append(Pepe)
+        arrayOfAnimal.append(Cami)
+        arrayOfAnimal.append(Juancho)
+        arrayOfAnimal.append(Pepe)
+        arrayOfAnimal.append(Cami)
+        let frame = CGRect(x: 16, y: 16, width: self.view.frame.width, height: self.view.frame.height)
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: frame.width , height: 200)
+        
+        collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView!.register(UINib(nibName: "ServicesViewCell", bundle: nil), forCellWithReuseIdentifier: serviceCellID)
+        collectionView.backgroundColor = UIColor.yellow
+        self.view.addSubview(collectionView)
+        
     }
     
     override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return arrayOfAnimal.count
+        return arrayOfAnimal.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
-    let animalToShow = arrayOfAnimal[indexPath.row]
-    
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: serviceCellID, for: indexPath) as! ServicesViewCell
-    
-    cell.backgroundColor = UIColor.orange
-    
-
-    cell.nameLabel.text = animalToShow.name
-    cell.commentLabel.text = animalToShow.comment
-    
-    return cell
+        
+        let animalToShow = arrayOfAnimal[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: serviceCellID, for: indexPath) as! ServicesViewCell
+        
+        cell.backgroundColor = UIColor.orange
+        
+        
+        cell.nameLabel.text = animalToShow.name
+        cell.commentLabel.text = animalToShow.comment
+        
+        return cell
     }
     
-
+    
 }

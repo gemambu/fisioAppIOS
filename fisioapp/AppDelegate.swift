@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //********************  UITabBarController  ********************//
         let tabVC = UITabBarController()
-        tabVC.viewControllers = [ servicesTableNavVC, productsTableNavVC, appoitmentsTableNavVC]
+        tabVC.viewControllers = [ productsTableNavVC, servicesTableNavVC, appoitmentsTableNavVC]
         
 //        window?.rootViewController = rootVC
         window?.rootViewController = tabVC

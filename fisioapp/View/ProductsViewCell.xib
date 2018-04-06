@@ -32,7 +32,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="29Y-T2-YhJ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="29Y-T2-YhJ">
                         <rect key="frame" x="4" y="4" width="407" height="407"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="29Y-T2-YhJ" secondAttribute="height" multiplier="1:1" id="kyd-nk-CAW"/>
