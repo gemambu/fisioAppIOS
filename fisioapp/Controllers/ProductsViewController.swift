@@ -44,8 +44,8 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 400, height: 150)
-        
+        layout.itemSize = CGSize(width: view.frame.width - 20, height: 150)
+
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
