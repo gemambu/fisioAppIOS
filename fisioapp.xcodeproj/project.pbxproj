@@ -30,6 +30,7 @@
 		07BAE7E72072BF9600BDA03E /* repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7D72072BF9600BDA03E /* repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; };
 		07BAE7EB2072BF9600BDA03E /* repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F9B05C2AC4C3C80FDA8A6D1 /* Pods_fisioapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */; };
 		51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8120760F8400CB3756 /* ProductViewController.swift */; };
 		51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8220760F8400CB3756 /* ProductViewController.xib */; };
 		51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8520760F9500CB3756 /* ServiceViewController.swift */; };
@@ -38,6 +39,7 @@
 		51266D8C20760FBE00CB3756 /* AppoitmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8A20760FBE00CB3756 /* AppoitmentViewController.xib */; };
 		51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8D20760FD700CB3756 /* EditProfileViewController.swift */; };
 		51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8E20760FD700CB3756 /* EditProfileViewController.xib */; };
+		515D0D52965049E93DF9DA18 /* Pods_fisioappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */; };
 		516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */; };
 		516474A2207609A900DCFA9B /* LoginAndRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */; };
 		51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461320769AD4005F317F /* ProductsViewController.swift */; };
@@ -152,6 +154,8 @@
 		07BAE7DD2072BF9600BDA03E /* repositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = repositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7E42072BF9600BDA03E /* repositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repositoryTests.swift; sourceTree = "<group>"; };
 		07BAE7E62072BF9600BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C5A2298EBD8218EC5968D97 /* Pods-fisioapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp.release.xcconfig"; sourceTree = "<group>"; };
+		3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51266D8120760F8400CB3756 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		51266D8220760F8400CB3756 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		51266D8520760F9500CB3756 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,10 @@
 		51FA46262076A139005F317F /* AppoitmentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewController.xib; sourceTree = "<group>"; };
 		51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewCell.swift; sourceTree = "<group>"; };
 		51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewCell.xib; sourceTree = "<group>"; };
+		91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fisioappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fisioapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3933672ADBDBF7E85AD2DF0 /* Pods-fisioappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.release.xcconfig"; sourceTree = "<group>"; };
+		E22BE32E203616465C02C00B /* Pods-fisioapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,7 @@
 			files = (
 				07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */,
 				07BAE7C62072BEB500BDA03E /* domain.framework in Frameworks */,
+				0F9B05C2AC4C3C80FDA8A6D1 /* Pods_fisioapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515D0D52965049E93DF9DA18 /* Pods_fisioappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +290,8 @@
 				07BAE7D62072BF9600BDA03E /* repository */,
 				07BAE7E32072BF9600BDA03E /* repositoryTests */,
 				076E05172072AAFB00554F97 /* Products */,
+				F0A19A9F90239CA382B59EF8 /* Pods */,
+				632DB832EEE9DD1879261B40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -397,6 +409,26 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		632DB832EEE9DD1879261B40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */,
+				91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0A19A9F90239CA382B59EF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E22BE32E203616465C02C00B /* Pods-fisioapp.debug.xcconfig */,
+				1C5A2298EBD8218EC5968D97 /* Pods-fisioapp.release.xcconfig */,
+				3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */,
+				D3933672ADBDBF7E85AD2DF0 /* Pods-fisioappTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -423,10 +455,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076E05312072AAFB00554F97 /* Build configuration list for PBXNativeTarget "fisioapp" */;
 			buildPhases = (
+				5FDC6A9F58D6E719AA969ADE /* [CP] Check Pods Manifest.lock */,
 				076E05122072AAFB00554F97 /* Sources */,
 				076E05132072AAFB00554F97 /* Frameworks */,
 				076E05142072AAFB00554F97 /* Resources */,
 				07BAE7CD2072BEB500BDA03E /* Embed Frameworks */,
+				805C01791F68469FDD7FA618 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -443,6 +477,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076E05342072AAFB00554F97 /* Build configuration list for PBXNativeTarget "fisioappTests" */;
 			buildPhases = (
+				09EE0301777B383FCA3F4FD7 /* [CP] Check Pods Manifest.lock */,
 				076E05242072AAFB00554F97 /* Sources */,
 				076E05252072AAFB00554F97 /* Frameworks */,
 				076E05262072AAFB00554F97 /* Resources */,
@@ -652,6 +687,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09EE0301777B383FCA3F4FD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fisioappTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FDC6A9F58D6E719AA969ADE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fisioapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		805C01791F68469FDD7FA618 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		076E05122072AAFB00554F97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -821,7 +915,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -874,7 +968,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -884,6 +978,7 @@
 		};
 		076E05322072AAFB00554F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E22BE32E203616465C02C00B /* Pods-fisioapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -898,6 +993,7 @@
 		};
 		076E05332072AAFB00554F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5A2298EBD8218EC5968D97 /* Pods-fisioapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -912,6 +1008,7 @@
 		};
 		076E05352072AAFB00554F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -928,6 +1025,7 @@
 		};
 		076E05362072AAFB00554F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3933672ADBDBF7E85AD2DF0 /* Pods-fisioappTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
