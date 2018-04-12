@@ -15,11 +15,27 @@
 		075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5F1207D2CB800199EFC /* RepositoryFakeInteractor.swift */; };
 		075DA5F4207D2CCF00199EFC /* RepositoryIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5F3207D2CCF00199EFC /* RepositoryIntImpl.swift */; };
 		075DA5F8207D5F1600199EFC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 075DA5F7207D5F1600199EFC /* Podfile */; };
+		075DA5FC207D624500199EFC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5FB207D624500199EFC /* UserData.swift */; };
+		075DA5FE207D645D00199EFC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5FD207D645D00199EFC /* User.swift */; };
+		075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA604207D65DD00199EFC /* GetUserFromBackendInteractor.swift */; };
+		075DA607207D65E900199EFC /* GetUserFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA606207D65E900199EFC /* GetUserFromBackendIntImpl.swift */; };
+		075DA609207D660300199EFC /* GetUserFromBackendFakeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA608207D660300199EFC /* GetUserFromBackendFakeInteractor.swift */; };
+		075DA60B207D678500199EFC /* CompletionInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA60A207D678500199EFC /* CompletionInterfaces.swift */; };
+		075DA60D207D68B100199EFC /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA60C207D68B100199EFC /* Paths.swift */; };
 		076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E05192072AAFB00554F97 /* AppDelegate.swift */; };
 		076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */; };
 		076E051F2072AAFB00554F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076E051E2072AAFB00554F97 /* Assets.xcassets */; };
 		076E05222072AAFB00554F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076E05202072AAFB00554F97 /* LaunchScreen.storyboard */; };
 		076E052D2072AAFB00554F97 /* fisioappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E052C2072AAFB00554F97 /* fisioappTests.swift */; };
+		07B6343B207EB61300DBB501 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6343A207EB61300DBB501 /* Formatter.swift */; };
+		07B6343F207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6343E207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift */; };
+		07B63441207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63440207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift */; };
+		07B63443207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63442207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift */; };
+		07B63445207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63444207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift */; };
+		07B6344B207EC18200DBB501 /* AuthenticateUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6344A207EC18200DBB501 /* AuthenticateUserInteractor.swift */; };
+		07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6344C207EC19E00DBB501 /* AuthenticateUserIntImpl.swift */; };
+		07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6344E207EC1CD00DBB501 /* RegisterUserIntImpl.swift */; };
+		07B63451207EC1ED00DBB501 /* RegisterUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63450207EC1ED00DBB501 /* RegisterUserInteractor.swift */; };
 		07BAE7BA2072BEB500BDA03E /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7B12072BEB500BDA03E /* domain.framework */; };
 		07BAE7C12072BEB500BDA03E /* domainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE7C02072BEB500BDA03E /* domainTests.swift */; };
 		07BAE7C32072BEB500BDA03E /* domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7B32072BEB500BDA03E /* domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -132,7 +148,14 @@
 		075DA5EF207D2CA500199EFC /* RepositoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInteractor.swift; sourceTree = "<group>"; };
 		075DA5F1207D2CB800199EFC /* RepositoryFakeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFakeInteractor.swift; sourceTree = "<group>"; };
 		075DA5F3207D2CCF00199EFC /* RepositoryIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryIntImpl.swift; sourceTree = "<group>"; };
-		075DA5F7207D5F1600199EFC /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		075DA5F7207D5F1600199EFC /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		075DA5FB207D624500199EFC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		075DA5FD207D645D00199EFC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		075DA604207D65DD00199EFC /* GetUserFromBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFromBackendInteractor.swift; sourceTree = "<group>"; };
+		075DA606207D65E900199EFC /* GetUserFromBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFromBackendIntImpl.swift; sourceTree = "<group>"; };
+		075DA608207D660300199EFC /* GetUserFromBackendFakeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFromBackendFakeInteractor.swift; sourceTree = "<group>"; };
+		075DA60A207D678500199EFC /* CompletionInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionInterfaces.swift; sourceTree = "<group>"; };
+		075DA60C207D68B100199EFC /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
 		076E05162072AAFB00554F97 /* fisioapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisioapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076E05192072AAFB00554F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		076E051C2072AAFB00554F97 /* fisioapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fisioapp.xcdatamodel; sourceTree = "<group>"; };
@@ -142,6 +165,15 @@
 		076E05282072AAFB00554F97 /* fisioappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fisioappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		076E052C2072AAFB00554F97 /* fisioappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisioappTests.swift; sourceTree = "<group>"; };
 		076E052E2072AAFB00554F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B6343A207EB61300DBB501 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		07B6343E207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserInBackendInteractor.swift; sourceTree = "<group>"; };
+		07B63440207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserInBackendIntImpl.swift; sourceTree = "<group>"; };
+		07B63442207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInBackendInteractor.swift; sourceTree = "<group>"; };
+		07B63444207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInBackendIntImpl.swift; sourceTree = "<group>"; };
+		07B6344A207EC18200DBB501 /* AuthenticateUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserInteractor.swift; sourceTree = "<group>"; };
+		07B6344C207EC19E00DBB501 /* AuthenticateUserIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserIntImpl.swift; sourceTree = "<group>"; };
+		07B6344E207EC1CD00DBB501 /* RegisterUserIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserIntImpl.swift; sourceTree = "<group>"; };
+		07B63450207EC1ED00DBB501 /* RegisterUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInteractor.swift; sourceTree = "<group>"; };
 		07BAE7B12072BEB500BDA03E /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7B32072BEB500BDA03E /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; };
 		07BAE7B42072BEB500BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -240,21 +272,26 @@
 		075DA5E2207D17BE00199EFC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				075DA5EA207D2A5400199EFC /* Typealias.swift */,
+				075DA60A207D678500199EFC /* CompletionInterfaces.swift */,
+				075DA60C207D68B100199EFC /* Paths.swift */,
+				07B6343A207EB61300DBB501 /* Formatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		075DA5E5207D268800199EFC /* Model */ = {
+		075DA5E5207D268800199EFC /* EntityModel */ = {
 			isa = PBXGroup;
 			children = (
+				075DA5FA207D623000199EFC /* User */,
 			);
-			path = Model;
+			path = EntityModel;
 			sourceTree = "<group>";
 		};
 		075DA5E6207D271B00199EFC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				075DA5EA207D2A5400199EFC /* Typealias.swift */,
+				075DA5F9207D620600199EFC /* Model */,
 				075DA5E7207D275300199EFC /* Interactors */,
 			);
 			path = Domain;
@@ -263,8 +300,7 @@
 		075DA5E7207D275300199EFC /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				075DA5E8207D278500199EFC /* GetUserInteractor.swift */,
-				075DA5EC207D2B4F00199EFC /* GetUserIntImpl.swift */,
+				07B63446207EC12600DBB501 /* Users */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -272,11 +308,73 @@
 		075DA5EE207D2C7500199EFC /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				075DA5E5207D268800199EFC /* EntityModel */,
+				075DA5FF207D655700199EFC /* Network */,
 				075DA5F1207D2CB800199EFC /* RepositoryFakeInteractor.swift */,
 				075DA5EF207D2CA500199EFC /* RepositoryInteractor.swift */,
 				075DA5F3207D2CCF00199EFC /* RepositoryIntImpl.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		075DA5F9207D620600199EFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5FD207D645D00199EFC /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		075DA5FA207D623000199EFC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5FB207D624500199EFC /* UserData.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		075DA5FF207D655700199EFC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				075DA600207D656C00199EFC /* apifisioapp */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		075DA600207D656C00199EFC /* apifisioapp */ = {
+			isa = PBXGroup;
+			children = (
+				075DA601207D658B00199EFC /* apiv1 */,
+			);
+			path = apifisioapp;
+			sourceTree = "<group>";
+		};
+		075DA601207D658B00199EFC /* apiv1 */ = {
+			isa = PBXGroup;
+			children = (
+				075DA602207D659A00199EFC /* User */,
+			);
+			path = apiv1;
+			sourceTree = "<group>";
+		};
+		075DA602207D659A00199EFC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				07B6343D207EBD9400DBB501 /* AuthenticateUser */,
+				075DA603207D65C900199EFC /* GetUser */,
+				07B6343C207EBD8A00DBB501 /* RegisterUser */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		075DA603207D65C900199EFC /* GetUser */ = {
+			isa = PBXGroup;
+			children = (
+				075DA608207D660300199EFC /* GetUserFromBackendFakeInteractor.swift */,
+				075DA604207D65DD00199EFC /* GetUserFromBackendInteractor.swift */,
+				075DA606207D65E900199EFC /* GetUserFromBackendIntImpl.swift */,
+			);
+			path = GetUser;
 			sourceTree = "<group>";
 		};
 		076E050D2072AAFB00554F97 = {
@@ -317,10 +415,9 @@
 				076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */,
 				51FA461B20769BC5005F317F /* DummyModel.swift */,
 				51266D922076100A00CB3756 /* Controllers */,
+				51266D9120760FF600CB3756 /* View */,
 				075DA5E6207D271B00199EFC /* Domain */,
 				075DA5EE207D2C7500199EFC /* Repository */,
-				075DA5E5207D268800199EFC /* Model */,
-				51266D9120760FF600CB3756 /* View */,
 				075DA5E2207D17BE00199EFC /* Utils */,
 			);
 			path = fisioapp;
@@ -333,6 +430,61 @@
 				076E052E2072AAFB00554F97 /* Info.plist */,
 			);
 			path = fisioappTests;
+			sourceTree = "<group>";
+		};
+		07B6343C207EBD8A00DBB501 /* RegisterUser */ = {
+			isa = PBXGroup;
+			children = (
+				07B63442207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift */,
+				07B63444207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift */,
+			);
+			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		07B6343D207EBD9400DBB501 /* AuthenticateUser */ = {
+			isa = PBXGroup;
+			children = (
+				07B6343E207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift */,
+				07B63440207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift */,
+			);
+			path = AuthenticateUser;
+			sourceTree = "<group>";
+		};
+		07B63446207EC12600DBB501 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				07B63447207EC13A00DBB501 /* AuthenticateUser */,
+				07B63449207EC16300DBB501 /* GetUser */,
+				07B63448207EC15700DBB501 /* RegisterUser */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		07B63447207EC13A00DBB501 /* AuthenticateUser */ = {
+			isa = PBXGroup;
+			children = (
+				07B6344A207EC18200DBB501 /* AuthenticateUserInteractor.swift */,
+				07B6344C207EC19E00DBB501 /* AuthenticateUserIntImpl.swift */,
+			);
+			path = AuthenticateUser;
+			sourceTree = "<group>";
+		};
+		07B63448207EC15700DBB501 /* RegisterUser */ = {
+			isa = PBXGroup;
+			children = (
+				07B63450207EC1ED00DBB501 /* RegisterUserInteractor.swift */,
+				07B6344E207EC1CD00DBB501 /* RegisterUserIntImpl.swift */,
+			);
+			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		07B63449207EC16300DBB501 /* GetUser */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5E8207D278500199EFC /* GetUserInteractor.swift */,
+				075DA5EC207D2B4F00199EFC /* GetUserIntImpl.swift */,
+			);
+			path = GetUser;
 			sourceTree = "<group>";
 		};
 		07BAE7B22072BEB500BDA03E /* domain */ = {
@@ -751,27 +903,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075DA607207D65E900199EFC /* GetUserFromBackendIntImpl.swift in Sources */,
 				51FA461920769B24005F317F /* ProductsViewCell.swift in Sources */,
 				516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */,
 				51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */,
 				076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */,
+				075DA609207D660300199EFC /* GetUserFromBackendFakeInteractor.swift in Sources */,
+				075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */,
 				51FA461C20769BC5005F317F /* DummyModel.swift in Sources */,
 				51FA46272076A139005F317F /* AppoitmentsViewController.swift in Sources */,
+				07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */,
 				51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */,
+				07B63451207EC1ED00DBB501 /* RegisterUserInteractor.swift in Sources */,
 				075DA5F4207D2CCF00199EFC /* RepositoryIntImpl.swift in Sources */,
+				07B6343B207EB61300DBB501 /* Formatter.swift in Sources */,
+				07B63441207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift in Sources */,
+				07B6343F207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift in Sources */,
+				07B6344B207EC18200DBB501 /* AuthenticateUserInteractor.swift in Sources */,
 				075DA5F0207D2CA500199EFC /* RepositoryInteractor.swift in Sources */,
 				075DA5E9207D278500199EFC /* GetUserInteractor.swift in Sources */,
 				51FA462320769E07005F317F /* ServicesViewController.swift in Sources */,
+				07B63445207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift in Sources */,
+				075DA60D207D68B100199EFC /* Paths.swift in Sources */,
 				075DA5ED207D2B4F00199EFC /* GetUserIntImpl.swift in Sources */,
 				51266D8B20760FBE00CB3756 /* AppoitmentViewController.swift in Sources */,
+				075DA60B207D678500199EFC /* CompletionInterfaces.swift in Sources */,
 				51FA461F20769DB6005F317F /* ServicesViewCell.swift in Sources */,
+				07B63443207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift in Sources */,
 				075DA5E4207D1CCB00199EFC /* BlankViewController.swift in Sources */,
 				51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */,
+				075DA5FC207D624500199EFC /* UserData.swift in Sources */,
+				07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */,
 				075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
 				075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */,
+				075DA5FE207D645D00199EFC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

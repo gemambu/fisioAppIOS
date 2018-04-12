@@ -11,6 +11,8 @@ import Foundation
 protocol RepositoryInteractor {
     
     /******** users ********/
-    func getUser(token: String, id: String, onSuccess: (String) -> Void, onError: (String) -> Void)
+    func authenticateUser(email: String, password: String, onSuccess: @escaping (UserData, String) -> Void, onError: @escaping (String) -> Void)
+    func getUser(token: String, id: String, onSuccess: @escaping (UserData) -> Void, onError: @escaping (String) -> Void)
+    func registerUser(name: String, email: String, password: String, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void)
     
 }
