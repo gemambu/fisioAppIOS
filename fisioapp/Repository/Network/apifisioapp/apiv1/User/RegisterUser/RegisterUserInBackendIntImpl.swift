@@ -19,8 +19,9 @@ class RegisterUserInBackendIntImpl: RegisterUserInBackendInteractor {
         let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USERS_REGISTER_SERVER_PATH)
         let parameters = [ "name": name, "email": email, "password": password ]
         let headers = [ "Content-Type": "application/x-www-form-urlencoded" ]
-        
-        Alamofire.request(urlAPI!,method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
+        print(urlAPI!)
+
+        Alamofire.request(kREGISTER_URL,method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             print("Response: \(response)")
             switch response.result{
                 case .success:

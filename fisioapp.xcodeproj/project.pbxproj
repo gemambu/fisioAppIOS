@@ -58,6 +58,7 @@
 		515D0D52965049E93DF9DA18 /* Pods_fisioappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */; };
 		516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */; };
 		516474A2207609A900DCFA9B /* LoginAndRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */; };
+		516B17C6207FA12400B86965 /* ViewControllers+AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516B17C5207FA12400B86965 /* ViewControllers+AlertMessage.swift */; };
 		5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176A057207F4F6400F3C81E /* RemoteBackEndConections.swift */; };
 		5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176A059207F4FD000F3C81E /* BackEndURLConstants.swift */; };
 		51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461320769AD4005F317F /* ProductsViewController.swift */; };
@@ -200,6 +201,7 @@
 		51266D8E20760FD700CB3756 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterController.swift; sourceTree = "<group>"; };
 		516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAndRegisterController.xib; sourceTree = "<group>"; };
+		516B17C5207FA12400B86965 /* ViewControllers+AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllers+AlertMessage.swift"; sourceTree = "<group>"; };
 		5176A057207F4F6400F3C81E /* RemoteBackEndConections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBackEndConections.swift; sourceTree = "<group>"; };
 		5176A059207F4FD000F3C81E /* BackEndURLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndURLConstants.swift; sourceTree = "<group>"; };
 		51FA461320769AD4005F317F /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				075DA60A207D678500199EFC /* CompletionInterfaces.swift */,
 				075DA60C207D68B100199EFC /* Paths.swift */,
 				07B6343A207EB61300DBB501 /* Formatter.swift */,
+				516B17C5207FA12400B86965 /* ViewControllers+AlertMessage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -944,6 +947,7 @@
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
+				516B17C6207FA12400B86965 /* ViewControllers+AlertMessage.swift in Sources */,
 				5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */,
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
 				075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */,

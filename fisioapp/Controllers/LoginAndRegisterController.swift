@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class LoginAndRegisterController: UIViewController {
     
@@ -22,7 +24,6 @@ class LoginAndRegisterController: UIViewController {
         @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
         @IBOutlet weak var textViewToRegisterButtonConstraint: NSLayoutConstraint!
         @IBOutlet weak var textViewToSegmentedControlConstraint: NSLayoutConstraint!
-        
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -104,13 +105,22 @@ class LoginAndRegisterController: UIViewController {
     extension LoginAndRegisterController{
         func handleLogin (){
             
-            RemoteBackEndConections().loginUserToBackEnd()
 
             print("Login button pushed")
             guard let email = emailTextField.text, let password = passwordTextField.text else {
                 print("Form is not complete")
                 return
             }
+            
+            let authenticateUserIntImpl : AuthenticateUserInteractor = AuthenticateUserIntImpl()
+            authenticateUserIntImpl.execute(email: email, password: password, onSuccess: { (user, message) in
+                
+                self.alertControllerToView(message: message)
+
+            }) { (errorMessage) in
+                self.alertControllerToView(message: errorMessage)
+            }
+
         }
     }
     
@@ -119,12 +129,22 @@ class LoginAndRegisterController: UIViewController {
     extension LoginAndRegisterController{
         func handleRegister(){
             
-            RemoteBackEndConections().registerNewUserToBackEnd()
             print("Register button pushed")
             guard let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text else {
                 print("Form is not complete")
                 return
             }
+            
+            let registerUserInteractorImplementation : RegisterUserInteractor = RegisterUserIntImpl()
+            
+            registerUserInteractorImplementation.execute(name: name, email: email, password: password, isProfessional: false, onSuccess: { (success, message) in
+
+                self.alertControllerToView(message: message)
+                
+            }) { (errorMessage) in
+                self.alertControllerToView(message: errorMessage)
+            }
+            
             
         }
     }
