@@ -58,6 +58,8 @@
 		515D0D52965049E93DF9DA18 /* Pods_fisioappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */; };
 		516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */; };
 		516474A2207609A900DCFA9B /* LoginAndRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */; };
+		5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176A057207F4F6400F3C81E /* RemoteBackEndConections.swift */; };
+		5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5176A059207F4FD000F3C81E /* BackEndURLConstants.swift */; };
 		51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461320769AD4005F317F /* ProductsViewController.swift */; };
 		51FA461620769AD4005F317F /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA461420769AD4005F317F /* ProductsViewController.xib */; };
 		51FA461920769B24005F317F /* ProductsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461720769B24005F317F /* ProductsViewCell.swift */; };
@@ -198,6 +200,8 @@
 		51266D8E20760FD700CB3756 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterController.swift; sourceTree = "<group>"; };
 		516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAndRegisterController.xib; sourceTree = "<group>"; };
+		5176A057207F4F6400F3C81E /* RemoteBackEndConections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBackEndConections.swift; sourceTree = "<group>"; };
+		5176A059207F4FD000F3C81E /* BackEndURLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndURLConstants.swift; sourceTree = "<group>"; };
 		51FA461320769AD4005F317F /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		51FA461420769AD4005F317F /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
 		51FA461720769B24005F317F /* ProductsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewCell.swift; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 			children = (
 				075DA5F9207D620600199EFC /* Model */,
 				075DA5E7207D275300199EFC /* Interactors */,
+				5176A057207F4F6400F3C81E /* RemoteBackEndConections.swift */,
+				5176A059207F4FD000F3C81E /* BackEndURLConstants.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -936,7 +942,9 @@
 				07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */,
 				075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
+				5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
+				5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */,
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
 				075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */,
 				075DA5FE207D645D00199EFC /* User.swift in Sources */,

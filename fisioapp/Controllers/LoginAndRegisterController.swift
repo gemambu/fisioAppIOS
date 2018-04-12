@@ -103,6 +103,9 @@ class LoginAndRegisterController: UIViewController {
     // MARK: - Login
     extension LoginAndRegisterController{
         func handleLogin (){
+            
+            RemoteBackEndConections().loginUserToBackEnd()
+
             print("Login button pushed")
             guard let email = emailTextField.text, let password = passwordTextField.text else {
                 print("Form is not complete")
@@ -116,6 +119,7 @@ class LoginAndRegisterController: UIViewController {
     extension LoginAndRegisterController{
         func handleRegister(){
             
+            RemoteBackEndConections().registerNewUserToBackEnd()
             print("Register button pushed")
             guard let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text else {
                 print("Form is not complete")
