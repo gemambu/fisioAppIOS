@@ -20,7 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window?.backgroundColor = UIColor.orange
         self.window?.makeKeyAndVisible()
-        let rootVC = LoginAndRegisterController()
+        //let rootVC = LoginAndRegisterController()
+        
+        // Blank page
+        let rootVC = BlankViewController()
+        window?.rootViewController = rootVC
+        return true
 
         //********************  UITabBarController  ********************//
         let servicesCollection = ServicesViewController()

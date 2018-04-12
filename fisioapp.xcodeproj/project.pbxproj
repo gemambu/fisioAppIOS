@@ -7,11 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075DA5E4207D1CCB00199EFC /* BlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5E3207D1CCB00199EFC /* BlankViewController.swift */; };
+		075DA5E9207D278500199EFC /* GetUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5E8207D278500199EFC /* GetUserInteractor.swift */; };
+		075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5EA207D2A5400199EFC /* Typealias.swift */; };
+		075DA5ED207D2B4F00199EFC /* GetUserIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5EC207D2B4F00199EFC /* GetUserIntImpl.swift */; };
+		075DA5F0207D2CA500199EFC /* RepositoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5EF207D2CA500199EFC /* RepositoryInteractor.swift */; };
+		075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5F1207D2CB800199EFC /* RepositoryFakeInteractor.swift */; };
+		075DA5F4207D2CCF00199EFC /* RepositoryIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5F3207D2CCF00199EFC /* RepositoryIntImpl.swift */; };
+		075DA5F8207D5F1600199EFC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 075DA5F7207D5F1600199EFC /* Podfile */; };
+		075DA5FC207D624500199EFC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5FB207D624500199EFC /* UserData.swift */; };
+		075DA5FE207D645D00199EFC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5FD207D645D00199EFC /* User.swift */; };
+		075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA604207D65DD00199EFC /* GetUserFromBackendInteractor.swift */; };
+		075DA607207D65E900199EFC /* GetUserFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA606207D65E900199EFC /* GetUserFromBackendIntImpl.swift */; };
+		075DA609207D660300199EFC /* GetUserFromBackendFakeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA608207D660300199EFC /* GetUserFromBackendFakeInteractor.swift */; };
+		075DA60B207D678500199EFC /* CompletionInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA60A207D678500199EFC /* CompletionInterfaces.swift */; };
+		075DA60D207D68B100199EFC /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA60C207D68B100199EFC /* Paths.swift */; };
 		076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E05192072AAFB00554F97 /* AppDelegate.swift */; };
 		076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */; };
 		076E051F2072AAFB00554F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076E051E2072AAFB00554F97 /* Assets.xcassets */; };
 		076E05222072AAFB00554F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076E05202072AAFB00554F97 /* LaunchScreen.storyboard */; };
 		076E052D2072AAFB00554F97 /* fisioappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E052C2072AAFB00554F97 /* fisioappTests.swift */; };
+		07B6343B207EB61300DBB501 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6343A207EB61300DBB501 /* Formatter.swift */; };
+		07B6343F207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6343E207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift */; };
+		07B63441207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63440207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift */; };
+		07B63443207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63442207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift */; };
+		07B63445207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63444207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift */; };
+		07B6344B207EC18200DBB501 /* AuthenticateUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6344A207EC18200DBB501 /* AuthenticateUserInteractor.swift */; };
+		07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6344C207EC19E00DBB501 /* AuthenticateUserIntImpl.swift */; };
+		07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6344E207EC1CD00DBB501 /* RegisterUserIntImpl.swift */; };
+		07B63451207EC1ED00DBB501 /* RegisterUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63450207EC1ED00DBB501 /* RegisterUserInteractor.swift */; };
 		07BAE7BA2072BEB500BDA03E /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7B12072BEB500BDA03E /* domain.framework */; };
 		07BAE7C12072BEB500BDA03E /* domainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE7C02072BEB500BDA03E /* domainTests.swift */; };
 		07BAE7C32072BEB500BDA03E /* domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7B32072BEB500BDA03E /* domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,6 +46,7 @@
 		07BAE7E72072BF9600BDA03E /* repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7D72072BF9600BDA03E /* repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; };
 		07BAE7EB2072BF9600BDA03E /* repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F9B05C2AC4C3C80FDA8A6D1 /* Pods_fisioapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */; };
 		51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8120760F8400CB3756 /* ProductViewController.swift */; };
 		51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8220760F8400CB3756 /* ProductViewController.xib */; };
 		51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8520760F9500CB3756 /* ServiceViewController.swift */; };
@@ -30,6 +55,7 @@
 		51266D8C20760FBE00CB3756 /* AppoitmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8A20760FBE00CB3756 /* AppoitmentViewController.xib */; };
 		51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8D20760FD700CB3756 /* EditProfileViewController.swift */; };
 		51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8E20760FD700CB3756 /* EditProfileViewController.xib */; };
+		515D0D52965049E93DF9DA18 /* Pods_fisioappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */; };
 		516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */; };
 		516474A2207609A900DCFA9B /* LoginAndRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */; };
 		51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461320769AD4005F317F /* ProductsViewController.swift */; };
@@ -115,6 +141,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		075DA5E3207D1CCB00199EFC /* BlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankViewController.swift; sourceTree = "<group>"; };
+		075DA5E8207D278500199EFC /* GetUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInteractor.swift; sourceTree = "<group>"; };
+		075DA5EA207D2A5400199EFC /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		075DA5EC207D2B4F00199EFC /* GetUserIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserIntImpl.swift; sourceTree = "<group>"; };
+		075DA5EF207D2CA500199EFC /* RepositoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInteractor.swift; sourceTree = "<group>"; };
+		075DA5F1207D2CB800199EFC /* RepositoryFakeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFakeInteractor.swift; sourceTree = "<group>"; };
+		075DA5F3207D2CCF00199EFC /* RepositoryIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryIntImpl.swift; sourceTree = "<group>"; };
+		075DA5F7207D5F1600199EFC /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		075DA5FB207D624500199EFC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		075DA5FD207D645D00199EFC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		075DA604207D65DD00199EFC /* GetUserFromBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFromBackendInteractor.swift; sourceTree = "<group>"; };
+		075DA606207D65E900199EFC /* GetUserFromBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFromBackendIntImpl.swift; sourceTree = "<group>"; };
+		075DA608207D660300199EFC /* GetUserFromBackendFakeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFromBackendFakeInteractor.swift; sourceTree = "<group>"; };
+		075DA60A207D678500199EFC /* CompletionInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionInterfaces.swift; sourceTree = "<group>"; };
+		075DA60C207D68B100199EFC /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
 		076E05162072AAFB00554F97 /* fisioapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fisioapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076E05192072AAFB00554F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		076E051C2072AAFB00554F97 /* fisioapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fisioapp.xcdatamodel; sourceTree = "<group>"; };
@@ -124,6 +165,15 @@
 		076E05282072AAFB00554F97 /* fisioappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fisioappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		076E052C2072AAFB00554F97 /* fisioappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisioappTests.swift; sourceTree = "<group>"; };
 		076E052E2072AAFB00554F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B6343A207EB61300DBB501 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		07B6343E207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserInBackendInteractor.swift; sourceTree = "<group>"; };
+		07B63440207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserInBackendIntImpl.swift; sourceTree = "<group>"; };
+		07B63442207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInBackendInteractor.swift; sourceTree = "<group>"; };
+		07B63444207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInBackendIntImpl.swift; sourceTree = "<group>"; };
+		07B6344A207EC18200DBB501 /* AuthenticateUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserInteractor.swift; sourceTree = "<group>"; };
+		07B6344C207EC19E00DBB501 /* AuthenticateUserIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserIntImpl.swift; sourceTree = "<group>"; };
+		07B6344E207EC1CD00DBB501 /* RegisterUserIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserIntImpl.swift; sourceTree = "<group>"; };
+		07B63450207EC1ED00DBB501 /* RegisterUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInteractor.swift; sourceTree = "<group>"; };
 		07BAE7B12072BEB500BDA03E /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7B32072BEB500BDA03E /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; };
 		07BAE7B42072BEB500BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +186,8 @@
 		07BAE7DD2072BF9600BDA03E /* repositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = repositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7E42072BF9600BDA03E /* repositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repositoryTests.swift; sourceTree = "<group>"; };
 		07BAE7E62072BF9600BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C5A2298EBD8218EC5968D97 /* Pods-fisioapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp.release.xcconfig"; sourceTree = "<group>"; };
+		3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51266D8120760F8400CB3756 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		51266D8220760F8400CB3756 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		51266D8520760F9500CB3756 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +211,10 @@
 		51FA46262076A139005F317F /* AppoitmentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewController.xib; sourceTree = "<group>"; };
 		51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewCell.swift; sourceTree = "<group>"; };
 		51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewCell.xib; sourceTree = "<group>"; };
+		91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fisioappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fisioapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3933672ADBDBF7E85AD2DF0 /* Pods-fisioappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.release.xcconfig"; sourceTree = "<group>"; };
+		E22BE32E203616465C02C00B /* Pods-fisioapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +224,7 @@
 			files = (
 				07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */,
 				07BAE7C62072BEB500BDA03E /* domain.framework in Frameworks */,
+				0F9B05C2AC4C3C80FDA8A6D1 /* Pods_fisioapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515D0D52965049E93DF9DA18 /* Pods_fisioappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +269,118 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075DA5E2207D17BE00199EFC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5EA207D2A5400199EFC /* Typealias.swift */,
+				075DA60A207D678500199EFC /* CompletionInterfaces.swift */,
+				075DA60C207D68B100199EFC /* Paths.swift */,
+				07B6343A207EB61300DBB501 /* Formatter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		075DA5E5207D268800199EFC /* EntityModel */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5FA207D623000199EFC /* User */,
+			);
+			path = EntityModel;
+			sourceTree = "<group>";
+		};
+		075DA5E6207D271B00199EFC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5F9207D620600199EFC /* Model */,
+				075DA5E7207D275300199EFC /* Interactors */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		075DA5E7207D275300199EFC /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				07B63446207EC12600DBB501 /* Users */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		075DA5EE207D2C7500199EFC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5E5207D268800199EFC /* EntityModel */,
+				075DA5FF207D655700199EFC /* Network */,
+				075DA5F1207D2CB800199EFC /* RepositoryFakeInteractor.swift */,
+				075DA5EF207D2CA500199EFC /* RepositoryInteractor.swift */,
+				075DA5F3207D2CCF00199EFC /* RepositoryIntImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		075DA5F9207D620600199EFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5FD207D645D00199EFC /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		075DA5FA207D623000199EFC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5FB207D624500199EFC /* UserData.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		075DA5FF207D655700199EFC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				075DA600207D656C00199EFC /* apifisioapp */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		075DA600207D656C00199EFC /* apifisioapp */ = {
+			isa = PBXGroup;
+			children = (
+				075DA601207D658B00199EFC /* apiv1 */,
+			);
+			path = apifisioapp;
+			sourceTree = "<group>";
+		};
+		075DA601207D658B00199EFC /* apiv1 */ = {
+			isa = PBXGroup;
+			children = (
+				075DA602207D659A00199EFC /* User */,
+			);
+			path = apiv1;
+			sourceTree = "<group>";
+		};
+		075DA602207D659A00199EFC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				07B6343D207EBD9400DBB501 /* AuthenticateUser */,
+				075DA603207D65C900199EFC /* GetUser */,
+				07B6343C207EBD8A00DBB501 /* RegisterUser */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		075DA603207D65C900199EFC /* GetUser */ = {
+			isa = PBXGroup;
+			children = (
+				075DA608207D660300199EFC /* GetUserFromBackendFakeInteractor.swift */,
+				075DA604207D65DD00199EFC /* GetUserFromBackendInteractor.swift */,
+				075DA606207D65E900199EFC /* GetUserFromBackendIntImpl.swift */,
+			);
+			path = GetUser;
+			sourceTree = "<group>";
+		};
 		076E050D2072AAFB00554F97 = {
 			isa = PBXGroup;
 			children = (
+				075DA5F7207D5F1600199EFC /* Podfile */,
 				076E05182072AAFB00554F97 /* fisioapp */,
 				076E052B2072AAFB00554F97 /* fisioappTests */,
 				07BAE7B22072BEB500BDA03E /* domain */,
@@ -221,6 +388,8 @@
 				07BAE7D62072BF9600BDA03E /* repository */,
 				07BAE7E32072BF9600BDA03E /* repositoryTests */,
 				076E05172072AAFB00554F97 /* Products */,
+				F0A19A9F90239CA382B59EF8 /* Pods */,
+				632DB832EEE9DD1879261B40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,11 +411,14 @@
 			children = (
 				076E05192072AAFB00554F97 /* AppDelegate.swift */,
 				076E051E2072AAFB00554F97 /* Assets.xcassets */,
-				51266D9120760FF600CB3756 /* View */,
-				51266D922076100A00CB3756 /* Controllers */,
 				076E05232072AAFB00554F97 /* Info.plist */,
 				076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */,
 				51FA461B20769BC5005F317F /* DummyModel.swift */,
+				51266D922076100A00CB3756 /* Controllers */,
+				51266D9120760FF600CB3756 /* View */,
+				075DA5E6207D271B00199EFC /* Domain */,
+				075DA5EE207D2C7500199EFC /* Repository */,
+				075DA5E2207D17BE00199EFC /* Utils */,
 			);
 			path = fisioapp;
 			sourceTree = "<group>";
@@ -258,6 +430,61 @@
 				076E052E2072AAFB00554F97 /* Info.plist */,
 			);
 			path = fisioappTests;
+			sourceTree = "<group>";
+		};
+		07B6343C207EBD8A00DBB501 /* RegisterUser */ = {
+			isa = PBXGroup;
+			children = (
+				07B63442207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift */,
+				07B63444207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift */,
+			);
+			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		07B6343D207EBD9400DBB501 /* AuthenticateUser */ = {
+			isa = PBXGroup;
+			children = (
+				07B6343E207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift */,
+				07B63440207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift */,
+			);
+			path = AuthenticateUser;
+			sourceTree = "<group>";
+		};
+		07B63446207EC12600DBB501 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				07B63447207EC13A00DBB501 /* AuthenticateUser */,
+				07B63449207EC16300DBB501 /* GetUser */,
+				07B63448207EC15700DBB501 /* RegisterUser */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		07B63447207EC13A00DBB501 /* AuthenticateUser */ = {
+			isa = PBXGroup;
+			children = (
+				07B6344A207EC18200DBB501 /* AuthenticateUserInteractor.swift */,
+				07B6344C207EC19E00DBB501 /* AuthenticateUserIntImpl.swift */,
+			);
+			path = AuthenticateUser;
+			sourceTree = "<group>";
+		};
+		07B63448207EC15700DBB501 /* RegisterUser */ = {
+			isa = PBXGroup;
+			children = (
+				07B63450207EC1ED00DBB501 /* RegisterUserInteractor.swift */,
+				07B6344E207EC1CD00DBB501 /* RegisterUserIntImpl.swift */,
+			);
+			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		07B63449207EC16300DBB501 /* GetUser */ = {
+			isa = PBXGroup;
+			children = (
+				075DA5E8207D278500199EFC /* GetUserInteractor.swift */,
+				075DA5EC207D2B4F00199EFC /* GetUserIntImpl.swift */,
+			);
+			path = GetUser;
 			sourceTree = "<group>";
 		};
 		07BAE7B22072BEB500BDA03E /* domain */ = {
@@ -329,8 +556,29 @@
 				51266D8520760F9500CB3756 /* ServiceViewController.swift */,
 				51FA461D20769DB6005F317F /* ServicesViewCell.swift */,
 				51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */,
+				075DA5E3207D1CCB00199EFC /* BlankViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		632DB832EEE9DD1879261B40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */,
+				91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0A19A9F90239CA382B59EF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E22BE32E203616465C02C00B /* Pods-fisioapp.debug.xcconfig */,
+				1C5A2298EBD8218EC5968D97 /* Pods-fisioapp.release.xcconfig */,
+				3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */,
+				D3933672ADBDBF7E85AD2DF0 /* Pods-fisioappTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,10 +607,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076E05312072AAFB00554F97 /* Build configuration list for PBXNativeTarget "fisioapp" */;
 			buildPhases = (
+				5FDC6A9F58D6E719AA969ADE /* [CP] Check Pods Manifest.lock */,
 				076E05122072AAFB00554F97 /* Sources */,
 				076E05132072AAFB00554F97 /* Frameworks */,
 				076E05142072AAFB00554F97 /* Resources */,
 				07BAE7CD2072BEB500BDA03E /* Embed Frameworks */,
+				805C01791F68469FDD7FA618 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -379,6 +629,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076E05342072AAFB00554F97 /* Build configuration list for PBXNativeTarget "fisioappTests" */;
 			buildPhases = (
+				09EE0301777B383FCA3F4FD7 /* [CP] Check Pods Manifest.lock */,
 				076E05242072AAFB00554F97 /* Sources */,
 				076E05252072AAFB00554F97 /* Frameworks */,
 				076E05262072AAFB00554F97 /* Resources */,
@@ -546,6 +797,7 @@
 				51266D8C20760FBE00CB3756 /* AppoitmentViewController.xib in Resources */,
 				51FA46282076A139005F317F /* AppoitmentsViewController.xib in Resources */,
 				51FA461A20769B24005F317F /* ProductsViewCell.xib in Resources */,
+				075DA5F8207D5F1600199EFC /* Podfile in Resources */,
 				076E05222072AAFB00554F97 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,25 +839,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09EE0301777B383FCA3F4FD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fisioappTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FDC6A9F58D6E719AA969ADE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fisioapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		805C01791F68469FDD7FA618 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		076E05122072AAFB00554F97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075DA607207D65E900199EFC /* GetUserFromBackendIntImpl.swift in Sources */,
 				51FA461920769B24005F317F /* ProductsViewCell.swift in Sources */,
 				516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */,
 				51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */,
 				076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */,
+				075DA609207D660300199EFC /* GetUserFromBackendFakeInteractor.swift in Sources */,
+				075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */,
 				51FA461C20769BC5005F317F /* DummyModel.swift in Sources */,
 				51FA46272076A139005F317F /* AppoitmentsViewController.swift in Sources */,
+				07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */,
 				51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */,
+				07B63451207EC1ED00DBB501 /* RegisterUserInteractor.swift in Sources */,
+				075DA5F4207D2CCF00199EFC /* RepositoryIntImpl.swift in Sources */,
+				07B6343B207EB61300DBB501 /* Formatter.swift in Sources */,
+				07B63441207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift in Sources */,
+				07B6343F207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift in Sources */,
+				07B6344B207EC18200DBB501 /* AuthenticateUserInteractor.swift in Sources */,
+				075DA5F0207D2CA500199EFC /* RepositoryInteractor.swift in Sources */,
+				075DA5E9207D278500199EFC /* GetUserInteractor.swift in Sources */,
 				51FA462320769E07005F317F /* ServicesViewController.swift in Sources */,
+				07B63445207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift in Sources */,
+				075DA60D207D68B100199EFC /* Paths.swift in Sources */,
+				075DA5ED207D2B4F00199EFC /* GetUserIntImpl.swift in Sources */,
 				51266D8B20760FBE00CB3756 /* AppoitmentViewController.swift in Sources */,
+				075DA60B207D678500199EFC /* CompletionInterfaces.swift in Sources */,
 				51FA461F20769DB6005F317F /* ServicesViewCell.swift in Sources */,
+				07B63443207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift in Sources */,
+				075DA5E4207D1CCB00199EFC /* BlankViewController.swift in Sources */,
 				51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */,
+				075DA5FC207D624500199EFC /* UserData.swift in Sources */,
+				07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */,
+				075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
+				075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */,
+				075DA5FE207D645D00199EFC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,7 +1083,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -802,7 +1136,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -812,6 +1146,7 @@
 		};
 		076E05322072AAFB00554F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E22BE32E203616465C02C00B /* Pods-fisioapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -826,6 +1161,7 @@
 		};
 		076E05332072AAFB00554F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5A2298EBD8218EC5968D97 /* Pods-fisioapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -840,6 +1176,7 @@
 		};
 		076E05352072AAFB00554F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -856,6 +1193,7 @@
 		};
 		076E05362072AAFB00554F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3933672ADBDBF7E85AD2DF0 /* Pods-fisioappTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
