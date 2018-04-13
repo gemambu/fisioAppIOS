@@ -113,10 +113,15 @@ class LoginAndRegisterController: UIViewController {
             }
             
             let authenticateUserIntImpl : AuthenticateUserInteractor = AuthenticateUserIntImpl()
+            
             authenticateUserIntImpl.execute(email: email, password: password, onSuccess: { (user, message) in
-                
-                self.alertControllerToView(message: message)
 
+                print("El user es: ")
+                print(user)
+                print("El mensaje es: ")
+                print(message)
+                    self.alertSuccessControllerToView(message: message)
+                
             }) { (errorMessage) in
                 self.alertControllerToView(message: errorMessage)
             }
@@ -136,9 +141,15 @@ class LoginAndRegisterController: UIViewController {
             }
             
             let registerUserInteractorImplementation : RegisterUserInteractor = RegisterUserIntImpl()
-            
+ 
             registerUserInteractorImplementation.execute(name: name, email: email, password: password, isProfessional: false, onSuccess: { (success, message) in
-
+                
+                print("¿Ha salido bien?")
+                print(success)
+                
+                if success == true {
+                    self.alertSuccessControllerToView(message: message)
+                }
                 self.alertControllerToView(message: message)
                 
             }) { (errorMessage) in

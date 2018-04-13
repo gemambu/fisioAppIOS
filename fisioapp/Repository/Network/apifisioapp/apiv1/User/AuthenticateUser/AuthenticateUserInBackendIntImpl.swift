@@ -20,7 +20,7 @@ class AuthenticateUserInBackendIntImpl: AuthenticateUserInBackendInteractor {
         let parameters = [ "email": email, "password": password ]
         let headers = [ "Content-Type": "application/x-www-form-urlencoded" ]
         
-        Alamofire.request(kLOGIN_URL,method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
+        Alamofire.request(urlAPI!,method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             switch response.result{
             case .success:
                 if let value = response.data {

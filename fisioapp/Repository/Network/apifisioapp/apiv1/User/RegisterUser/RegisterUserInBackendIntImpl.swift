@@ -21,7 +21,7 @@ class RegisterUserInBackendIntImpl: RegisterUserInBackendInteractor {
         let headers = [ "Content-Type": "application/x-www-form-urlencoded" ]
         print(urlAPI!)
 
-        Alamofire.request(kREGISTER_URL,method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
+        Alamofire.request(urlAPI!,method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             print("Response: \(response)")
             switch response.result{
                 case .success:
