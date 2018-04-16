@@ -49,7 +49,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     
     
     /******** appointments ********/
-    /*func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {
+    func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {
         
         let getAppointmentsForDateFromBackendInteractor: GetAppointmentsForDateFromBackEndInteractor = GetAppointmentsForDateFromBackEndIntImpl()
         
@@ -61,6 +61,6 @@ class RepositoryIntImpl: RepositoryInteractor {
                                                             onError: { (msg: String) -> Void in
                                                                 onError(msg)
         })
-    }*/
+    }
 
 }

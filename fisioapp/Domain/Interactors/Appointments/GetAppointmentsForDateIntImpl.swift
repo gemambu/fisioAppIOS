@@ -13,7 +13,7 @@ class GetAppointmentsForDateIntImpl: GetAppointmentsForDateInteractor {
         
         let repositoryInteractor: RepositoryInteractor = RepositoryIntImpl()
         
-        /*repositoryInteractor.getAppointmentsForDate(token: token,
+        repositoryInteractor.getAppointmentsForDate(token: token,
                                                     date: date,
                                                     onSuccess: { (appointments: [AppointmentData]) in
                                                         var appointmentsResult = [Appointment]()
@@ -26,7 +26,7 @@ class GetAppointmentsForDateIntImpl: GetAppointmentsForDateInteractor {
                                                         onSuccess(appointmentsResult)},
                                                     onError: { (msg: String) -> Void in
                                                         onError(msg)
-                                                    })*/
+                                                    })
     }
     
     private func entityMapper(appointmentData: AppointmentData) -> Appointment {

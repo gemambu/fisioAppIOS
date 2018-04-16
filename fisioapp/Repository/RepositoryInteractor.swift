@@ -17,6 +17,6 @@ protocol RepositoryInteractor {
     
     
     /******** appointments ********/
-    /*func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void)*/
+    func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void)
     
 }
