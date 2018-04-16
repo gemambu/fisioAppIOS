@@ -578,8 +578,8 @@
 		51266D922076100A00CB3756 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */,
 				5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */,
+				5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */,
 				5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */,
 				5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */,
 				51FA461320769AD4005F317F /* ProductsViewController.swift */,

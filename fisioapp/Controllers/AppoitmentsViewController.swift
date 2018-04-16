@@ -10,12 +10,12 @@ import UIKit
 
 let appoitmentsCellID = "AppoitmentsViewCell"
 
-class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowLayout  {
     
     var collectionView: UICollectionView!
     var datePicker: UIDatePicker!
     
-    var appointments: [AppointmentModel] = []
+    var appointmentsForCV: [AppointmentModel] = []
     let appointment1 = AppointmentModel(customer: "Alan Casas", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
     let appointment2 = AppointmentModel(customer: "Rodrigo Limpias", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
     let appointment3 = AppointmentModel(customer: "Gema Martínez", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
@@ -25,14 +25,14 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
         super.viewDidLoad()
         title = "Citas"
         
-        appointments.append(appointment1)
+        /*appointments.append(appointment1)
         appointments.append(appointment2)
         appointments.append(appointment3)
         appointments.append(appointment4)
         appointments.append(appointment1)
         appointments.append(appointment2)
         appointments.append(appointment3)
-        appointments.append(appointment4)
+        appointments.append(appointment4)*/
         
         
         
@@ -59,22 +59,7 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
         // Dispose of any resources that can be recreated.
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return appointments.count
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let appointmentToShow = appointments[indexPath.row]
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: appoitmentsCellID, for: indexPath) as! AppoitmentsViewCell
-        
-        cell.backgroundColor = UIColor.orange
-        cell.nameLabel.text = appointmentToShow.customer
-        cell.commentLabel.text = appointmentToShow.address
-        
-        return cell
-    }
     
     func initializeDatePicker() {
         
@@ -88,6 +73,28 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
     @objc func selectedDate(sender: UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
+        let date = dateFormatter.string(from: datePicker.date)
+        
+        self.getAppointmentsForDate(date: date)
+    }
+    
+    func getAppointmentsForDate(date: String){
+        let getAppointmentsForDate: GetAppointmentsForDateInteractor = GetAppointmentsForDateIntImpl()
+        
+        let queue = OperationQueue()
+        queue.addOperation {
+            getAppointmentsForDate.execute(token: "",
+                                           date: date,
+                                           onSuccess: { (appointments: [Appointment]) in
+                                            for appointment in appointments {
+                                                let appointment = self.appointmentMapper(appointment: appointment)
+                                                self.appointmentsForCV.append(appointment)
+                                            }
+                                        
+            }, onError: { (msg: String) -> Void in
+                
+            })
+        }
     }
     
     
