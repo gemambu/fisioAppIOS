@@ -6,10 +6,6 @@ DEPENDENCIES:
   - Alamofire
   - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON`, branch `swift3`)
 
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Alamofire
-
 EXTERNAL SOURCES:
   SwiftyJSON:
     :branch: swift3
@@ -26,4 +22,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ea26f330c65756100204da34900a25d7b6048362
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0

@@ -9,11 +9,43 @@
 import UIKit
 
 class AppoitmentViewController: UIViewController {
+    
+    var appointment: AppointmentModel!
+    
+    @IBOutlet weak var map: UIImageView!
+    @IBOutlet weak var customer: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var confirmed: UILabel!
+    @IBOutlet weak var cancelled: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=\(appointment.lat),\(appointment.long)&zoom=16&size=320x220&scale=2&markers=color:blue%7C\(appointment.lat),\(appointment.long)"
+        let url = URL(string: mapURL)
+        var imageData = NSData(contentsOf: url!)
+        var image = UIImage.init(data: imageData as! Data)
 
-        // Do any additional setup after loading the view.
+        map.image = image
+        customer.text = appointment.customer
+        address.text = appointment.address
+        price.text = "\(appointment.price)€"
+        if (appointment.isConfirmed == true){
+            confirmed.text = "Yes"
+        } else  {
+            confirmed.text = "Pending"
+        }
+        
+        if (appointment.isCancelled == true) {
+            cancelled.text = "Yes"
+        } else {
+            cancelled.text = "No"
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +54,6 @@ class AppoitmentViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

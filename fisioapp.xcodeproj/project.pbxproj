@@ -51,8 +51,6 @@
 		51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8220760F8400CB3756 /* ProductViewController.xib */; };
 		51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8520760F9500CB3756 /* ServiceViewController.swift */; };
 		51266D8820760F9500CB3756 /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8620760F9500CB3756 /* ServiceViewController.xib */; };
-		51266D8B20760FBE00CB3756 /* AppoitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8920760FBE00CB3756 /* AppoitmentViewController.swift */; };
-		51266D8C20760FBE00CB3756 /* AppoitmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8A20760FBE00CB3756 /* AppoitmentViewController.xib */; };
 		51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8D20760FD700CB3756 /* EditProfileViewController.swift */; };
 		51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8E20760FD700CB3756 /* EditProfileViewController.xib */; };
 		515D0D52965049E93DF9DA18 /* Pods_fisioappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */; };
@@ -70,10 +68,14 @@
 		51FA462020769DB6005F317F /* ServicesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA461E20769DB6005F317F /* ServicesViewCell.xib */; };
 		51FA462320769E07005F317F /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA462120769E07005F317F /* ServicesViewController.swift */; };
 		51FA462420769E07005F317F /* ServicesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA462220769E07005F317F /* ServicesViewController.xib */; };
-		51FA46272076A139005F317F /* AppoitmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA46252076A139005F317F /* AppoitmentsViewController.swift */; };
 		51FA46282076A139005F317F /* AppoitmentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA46262076A139005F317F /* AppoitmentsViewController.xib */; };
 		51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */; };
 		51FA462C2076A15E005F317F /* AppoitmentsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */; };
+		5B5824D22084DAFA006399A1 /* AppointmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D12084DAFA006399A1 /* AppointmentModel.swift */; };
+		5B5824D62084DB62006399A1 /* AppointmentsVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */; };
+		5B5824D72084DB62006399A1 /* AppoitmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */; };
+		5B5824D82084DB62006399A1 /* AppoitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */; };
+		5B5824DA2084DB91006399A1 /* AppoitmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,8 +197,6 @@
 		51266D8220760F8400CB3756 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		51266D8520760F9500CB3756 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		51266D8620760F9500CB3756 /* ServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceViewController.xib; sourceTree = "<group>"; };
-		51266D8920760FBE00CB3756 /* AppoitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentViewController.swift; sourceTree = "<group>"; };
-		51266D8A20760FBE00CB3756 /* AppoitmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentViewController.xib; sourceTree = "<group>"; };
 		51266D8D20760FD700CB3756 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		51266D8E20760FD700CB3756 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterController.swift; sourceTree = "<group>"; };
@@ -213,10 +213,14 @@
 		51FA461E20769DB6005F317F /* ServicesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesViewCell.xib; sourceTree = "<group>"; };
 		51FA462120769E07005F317F /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		51FA462220769E07005F317F /* ServicesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesViewController.xib; sourceTree = "<group>"; };
-		51FA46252076A139005F317F /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewController.swift; sourceTree = "<group>"; };
 		51FA46262076A139005F317F /* AppoitmentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewController.xib; sourceTree = "<group>"; };
 		51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewCell.swift; sourceTree = "<group>"; };
 		51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewCell.xib; sourceTree = "<group>"; };
+		5B5824D12084DAFA006399A1 /* AppointmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentModel.swift; sourceTree = "<group>"; };
+		5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentsVCExtension.swift; sourceTree = "<group>"; };
+		5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewController.swift; sourceTree = "<group>"; };
+		5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoitmentViewController.swift; sourceTree = "<group>"; };
+		5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppoitmentViewController.xib; sourceTree = "<group>"; };
 		91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fisioappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fisioapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3933672ADBDBF7E85AD2DF0 /* Pods-fisioappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 				076E05232072AAFB00554F97 /* Info.plist */,
 				076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */,
 				51FA461B20769BC5005F317F /* DummyModel.swift */,
+				5B5824D12084DAFA006399A1 /* AppointmentModel.swift */,
 				51266D922076100A00CB3756 /* Controllers */,
 				51266D9120760FF600CB3756 /* View */,
 				075DA5E6207D271B00199EFC /* Domain */,
@@ -535,12 +540,12 @@
 		51266D9120760FF600CB3756 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */,
 				076E05202072AAFB00554F97 /* LaunchScreen.storyboard */,
 				516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */,
 				51266D8E20760FD700CB3756 /* EditProfileViewController.xib */,
 				51FA461420769AD4005F317F /* ProductsViewController.xib */,
 				51266D8220760F8400CB3756 /* ProductViewController.xib */,
-				51266D8A20760FBE00CB3756 /* AppoitmentViewController.xib */,
 				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
 				51FA462220769E07005F317F /* ServicesViewController.xib */,
 				51266D8620760F9500CB3756 /* ServiceViewController.xib */,
@@ -554,14 +559,15 @@
 		51266D922076100A00CB3756 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */,
+				5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */,
+				5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */,
 				5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */,
 				51FA461320769AD4005F317F /* ProductsViewController.swift */,
 				51FA461720769B24005F317F /* ProductsViewCell.swift */,
-				51FA46252076A139005F317F /* AppoitmentsViewController.swift */,
 				51FA462120769E07005F317F /* ServicesViewController.swift */,
 				51266D8D20760FD700CB3756 /* EditProfileViewController.swift */,
 				51266D8120760F8400CB3756 /* ProductViewController.swift */,
-				51266D8920760FBE00CB3756 /* AppoitmentViewController.swift */,
 				51266D8520760F9500CB3756 /* ServiceViewController.swift */,
 				51FA461D20769DB6005F317F /* ServicesViewCell.swift */,
 				51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */,
@@ -622,6 +628,7 @@
 				076E05142072AAFB00554F97 /* Resources */,
 				07BAE7CD2072BEB500BDA03E /* Embed Frameworks */,
 				805C01791F68469FDD7FA618 /* [CP] Embed Pods Frameworks */,
+				6BE653C9B636A85489EC6CDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -642,6 +649,8 @@
 				076E05242072AAFB00554F97 /* Sources */,
 				076E05252072AAFB00554F97 /* Frameworks */,
 				076E05262072AAFB00554F97 /* Resources */,
+				870B35772DE6F34AF023341D /* [CP] Embed Pods Frameworks */,
+				B8232D784097C1F83F873843 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -797,13 +806,13 @@
 				51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */,
 				51FA462020769DB6005F317F /* ServicesViewCell.xib in Resources */,
 				51266D8820760F9500CB3756 /* ServiceViewController.xib in Resources */,
+				5B5824DA2084DB91006399A1 /* AppoitmentViewController.xib in Resources */,
 				51FA461620769AD4005F317F /* ProductsViewController.xib in Resources */,
 				51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */,
 				076E051F2072AAFB00554F97 /* Assets.xcassets in Resources */,
 				51FA462420769E07005F317F /* ServicesViewController.xib in Resources */,
 				51FA462C2076A15E005F317F /* AppoitmentsViewCell.xib in Resources */,
 				516474A2207609A900DCFA9B /* LoginAndRegisterController.xib in Resources */,
-				51266D8C20760FBE00CB3756 /* AppoitmentViewController.xib in Resources */,
 				51FA46282076A139005F317F /* AppoitmentsViewController.xib in Resources */,
 				51FA461A20769B24005F317F /* ProductsViewCell.xib in Resources */,
 				075DA5F8207D5F1600199EFC /* Podfile in Resources */,
@@ -885,6 +894,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6BE653C9B636A85489EC6CDE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		805C01791F68469FDD7FA618 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -905,6 +929,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		870B35772DE6F34AF023341D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8232D784097C1F83F873843 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -920,7 +974,6 @@
 				075DA609207D660300199EFC /* GetUserFromBackendFakeInteractor.swift in Sources */,
 				075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */,
 				51FA461C20769BC5005F317F /* DummyModel.swift in Sources */,
-				51FA46272076A139005F317F /* AppoitmentsViewController.swift in Sources */,
 				07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */,
 				51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */,
 				07B63451207EC1ED00DBB501 /* RegisterUserInteractor.swift in Sources */,
@@ -929,17 +982,19 @@
 				07B63441207EBDD700DBB501 /* AuthenticateUserInBackendIntImpl.swift in Sources */,
 				07B6343F207EBDC000DBB501 /* AuthenticateUserInBackendInteractor.swift in Sources */,
 				07B6344B207EC18200DBB501 /* AuthenticateUserInteractor.swift in Sources */,
+				5B5824D62084DB62006399A1 /* AppointmentsVCExtension.swift in Sources */,
 				075DA5F0207D2CA500199EFC /* RepositoryInteractor.swift in Sources */,
 				075DA5E9207D278500199EFC /* GetUserInteractor.swift in Sources */,
 				51FA462320769E07005F317F /* ServicesViewController.swift in Sources */,
 				07B63445207EBDFC00DBB501 /* RegisterUserInBackendIntImpl.swift in Sources */,
 				075DA60D207D68B100199EFC /* Paths.swift in Sources */,
 				075DA5ED207D2B4F00199EFC /* GetUserIntImpl.swift in Sources */,
-				51266D8B20760FBE00CB3756 /* AppoitmentViewController.swift in Sources */,
 				075DA60B207D678500199EFC /* CompletionInterfaces.swift in Sources */,
 				51FA461F20769DB6005F317F /* ServicesViewCell.swift in Sources */,
+				5B5824D82084DB62006399A1 /* AppoitmentViewController.swift in Sources */,
 				07B63443207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift in Sources */,
 				075DA5E4207D1CCB00199EFC /* BlankViewController.swift in Sources */,
+				5B5824D72084DB62006399A1 /* AppoitmentsViewController.swift in Sources */,
 				51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */,
 				075DA5FC207D624500199EFC /* UserData.swift in Sources */,
 				07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */,
@@ -949,6 +1004,7 @@
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
 				516B17C6207FA12400B86965 /* ViewControllers+AlertMessage.swift in Sources */,
 				5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */,
+				5B5824D22084DAFA006399A1 /* AppointmentModel.swift in Sources */,
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
 				075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */,
 				075DA5FE207D645D00199EFC /* User.swift in Sources */,
