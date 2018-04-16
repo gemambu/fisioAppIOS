@@ -9,7 +9,7 @@
 import Foundation
 
 class RepositoryFakeInteractor: RepositoryInteractor {
-
+    
     /******** users ********/
     func authenticateUser(email: String, password: String, onSuccess: @escaping (UserData, String) -> Void, onError: @escaping (String) -> Void) {
         //let allOk = false
@@ -83,5 +83,10 @@ class RepositoryFakeInteractor: RepositoryInteractor {
         let token = "FakeToken.1234567890"
         return token
     }
+    
+    /******** appointments ********/
+    /*func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {
+        
+    }*/
 
 }

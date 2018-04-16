@@ -46,5 +46,21 @@ class RepositoryIntImpl: RepositoryInteractor {
                                                     onError(msg)
                                                     })
     }
+    
+    
+    /******** appointments ********/
+    /*func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {
+        
+        let getAppointmentsForDateFromBackendInteractor: GetAppointmentsForDateFromBackEndInteractor = GetAppointmentsForDateFromBackEndIntImpl()
+        
+        getAppointmentsForDateFromBackendInteractor.execute(token: token,
+                                                            date: date,
+                                                            onSuccess: {([AppointmentData]) -> Void in
+                                                                onSuccess([AppointmentData])
+        },
+                                                            onError: { (msg: String) -> Void in
+                                                                onError(msg)
+        })
+    }*/
 
 }
