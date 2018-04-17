@@ -53,14 +53,21 @@ class RepositoryIntImpl: RepositoryInteractor {
         
         let getAppointmentsForDateFromBackendInteractor: GetAppointmentsForDateFromBackEndInteractor = GetAppointmentsForDateFromBackEndIntImpl()
         
-        getAppointmentsForDateFromBackendInteractor.execute(token: token,
-                                                            date: date,
-                                                            onSuccess: {([AppointmentData]) -> Void in
-                                                                onSuccess([AppointmentData])
-        },
-                                                            onError: { (msg: String) -> Void in
-                                                                onError(msg)
+//        getAppointmentsForDateFromBackendInteractor.execute(token: token,
+//                                                            date: date,
+//                                                            onSuccess: {([AppointmentData]) -> Void in
+//                                                                onSuccess([AppointmentData])
+//        },
+//                                                            onError: { (msg: String) -> Void in
+//                                                                onError(msg)
+//        })
+        
+        getAppointmentsForDateFromBackendInteractor.execute(token: "", date: "", onSuccess: {_ in
+            
+        }, onError: {_ in
+            
         })
+        
     }
 
 }
