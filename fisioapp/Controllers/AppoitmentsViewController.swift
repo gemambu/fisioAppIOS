@@ -21,6 +21,17 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
     let appointment3 = AppointmentModel(customer: "Gema Martínez", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
     let appointment4 = AppointmentModel(customer: "Carlos Company", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
     
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nil, bundle: nil)
+        title = "Citas"
+        tabBarItem.image = #imageLiteral(resourceName: "008-call-center-worker-with-headset")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Citas"
