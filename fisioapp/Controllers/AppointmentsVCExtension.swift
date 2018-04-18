@@ -32,7 +32,7 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
     
     func appointmentMapper(appointment: Appointment) -> AppointmentModel{
         
-        let customerName = appointment.customer.name + appointment.customer.lastName
+        let customerName = appointment.customer.name + " " + appointment.customer.lastName
         let appointmentModel = AppointmentModel(customer: customerName,
                                                 address: appointment.address, isConfirmed: appointment.isConfirmed, isCancelled: appointment.isCancelled, price: appointment.service.price,
                                                 lat: appointment.latitude,

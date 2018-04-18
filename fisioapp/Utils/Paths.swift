@@ -9,8 +9,8 @@
 import Foundation
 
 // Server
-let DEBUG_HTTP_SERVER = "http://192.168.1.41:3000"
-let RELEASE_HTTP_SERVER = "http://192.168.1.41:3000"
+let DEBUG_HTTP_SERVER = "http://172.20.10.2:3000"
+let RELEASE_HTTP_SERVER = "http://172.20.10.2:3000"
 
 // Files
 let FISIOAPP_APPOINTMENTS_PROFESSIONAL_SERVER_PATH = "/apiv1/appointments/professional"

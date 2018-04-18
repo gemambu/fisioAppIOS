@@ -15,12 +15,9 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
     var collectionView: UICollectionView!
     var datePicker: UIDatePicker!
     
-    var appointmentsForCV: [AppointmentModel] = []
-    let appointment1 = AppointmentModel(customer: "Alan Casas", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
-    let appointment2 = AppointmentModel(customer: "Rodrigo Limpias", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
-    let appointment3 = AppointmentModel(customer: "Gema Martínez", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
-    let appointment4 = AppointmentModel(customer: "Carlos Company", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
+    let myToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImlzUHJvZmVzc2lvbmFsIjp0cnVlLCJmZWxsb3dzaGlwTnVtYmVyIjozMywiZ2VuZGVyIjoibWFsZSIsIm5hbWUiOiJmaXNpbyIsImxhc3ROYW1lIjoibGFzdG5hbWUiLCJlbWFpbCI6ImZpc2lvQGludmFsaWQuY29tIiwicGFzc3dvcmQiOiJlZjc5N2M4MTE4ZjAyZGZiNjQ5NjA3ZGQ1ZDNmOGM3NjIzMDQ4YzljMDYzZDUzMmNjOTVjNWVkN2E4OThhNjRmIiwiYWRkcmVzcyI6IkZpc2lvIEFkZHJlc3MsIDMzIiwicGhvbmUiOiI2MjY2MjY2MjYiLCJiaXJ0aERhdGUiOiIxOTcwLTEyLTMwVDEyOjMwOjAwLjAwMFoiLCJuYXRpb25hbElkIjoiMTIzNDU2NzhaIiwicmVnaXN0cmF0aW9uRGF0ZSI6IjIwMTgtMDEtMDFUMDE6MDE6MDAuMDAwWiIsImxhc3RMb2dpbkRhdGUiOiIyMDE4LTAzLTA3VDE2OjAwOjAwLjAwMFoiLCJfX3YiOjAsImRlbGV0ZWQiOmZhbHNlfSwiaWF0IjoxNTI0MDQzMzE3LCJleHAiOjE1MjQyMTYxMTd9.L2x_sF9ZXd1OiS1cDvdX9dikXqHEBWAQbVZS_QU5g2s"
     
+    var appointmentsForCV: [AppointmentModel] = []
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -35,17 +32,6 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Citas"
-        
-        /*appointments.append(appointment1)
-        appointments.append(appointment2)
-        appointments.append(appointment3)
-        appointments.append(appointment4)
-        appointments.append(appointment1)
-        appointments.append(appointment2)
-        appointments.append(appointment3)
-        appointments.append(appointment4)*/
-        
-        
         
         let frame = CGRect(x: 0, y: self.view.frame.height/2, width: self.view.frame.width, height: self.view.frame.height)
         
@@ -85,6 +71,7 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let date = dateFormatter.string(from: datePicker.date)
+        print(date)
         
         self.getAppointmentsForDate(date: date)
     }
@@ -92,20 +79,21 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
     func getAppointmentsForDate(date: String){
         let getAppointmentsForDate: GetAppointmentsForDateInteractor = GetAppointmentsForDateIntImpl()
         
-        let queue = OperationQueue()
-        queue.addOperation {
-            getAppointmentsForDate.execute(token: "",
+        //let queue = OperationQueue()
+        //queue.addOperation {
+            getAppointmentsForDate.execute(token: myToken,
                                            date: date,
                                            onSuccess: { (appointments: [Appointment]) in
                                             for appointment in appointments {
                                                 let appointment = self.appointmentMapper(appointment: appointment)
                                                 self.appointmentsForCV.append(appointment)
                                             }
+                                            self.collectionView.reloadData()
                                         
             }, onError: { (msg: String) -> Void in
                 
             })
-        }
+        //}
     }
     
     

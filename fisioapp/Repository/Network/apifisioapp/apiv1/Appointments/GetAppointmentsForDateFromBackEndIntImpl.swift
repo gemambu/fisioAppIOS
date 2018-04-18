@@ -11,13 +11,14 @@ import Alamofire
 import SwiftyJSON
 
 class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEndInteractor {
+    
     func execute(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {
         
         let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_APPOINTMENTS_PROFESSIONAL_SERVER_PATH)
         let headers = [ "x-access-token" : token ]
-        let queryParams = ["dateFrom": date, "dateTo": date]
+        let queryParams: Parameters = ["dateTo": date, "dateFrom": date]
         
-        Alamofire.request(urlAPI!, method: .get, parameters: queryParams, headers: headers).validate().responseJSON { (response) in
+        Alamofire.request(urlAPI!, method: .get, parameters: queryParams, encoding: URLEncoding.default, headers: headers).validate().responseJSON { (response) in
             switch response.result{
             case .success:
                 if let value = response.data {
