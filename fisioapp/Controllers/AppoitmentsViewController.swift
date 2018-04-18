@@ -84,13 +84,27 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
             getAppointmentsForDate.execute(token: myToken,
                                            date: date,
                                            onSuccess: { (appointments: [Appointment]) in
-                                            for appointment in appointments {
-                                                print(appointment.date)
+                                            
+                                            if (appointments.count == 0) {
+                                                self.appointmentsForCV = []
+                                                self.collectionView.reloadData()
+                                            } else {
+                                                for appointment in appointments {
+                                                    let appointment = self.appointmentMapper(appointment: appointment)
+                                                    self.appointmentsForCV.append(appointment)
+                                                    self.collectionView.reloadData()
+                                                }
+                                            }
+                                            
+                                            
+                                            
+                                            /*for appointment in appointments {
+                                                //print(appointment.date)
                                                 let appointment = self.appointmentMapper(appointment: appointment)
                                                 
                                                 self.appointmentsForCV.append(appointment)
                                             }
-                                            self.collectionView.reloadData()
+                                            self.collectionView.reloadData()*/
                                         
             }, onError: { (msg: String) -> Void in
                 

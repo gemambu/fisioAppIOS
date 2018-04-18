@@ -20,7 +20,7 @@ class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEn
         
         Alamofire.request(urlAPI!, method: .get, parameters: queryParams, encoding: URLEncoding.default, headers: headers).validate().responseJSON { (response) in
             //print("\(urlAPI) : \(queryParams)")
-            print(response.request)
+           //print(response.request)
             switch response.result{
             case .success:
                 if let value = response.data {
