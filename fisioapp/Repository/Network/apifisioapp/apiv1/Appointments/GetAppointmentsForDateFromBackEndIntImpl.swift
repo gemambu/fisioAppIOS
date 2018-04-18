@@ -16,9 +16,11 @@ class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEn
         
         let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_APPOINTMENTS_PROFESSIONAL_SERVER_PATH)
         let headers = [ "x-access-token" : token ]
-        let queryParams: Parameters = ["dateTo": date, "dateFrom": date]
+        let queryParams: Parameters = ["dateFrom": date, "dateTo": date]
         
         Alamofire.request(urlAPI!, method: .get, parameters: queryParams, encoding: URLEncoding.default, headers: headers).validate().responseJSON { (response) in
+            //print("\(urlAPI) : \(queryParams)")
+            print(response.request)
             switch response.result{
             case .success:
                 if let value = response.data {

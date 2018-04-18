@@ -34,7 +34,11 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
         
         let customerName = appointment.customer.name + " " + appointment.customer.lastName
         let appointmentModel = AppointmentModel(customer: customerName,
-                                                address: appointment.address, isConfirmed: appointment.isConfirmed, isCancelled: appointment.isCancelled, price: appointment.service.price,
+                                                address: appointment.address,
+                                                date: appointment.date,
+                                                isConfirmed: appointment.isConfirmed,
+                                                isCancelled: appointment.isCancelled,
+                                                price: appointment.service.price,
                                                 lat: appointment.latitude,
                                                 long: appointment.longitude)
         
