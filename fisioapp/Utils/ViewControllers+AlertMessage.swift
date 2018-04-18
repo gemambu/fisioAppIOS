@@ -9,10 +9,10 @@
 import UIKit
 
 extension UIViewController{
-    func alertSuccessControllerToView( message: String ){
+    func alertSuccessControllerToView( message: String, completionHandler: (((UIAlertAction))-> Void)?  ){
         let alertController = UIAlertController(title: "Todo salio bien", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: completionHandler)
+        alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion: nil)
     }
     

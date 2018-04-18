@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabVC = UITabBarController()
         tabVC.viewControllers = [ productsTableNavVC, servicesTableNavVC, appoitmentsTableNavVC]
         
-        window?.rootViewController = tabVC
+        window?.rootViewController = loginVC
 
         return true
     }
