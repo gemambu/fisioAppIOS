@@ -25,13 +25,53 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
         tabBarItem.image = #imageLiteral(resourceName: "008-call-center-worker-with-headset")
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Citas"
+        
+        initializeDatePicker()
+        initializeCollectionView()
+        self.view.addSubview(collectionView)
+        self.view.addSubview(datePicker)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    /******** date picker ********/
+    func initializeDatePicker() {
+        
+        let datePickerFrame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/2)
+        
+        datePicker = UIDatePicker(frame: datePickerFrame)
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(selectedDate(sender:)), for: .allEvents)
+    }
+    
+    
+    @objc func selectedDate(sender: UIDatePicker){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.string(from: datePicker.date)
+        //print(date)
+        self.getAppointmentsForDate(date: date)
+    }
+    
+    
+    
+    /******** collection view ********/
+    func initializeCollectionView() {
         
         let frame = CGRect(x: 0, y: self.view.frame.height/2, width: self.view.frame.width, height: self.view.frame.height)
         
@@ -44,38 +84,11 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
         collectionView.delegate = self
         collectionView!.register(UINib(nibName: "AppoitmentsViewCell", bundle: nil), forCellWithReuseIdentifier: appoitmentsCellID)
         collectionView.backgroundColor = UIColor.white
-        
-        initializeDatePicker()
-        self.view.addSubview(collectionView)
-        self.view.addSubview(datePicker)
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     
-    func initializeDatePicker() {
-        
-        let datePickerFrame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/2)
-        
-        datePicker = UIDatePicker(frame: datePickerFrame)
-        datePicker.datePickerMode = .date
-        datePicker.addTarget(self, action: #selector(selectedDate(sender:)), for: .allEvents)
-    }
-    
-    @objc func selectedDate(sender: UIDatePicker){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.string(from: datePicker.date)
-        //print(date)
-        
-        self.getAppointmentsForDate(date: date)
-    }
-    
+    /******** get appointments ********/
     func getAppointmentsForDate(date: String){
         let getAppointmentsForDate: GetAppointmentsForDateInteractor = GetAppointmentsForDateIntImpl()
         
@@ -102,4 +115,6 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
             })
     }
 
+    
+    
 }

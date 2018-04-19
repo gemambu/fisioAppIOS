@@ -6,6 +6,7 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
         return appointmentsForCV.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let appointmentToShow = appointmentsForCV[indexPath.row]
@@ -19,6 +20,7 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let selected = appointmentsForCV[indexPath.row]
@@ -30,6 +32,8 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     
+    
+    /******** appointment mapper ********/
     func appointmentMapper(appointment: AppointmentDomain) -> AppointmentModel{
         
         let customerName = appointment.customer.name + " " + appointment.customer.lastName
