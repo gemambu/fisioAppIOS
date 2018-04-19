@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class LoginAndRegisterController: UIViewController {
+class LoginAndRegisterController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textViews: UIView!
     @IBOutlet weak var registerButton: UIButton!
@@ -28,6 +28,10 @@ class LoginAndRegisterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -125,15 +129,17 @@ extension LoginAndRegisterController{
                 let servicesCollection = ServicesViewController()
                 let productsCollection = ProductsViewController()
                 let appoitmentsCollection = AppoitmentsViewController()
+                let userProfileController = UserProfileViewController()
                 
                 //********************  UITabBarController  ********************//
                 let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
                 let productsTableNavVC = UINavigationController(rootViewController: productsCollection)
                 let appoitmentsTableNavVC = UINavigationController(rootViewController: appoitmentsCollection)
+                let userProfileNavigation = UINavigationController(rootViewController: userProfileController)
                 
                 //********************  UITabBarController  ********************//
                 let tabVC = UITabBarController()
-                tabVC.viewControllers = [ productsTableNavVC, servicesTableNavVC, appoitmentsTableNavVC]
+                tabVC.viewControllers = [appoitmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
                 
                 self.present(tabVC, animated: true, completion: nil)
             })
@@ -144,7 +150,6 @@ extension LoginAndRegisterController{
         
     }
 }
-
 
 // MARK: - Login Register
 extension LoginAndRegisterController{
@@ -176,6 +181,19 @@ extension LoginAndRegisterController{
         }
         
         
+    }
+}
+
+extension LoginAndRegisterController {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 

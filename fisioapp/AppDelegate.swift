@@ -26,17 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let servicesCollection = ServicesViewController()
         let productsCollection = ProductsViewController()
         let appoitmentsCollection = AppoitmentsViewController()
+        let userProfileController = UserProfileViewController()
         
         //********************  UITabBarController  ********************//
         let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
         let productsTableNavVC = UINavigationController(rootViewController: productsCollection)
         let appoitmentsTableNavVC = UINavigationController(rootViewController: appoitmentsCollection)
-
+        let userProfileNavigation = UINavigationController(rootViewController: userProfileController)
+        
         //********************  UITabBarController  ********************//
         let tabVC = UITabBarController()
-        tabVC.viewControllers = [ productsTableNavVC, servicesTableNavVC, appoitmentsTableNavVC]
+        tabVC.viewControllers = [appoitmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
         
-        window?.rootViewController = loginVC
+        window?.rootViewController = tabVC
 
         return true
     }

@@ -8,10 +8,10 @@
 
 import Foundation
 
-// ERROR: Cambia la ip
+// ERROR: Cambiar ip
 // Server
-let DEBUG_HTTP_SERVER = "http://192.168.13.33:3000"
-let RELEASE_HTTP_SERVER = "http://192.168.13.33:3000"
+let DEBUG_HTTP_SERVER = "http://192.168.13.39:3000"
+let RELEASE_HTTP_SERVER = "http://192.168.13.39:3000"
 
 // Files
 let FISIOAPP_APPOINTMENTS_PROFESSIONAL_SERVER_PATH = "/apiv1/appointments/professional"

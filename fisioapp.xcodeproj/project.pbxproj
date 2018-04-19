@@ -53,6 +53,8 @@
 		51266D8820760F9500CB3756 /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8620760F9500CB3756 /* ServiceViewController.xib */; };
 		51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8D20760FD700CB3756 /* EditProfileViewController.swift */; };
 		51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8E20760FD700CB3756 /* EditProfileViewController.xib */; };
+		513B29C02088E4E0008D5394 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B29BE2088E4E0008D5394 /* UserProfileViewController.swift */; };
+		513B29C12088E4E0008D5394 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 513B29BF2088E4E0008D5394 /* UserProfileViewController.xib */; };
 		515D0D52965049E93DF9DA18 /* Pods_fisioappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */; };
 		516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */; };
 		516474A2207609A900DCFA9B /* LoginAndRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */; };
@@ -206,6 +208,8 @@
 		51266D8620760F9500CB3756 /* ServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceViewController.xib; sourceTree = "<group>"; };
 		51266D8D20760FD700CB3756 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		51266D8E20760FD700CB3756 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		513B29BE2088E4E0008D5394 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		513B29BF2088E4E0008D5394 /* UserProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileViewController.xib; sourceTree = "<group>"; };
 		5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterController.swift; sourceTree = "<group>"; };
 		516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAndRegisterController.xib; sourceTree = "<group>"; };
 		516B17C5207FA12400B86965 /* ViewControllers+AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllers+AlertMessage.swift"; sourceTree = "<group>"; };
@@ -559,6 +563,7 @@
 		51266D9120760FF600CB3756 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				513B29BF2088E4E0008D5394 /* UserProfileViewController.xib */,
 				5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */,
 				076E05202072AAFB00554F97 /* LaunchScreen.storyboard */,
 				516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */,
@@ -580,6 +585,7 @@
 			children = (
 				5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */,
 				5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */,
+				513B29BE2088E4E0008D5394 /* UserProfileViewController.swift */,
 				5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */,
 				5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */,
 				51FA461320769AD4005F317F /* ProductsViewController.swift */,
@@ -841,6 +847,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513B29C12088E4E0008D5394 /* UserProfileViewController.xib in Resources */,
 				51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */,
 				51FA462020769DB6005F317F /* ServicesViewCell.xib in Resources */,
 				51266D8820760F9500CB3756 /* ServiceViewController.xib in Resources */,
@@ -1018,6 +1025,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				075DA607207D65E900199EFC /* GetUserFromBackendIntImpl.swift in Sources */,
+				513B29C02088E4E0008D5394 /* UserProfileViewController.swift in Sources */,
 				51FA461920769B24005F317F /* ProductsViewCell.swift in Sources */,
 				516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */,
 				5B5824E62084DD63006399A1 /* AppointmentData.swift in Sources */,
