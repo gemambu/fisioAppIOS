@@ -76,7 +76,7 @@
 		5B5824D72084DB62006399A1 /* AppoitmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */; };
 		5B5824D82084DB62006399A1 /* AppoitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */; };
 		5B5824DA2084DB91006399A1 /* AppoitmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */; };
-		5B5824DC2084DC9E006399A1 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824DB2084DC9E006399A1 /* Appointment.swift */; };
+		5B5824DC2084DC9E006399A1 /* AppointmentDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */; };
 		5B5824E12084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824DF2084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift */; };
 		5B5824E22084DCDD006399A1 /* GetAppointmentsForDateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824E02084DCDD006399A1 /* GetAppointmentsForDateInteractor.swift */; };
 		5B5824E62084DD63006399A1 /* AppointmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824E42084DD63006399A1 /* AppointmentData.swift */; };
@@ -228,7 +228,7 @@
 		5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewController.swift; sourceTree = "<group>"; };
 		5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoitmentViewController.swift; sourceTree = "<group>"; };
 		5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppoitmentViewController.xib; sourceTree = "<group>"; };
-		5B5824DB2084DC9E006399A1 /* Appointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDomain.swift; sourceTree = "<group>"; };
 		5B5824DF2084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppointmentsForDateIntImpl.swift; sourceTree = "<group>"; };
 		5B5824E02084DCDD006399A1 /* GetAppointmentsForDateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppointmentsForDateInteractor.swift; sourceTree = "<group>"; };
 		5B5824E42084DD63006399A1 /* AppointmentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentData.swift; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				075DA5FD207D645D00199EFC /* User.swift */,
-				5B5824DB2084DC9E006399A1 /* Appointment.swift */,
+				5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1051,7 +1051,7 @@
 				5B5824D72084DB62006399A1 /* AppoitmentsViewController.swift in Sources */,
 				51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */,
 				075DA5FC207D624500199EFC /* UserData.swift in Sources */,
-				5B5824DC2084DC9E006399A1 /* Appointment.swift in Sources */,
+				5B5824DC2084DC9E006399A1 /* AppointmentDomain.swift in Sources */,
 				07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */,
 				075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,

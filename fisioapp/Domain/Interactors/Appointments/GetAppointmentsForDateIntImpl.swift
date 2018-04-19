@@ -9,14 +9,14 @@
 import Foundation
 
 class GetAppointmentsForDateIntImpl: GetAppointmentsForDateInteractor {
-    func execute(token: String, date: String, onSuccess: @escaping ([Appointment]) -> Void, onError: @escaping (String) -> Void) {
+    func execute(token: String, date: String, onSuccess: @escaping ([AppointmentDomain]) -> Void, onError: @escaping (String) -> Void) {
         
         let repositoryInteractor: RepositoryInteractor = RepositoryIntImpl()
         
         repositoryInteractor.getAppointmentsForDate(token: token,
                                                     date: date,
                                                     onSuccess: { (appointments: [AppointmentData]) in
-                                                        var appointmentsResult = [Appointment]()
+                                                        var appointmentsResult = [AppointmentDomain]()
                                                         
                                                         for appointment in appointments {
                                                             let appointment = self.entityMapper(appointmentData: appointment)
@@ -29,9 +29,9 @@ class GetAppointmentsForDateIntImpl: GetAppointmentsForDateInteractor {
                                                     })
     }
     
-    private func entityMapper(appointmentData: AppointmentData) -> Appointment {
-        let appointment = Appointment(
-            id: appointmentData.id,
+    private func entityMapper(appointmentData: AppointmentData) -> AppointmentDomain {
+        let appointment = AppointmentDomain(
+                                      id: appointmentData.id,
                                       service: CatalogData(databaseID: appointmentData.service.databaseID,
                                                            name: appointmentData.service.name,
                                                            description: appointmentData.service.description,

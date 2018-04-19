@@ -26,13 +26,13 @@ class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEn
                 if let value = response.data {
                     let json = JSON(data: value)
                     
-                    var appointments = [AppointmentData]()
+                    var appointmentsFromJson = [AppointmentData]()
                     
                     let rows = json["result"]["rows"].arrayValue
                     
                     for appointment in rows {
                         
-                        let appointment = AppointmentData(
+                        let appointmentParsed = AppointmentData(
                             id: appointment["_id"].stringValue,
                             service: CatalogData(
                                 databaseID: appointment["service"]["_id"].stringValue,
@@ -55,10 +55,10 @@ class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEn
                             isCancelled: appointment["isCancelled"].boolValue,
                             isConfirmed: appointment["isConfirmed"].boolValue)
                         
-                        appointments.append(appointment)
+                        appointmentsFromJson.append(appointmentParsed)
                     }
                     
-                    onSuccess(appointments)
+                    onSuccess(appointmentsFromJson)
                 }
                 
                 break

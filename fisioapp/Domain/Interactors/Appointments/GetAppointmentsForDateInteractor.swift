@@ -9,5 +9,5 @@
 import Foundation
 
 protocol GetAppointmentsForDateInteractor {
-    func execute(token: String, date: String, onSuccess: @escaping ([Appointment]) -> Void, onError: @escaping (String) -> Void)
+    func execute(token: String, date: String, onSuccess: @escaping ([AppointmentDomain]) -> Void, onError: @escaping (String) -> Void)
 }
