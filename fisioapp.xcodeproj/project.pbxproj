@@ -441,12 +441,12 @@
 		076E05182072AAFB00554F97 /* fisioapp */ = {
 			isa = PBXGroup;
 			children = (
+				5B5824ED208948AE006399A1 /* Appointments */,
 				076E05192072AAFB00554F97 /* AppDelegate.swift */,
 				076E051E2072AAFB00554F97 /* Assets.xcassets */,
 				076E05232072AAFB00554F97 /* Info.plist */,
 				076E051B2072AAFB00554F97 /* fisioapp.xcdatamodeld */,
 				51FA461B20769BC5005F317F /* DummyModel.swift */,
-				5B5824D12084DAFA006399A1 /* AppointmentModel.swift */,
 				51266D922076100A00CB3756 /* Controllers */,
 				51266D9120760FF600CB3756 /* View */,
 				075DA5E6207D271B00199EFC /* Domain */,
@@ -559,16 +559,13 @@
 		51266D9120760FF600CB3756 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */,
 				076E05202072AAFB00554F97 /* LaunchScreen.storyboard */,
 				516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */,
 				51266D8E20760FD700CB3756 /* EditProfileViewController.xib */,
 				51FA461420769AD4005F317F /* ProductsViewController.xib */,
 				51266D8220760F8400CB3756 /* ProductViewController.xib */,
-				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
 				51FA462220769E07005F317F /* ServicesViewController.xib */,
 				51266D8620760F9500CB3756 /* ServiceViewController.xib */,
-				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
 				51FA461820769B24005F317F /* ProductsViewCell.xib */,
 				51FA461E20769DB6005F317F /* ServicesViewCell.xib */,
 			);
@@ -578,9 +575,6 @@
 		51266D922076100A00CB3756 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */,
-				5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */,
-				5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */,
 				5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */,
 				51FA461320769AD4005F317F /* ProductsViewController.swift */,
 				51FA461720769B24005F317F /* ProductsViewCell.swift */,
@@ -589,7 +583,6 @@
 				51266D8120760F8400CB3756 /* ProductViewController.swift */,
 				51266D8520760F9500CB3756 /* ServiceViewController.swift */,
 				51FA461D20769DB6005F317F /* ServicesViewCell.swift */,
-				51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */,
 				075DA5E3207D1CCB00199EFC /* BlankViewController.swift */,
 			);
 			path = Controllers;
@@ -611,6 +604,53 @@
 				5B5824EA2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift */,
 			);
 			path = Appointments;
+			sourceTree = "<group>";
+		};
+		5B5824ED208948AE006399A1 /* Appointments */ = {
+			isa = PBXGroup;
+			children = (
+				5B5824EE208948C1006399A1 /* Appointments */,
+				5B5824EF208948CB006399A1 /* AppointmentDetail */,
+				5B5824F0208948EB006399A1 /* Utils */,
+				5B5824F120894926006399A1 /* Views */,
+			);
+			path = Appointments;
+			sourceTree = "<group>";
+		};
+		5B5824EE208948C1006399A1 /* Appointments */ = {
+			isa = PBXGroup;
+			children = (
+				5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */,
+				5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */,
+			);
+			path = Appointments;
+			sourceTree = "<group>";
+		};
+		5B5824EF208948CB006399A1 /* AppointmentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */,
+			);
+			path = AppointmentDetail;
+			sourceTree = "<group>";
+		};
+		5B5824F0208948EB006399A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */,
+				5B5824D12084DAFA006399A1 /* AppointmentModel.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5B5824F120894926006399A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
+				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
+				5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		632DB832EEE9DD1879261B40 /* Frameworks */ = {
