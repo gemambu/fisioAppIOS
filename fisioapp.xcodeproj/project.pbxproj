@@ -84,6 +84,7 @@
 		5B5824EB2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824E92084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift */; };
 		5B5824EC2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824EA2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift */; };
 		5B5824F320895214006399A1 /* UpdateAppointmentInBackEndInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824F220895214006399A1 /* UpdateAppointmentInBackEndInteractor.swift */; };
+		5B5824F520895532006399A1 /* UpdateAppointmentInBackEndIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824F420895532006399A1 /* UpdateAppointmentInBackEndIntImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,7 @@
 		5B5824E92084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAppointmentsForDateFromBackEndInteractor.swift; sourceTree = "<group>"; };
 		5B5824EA2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAppointmentsForDateFromBackEndIntImpl.swift; sourceTree = "<group>"; };
 		5B5824F220895214006399A1 /* UpdateAppointmentInBackEndInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAppointmentInBackEndInteractor.swift; sourceTree = "<group>"; };
+		5B5824F420895532006399A1 /* UpdateAppointmentInBackEndIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAppointmentInBackEndIntImpl.swift; sourceTree = "<group>"; };
 		91EFD823280835D0DF8D90AA /* Pods_fisioappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fisioappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fisioapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3933672ADBDBF7E85AD2DF0 /* Pods-fisioappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				5B5824E92084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift */,
 				5B5824EA2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift */,
 				5B5824F220895214006399A1 /* UpdateAppointmentInBackEndInteractor.swift */,
+				5B5824F420895532006399A1 /* UpdateAppointmentInBackEndIntImpl.swift */,
 			);
 			path = Appointments;
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
 				516B17C6207FA12400B86965 /* ViewControllers+AlertMessage.swift in Sources */,
 				5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */,
+				5B5824F520895532006399A1 /* UpdateAppointmentInBackEndIntImpl.swift in Sources */,
 				5B5824D22084DAFA006399A1 /* AppointmentModel.swift in Sources */,
 				5B5824EB2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift in Sources */,
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
