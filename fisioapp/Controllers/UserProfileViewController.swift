@@ -102,20 +102,6 @@ extension UserProfileViewController {
         
         print(" \(name), \(lastName), \(email), \(address), \(phone), \(birhdate), \(nationalID), \(gender) ")
         
-        let updateUserInteractorImplementation: DomainUserProfileInteractor = DomainUserProfileInteractorImplementation()
-        
-        updateUserInteractorImplementation.execute(name: name, lastname: lastName, email: email, address: address, phone: phone, birthdate: birhdate, nationalId: nationalID, gender: gender, image: userPicture.image!, onSuccess: { (success, message) in
-            
-            if success {
-                self.alertSuccessControllerToView(message: message, completionHandler: nil)
-            }
-            
-        }) { (errorMessage) in
-            
-            self.alertControllerToView(message: errorMessage)
-            
-        }
-        
     }
 }
 

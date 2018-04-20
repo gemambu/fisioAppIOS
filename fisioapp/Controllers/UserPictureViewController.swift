@@ -117,12 +117,27 @@ extension UserPictureViewController {
     @objc func savePicture() {
         print("savePicture pulsado")
         
+        let updateUserInteractorImplementation: DomainUserPictureInteractor = DomainUserPictureInteractorImplementation()
+
         if userImage.image == nil {
             userImage.image = #imageLiteral(resourceName: "no-image")
         }
         
         navigationController?.dismiss(animated: true, completion: nil)
         delegate?.addPictureViewController(controller: self, didFinishAdding: userImage.image!)
+        
+        let userImageInteractorImplementation : DomainUserPictureInteractor = DomainUserPictureInteractorImplementation()
+        userImageInteractorImplementation.execute(image: userImage.image!, onSuccess: { (success, message) in
+            
+            if success {
+                self.alertSuccessControllerToView(message: message, completionHandler: nil)
+            }
+            
+        }) { (errorMessage) in
+            
+            self.alertControllerToView(message: errorMessage)
+            
+        }
     }
 }
 
