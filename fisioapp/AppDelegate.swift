@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabVC.viewControllers = [appoitmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
         
         
-        window?.rootViewController = userProfileNavigation
+        window?.rootViewController = loginVC
 
         return true
     }
