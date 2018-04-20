@@ -38,7 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabVC = UITabBarController()
         tabVC.viewControllers = [appoitmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
         
-        window?.rootViewController = tabVC
+        
+        window?.rootViewController = userProfileNavigation
 
         return true
     }

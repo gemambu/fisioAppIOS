@@ -8,7 +8,7 @@
 
 import Foundation
 
-// ERROR: Cambiar ip
+// FIXME: Cambiar ip
 // Server
 let DEBUG_HTTP_SERVER = "http://192.168.13.39:3000"
 let RELEASE_HTTP_SERVER = "http://192.168.13.39:3000"

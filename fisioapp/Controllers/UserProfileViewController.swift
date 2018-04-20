@@ -8,8 +8,10 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UserPictureViewControllerDelegate {
     
+    @IBOutlet weak var userPicture: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,9 +19,7 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var birthDateTextField: UITextField!
     @IBOutlet weak var nationalIdTextField: UITextField!
-    @IBOutlet weak var genderSwitch: UISwitch!
-    
-    
+    @IBOutlet weak var genderSegmentControl: UISegmentedControl!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +29,11 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupUI()
     }
     
     override func viewDidLoad() {
@@ -41,6 +46,7 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         phoneTextField.delegate = self
         birthDateTextField.delegate = self
         nationalIdTextField.delegate = self
+        
         
         setupUI()
     }
@@ -62,19 +68,50 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         navigationItem.rightBarButtonItem = picture
         navigationItem.leftBarButtonItem = save
     }
-
     
+}
+
+extension UserProfileViewController {
+    
+    func addPictureViewControllerDidCancel(controller: UserPictureViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addPictureViewController(controller: UserPictureViewController, didFinishAdding picture: UIImage) {
+        userPicture.image = picture
+        navigationController?.popViewController(animated: true)
+    }
+
 }
 
 extension UserProfileViewController {
     @objc func saveUserProfile () {
         print("Se salvaran los datos en la base de datos")
+        let gender: String
+        
+        if genderSegmentControl.selectedSegmentIndex == 0 {
+            gender = "Male"
+        }else{
+            gender = "Female"
+        }
+        
+        guard let name = nameTextField.text, let lastName = lastNameTextField.text, let email = emailTextField.text, let address = addressTextField.text, let phone = phoneTextField.text, let birhdate = birthDateTextField.text, let nationalID = nationalIdTextField.text else {
+            print("Form is not complete")
+            return
+        }
+        
+        print(" \(name), \(lastName), \(email), \(address), \(phone), \(birhdate), \(nationalID), \(gender) ")
     }
 }
 
 extension UserProfileViewController {
     @objc func takePictureToUpdateUserPicture () {
         print("Se tomara la imagen para mostrar imagenes de carrete o tomarse una nueva foto")
+        let userPictureViewController = UserPictureViewController()
+        let navigationUserPictureVC = UINavigationController(rootViewController: userPictureViewController)
+        
+        userPictureViewController.delegate = self
+        navigationController?.present(navigationUserPictureVC, animated: true, completion: nil)
     }
 }
 
@@ -82,11 +119,56 @@ extension UserProfileViewController{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
-        
+
         return true
     }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        switch textField {
+        case nationalIdTextField:
+            scrollView.setContentOffset(CGPoint(x: 0, y: 230), animated: true)
+        case birthDateTextField:
+            scrollView.setContentOffset(CGPoint(x: 0, y: 230), animated: true)
+        case phoneTextField:
+            scrollView.setContentOffset(CGPoint(x: 0, y: 230), animated: true)
+        default:
+            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
