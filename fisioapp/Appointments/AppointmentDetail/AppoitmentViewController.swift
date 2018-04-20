@@ -17,7 +17,6 @@ class AppoitmentViewController: UIViewController {
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var confirmedSwitch: UISwitch!
-    
     @IBOutlet weak var cancelledSwitch: UISwitch!
     
     
@@ -28,26 +27,23 @@ class AppoitmentViewController: UIViewController {
         let mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=\(appointment.lat),\(appointment.long)&zoom=16&size=320x220&scale=2&markers=color:blue%7C\(appointment.lat),\(appointment.long)"
         let url = URL(string: mapURL)
         var imageData = NSData(contentsOf: url!)
-        var image = UIImage.init(data: imageData! as Data)
-
+        var image = #imageLiteral(resourceName: "map_placeholder.gif")
+        if (imageData != nil){
+            image = UIImage.init(data: imageData! as Data)!
+        }
+        
         map.image = image
-        //let name =
         customer.text = appointment.customer
         address.text = appointment.address
         price.text = "\(appointment.price)€"
-        if (appointment.isConfirmed == true){
-            confirmed.text = "Yes"
-        } else  {
-            confirmed.text = "Pending"
+        confirmedSwitch.isOn = appointment.isConfirmed
+        cancelledSwitch.isOn = appointment.isCancelled
+        
+        if (appointment.isCancelled) {
+            confirmedSwitch.isEnabled = false
+            cancelledSwitch.isEnabled = false
         }
-        
-        if (appointment.isCancelled == true) {
-            cancelled.text = "Yes"
-        } else {
-            cancelled.text = "No"
-        }
-        
-        
+     
     }
 
     override func didReceiveMemoryWarning() {

@@ -99,7 +99,7 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
                                                 if (appointmentsFromDomain.count == 0) {
                                                     self.appointmentsForCV = []
                                                     self.collectionView.reloadData()
-                                                } else if (appointmentsFromDomain.count >= 1){
+                                                } else {
                                                     for appointment in appointmentsFromDomain {
                                                         let appointment = self.appointmentMapper(appointment: appointment)
                                                         self.appointmentsForCV.append(appointment)
@@ -107,7 +107,6 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
                                                     }
                                                     self.collectionView.reloadData()
                                                 }
-                                            
                                             },
                                            onError: { (msg: String) -> Void in
                                             print("Error: \(msg)")

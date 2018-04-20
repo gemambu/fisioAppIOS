@@ -71,6 +71,7 @@
 		51FA46282076A139005F317F /* AppoitmentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA46262076A139005F317F /* AppoitmentsViewController.xib */; };
 		51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */; };
 		51FA462C2076A15E005F317F /* AppoitmentsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */; };
+		5B036C55208A2EB4008284DD /* map_placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5B036C54208A2EB4008284DD /* map_placeholder.gif */; };
 		5B5824D22084DAFA006399A1 /* AppointmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D12084DAFA006399A1 /* AppointmentModel.swift */; };
 		5B5824D62084DB62006399A1 /* AppointmentsVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */; };
 		5B5824D72084DB62006399A1 /* AppoitmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */; };
@@ -227,6 +228,7 @@
 		51FA46262076A139005F317F /* AppoitmentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewController.xib; sourceTree = "<group>"; };
 		51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewCell.swift; sourceTree = "<group>"; };
 		51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewCell.xib; sourceTree = "<group>"; };
+		5B036C54208A2EB4008284DD /* map_placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = map_placeholder.gif; sourceTree = "<group>"; };
 		5B5824D12084DAFA006399A1 /* AppointmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentModel.swift; sourceTree = "<group>"; };
 		5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentsVCExtension.swift; sourceTree = "<group>"; };
 		5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewController.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 			children = (
 				51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */,
 				5B5824D12084DAFA006399A1 /* AppointmentModel.swift */,
+				5B036C54208A2EB4008284DD /* map_placeholder.gif */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 				51FA46282076A139005F317F /* AppoitmentsViewController.xib in Resources */,
 				51FA461A20769B24005F317F /* ProductsViewCell.xib in Resources */,
 				075DA5F8207D5F1600199EFC /* Podfile in Resources */,
+				5B036C55208A2EB4008284DD /* map_placeholder.gif in Resources */,
 				076E05222072AAFB00554F97 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
