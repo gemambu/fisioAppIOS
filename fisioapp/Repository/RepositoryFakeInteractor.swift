@@ -84,7 +84,12 @@ class RepositoryFakeInteractor: RepositoryInteractor {
         return token
     }
     
+    
+    
     /******** appointments ********/
     func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {}
+    
+    
+    func updateAppointment(token: String, id: String, isConfirmed: Bool, isCancelled: Bool, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {}
 
 }
