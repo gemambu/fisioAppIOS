@@ -16,8 +16,9 @@ class AppoitmentViewController: UIViewController {
     @IBOutlet weak var customer: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var confirmed: UILabel!
-    @IBOutlet weak var cancelled: UILabel!
+    @IBOutlet weak var confirmedSwitch: UISwitch!
+    
+    @IBOutlet weak var cancelledSwitch: UISwitch!
     
     
 
