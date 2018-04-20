@@ -18,7 +18,7 @@ class RepositoryUserProfileInteractorImplementation : RepositoryUserProfileInter
     let defaults = UserDefaults.standard
     
     func execute(name: String, lastname: String?, email: String, address: String?, phone: String?, birthdate: String?, nationalId: String?, gender: String?, image: UIImage, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
-        
+
         let token = defaults.string(forKey: "token")
         let userId = defaults.string(forKey: "userId")
         
@@ -26,16 +26,12 @@ class RepositoryUserProfileInteractorImplementation : RepositoryUserProfileInter
             "Authorization": token!,
             "Content-type": "multipart/form-data"
         ]
-        
-//        guard let mediaImage = Media(withImage: image, forKey: "image")else { return }
-        
+
+        let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USERS_UPDATE_SERVER_PATH + "/" + userId! )
+
         let imageData = UIImageJPEGRepresentation(image, 0.5)
 
-        
-        
         let parameters = [ "name": name, "email": email, "image" : image ] as [String : Any]
-        
-        let urlAPI = URL(string: "http://localhost:3000/apiv1/uploads/users/\(userId!)")
         
         Alamofire.upload(multipartFormData: { (form: MultipartFormData) in
             

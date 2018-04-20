@@ -411,7 +411,7 @@
 				07B6343D207EBD9400DBB501 /* AuthenticateUser */,
 				075DA603207D65C900199EFC /* GetUser */,
 				07B6343C207EBD8A00DBB501 /* RegisterUser */,
-				519D19762089FD1A0049FB00 /* UpdateUser */,
+				519D19762089FD1A0049FB00 /* UpdateImageUser */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -617,13 +617,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		519D19762089FD1A0049FB00 /* UpdateUser */ = {
+		519D19762089FD1A0049FB00 /* UpdateImageUser */ = {
 			isa = PBXGroup;
 			children = (
 				519D19722089FCF70049FB00 /* RepositoryUserProfileInteractor.swift */,
 				519D19742089FD060049FB00 /* RepositoryUserProfileInteractorImplementation.swift */,
 			);
-			path = UpdateUser;
+			path = UpdateImageUser;
 			sourceTree = "<group>";
 		};
 		519D197B2089FF2E0049FB00 /* UpdateUser */ = {
