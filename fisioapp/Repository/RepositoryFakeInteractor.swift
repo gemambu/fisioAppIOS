@@ -9,19 +9,24 @@
 import Foundation
 
 class RepositoryFakeInteractor: RepositoryInteractor {
-   
-    /*** Catalog ***/
-    func getCatalogItems(token: String, type: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
-        
-    }
-    
     func saveCatalogItem(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
         
     }
     
     func deleteCatalogItem(token: String, id: String, type: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+ 
+    }
+    
+    func getProducts(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
         
     }
+    
+    func getServices(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
+        
+    }
+    
+   
+    
     
     
     /******** users ********/

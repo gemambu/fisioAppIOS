@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol GetCatalogItemsFromBackEndInteractor {
-    func execute(token: String, type: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void)
+protocol GetServicesFromBackEndInteractor {
+    func execute(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void)
 }

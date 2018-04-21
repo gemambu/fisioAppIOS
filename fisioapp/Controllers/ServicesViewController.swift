@@ -14,10 +14,7 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     var collectionView: UICollectionView!
     
-    var arrayOfAnimal: [DummyModel] = []
-    let Juancho: DummyModel = DummyModel(name: "Juancho", comment: "Lagarto", image: #imageLiteral(resourceName: "lizard"))
-    let Pepe: DummyModel = DummyModel(name: "Pepe", comment: "Perros", image: #imageLiteral(resourceName: "dogMassage"))
-    let Cami: DummyModel = DummyModel(name: "Cami", comment: "Camaleon", image: #imageLiteral(resourceName: "camaleon"))
+    var itemsArray: [Catalog] = []
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -33,24 +30,8 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
         super.viewDidLoad()
         title = "Servicios"
         
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
+        getServicesList()
+        
         let frame = CGRect(x: 16, y: 16, width: self.view.frame.width, height: self.view.frame.height)
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -73,20 +54,44 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayOfAnimal.count
+        return itemsArray.count
+    }
+    
+    func getServicesList() {
+        
+        let getListInteractor: GetServicesInteractor = GetServicesIntImpl()
+        
+        getListInteractor.execute(token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImlzUHJvZmVzc2lvbmFsIjp0cnVlLCJmZWxsb3dzaGlwTnVtYmVyIjozMywiZ2VuZGVyIjoibWFsZSIsIm5hbWUiOiJmaXNpbyIsImxhc3ROYW1lIjoibGFzdG5hbWUiLCJlbWFpbCI6ImZpc2lvQGludmFsaWQuY29tIiwicGFzc3dvcmQiOiJlZjc5N2M4MTE4ZjAyZGZiNjQ5NjA3ZGQ1ZDNmOGM3NjIzMDQ4YzljMDYzZDUzMmNjOTVjNWVkN2E4OThhNjRmIiwiYWRkcmVzcyI6IkZpc2lvIEFkZHJlc3MsIDMzIiwicGhvbmUiOiI2MjY2MjY2MjYiLCJiaXJ0aERhdGUiOiIyMDE4LTA0LTA3VDEwOjI0OjU3LjAwMFoiLCJuYXRpb25hbElkIjoiMTIzNDU2NzhaIiwicmVnaXN0cmF0aW9uRGF0ZSI6IjIwMTgtMDEtMDFUMDE6MDE6MDAuMDAwWiIsImxhc3RMb2dpbkRhdGUiOiIyMDE4LTAzLTA3VDE2OjAwOjAwLjAwMFoiLCJfX3YiOjAsImRlbGV0ZWQiOmZhbHNlfSwiaWF0IjoxNTI0MzI0ODU4LCJleHAiOjE1MjQ0OTc2NTh9.zZPf99zuDDMy7DNXvD7qpL8WHyP8i5gNfQpsN6_0KB4",
+                                         onSuccess: { (itemsFromDomain: [Catalog]) in
+                                            if (itemsFromDomain.count == 0) {
+                                                self.itemsArray = []
+                                                self.collectionView.reloadData()
+                                                
+                                            } else {
+                                                
+                                                for product in itemsFromDomain {
+                                                    self.itemsArray.append(product)
+                                                }
+                                                print(self.itemsArray.count)
+                                                self.collectionView.reloadData()
+                                            }
+                                            
+        },
+                                         onError: { (msg: String) -> Void in
+                                            print("Error: \(msg)")
+        })
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let animalToShow = arrayOfAnimal[indexPath.row]
+        let itemToShow = itemsArray[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: serviceCellID, for: indexPath) as! ServicesViewCell
         
-        cell.backgroundColor = UIColor.orange
+        cell.backgroundColor = UIColor.white
         
-        
-        cell.nameLabel.text = animalToShow.name
-        cell.commentLabel.text = animalToShow.comment
+        cell.nameLabel.text = itemToShow.name
+        cell.commentLabel.text = "\(itemToShow.price) €"
         
         return cell
     }
