@@ -12,6 +12,8 @@ class AppoitmentViewController: UIViewController {
     
     var appointment: AppointmentModel!
     
+    let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImlzUHJvZmVzc2lvbmFsIjp0cnVlLCJmZWxsb3dzaGlwTnVtYmVyIjozMywiZ2VuZGVyIjoibWFsZSIsIm5hbWUiOiJmaXNpbyIsImxhc3ROYW1lIjoibGFzdG5hbWUiLCJlbWFpbCI6ImZpc2lvQGludmFsaWQuY29tIiwicGFzc3dvcmQiOiJlZjc5N2M4MTE4ZjAyZGZiNjQ5NjA3ZGQ1ZDNmOGM3NjIzMDQ4YzljMDYzZDUzMmNjOTVjNWVkN2E4OThhNjRmIiwiYWRkcmVzcyI6IkZpc2lvIEFkZHJlc3MsIDMzIiwicGhvbmUiOiI2MjY2MjY2MjYiLCJiaXJ0aERhdGUiOiIxOTcwLTEyLTMwVDEyOjMwOjAwLjAwMFoiLCJuYXRpb25hbElkIjoiMTIzNDU2NzhaIiwicmVnaXN0cmF0aW9uRGF0ZSI6IjIwMTgtMDEtMDFUMDE6MDE6MDAuMDAwWiIsImxhc3RMb2dpbkRhdGUiOiIyMDE4LTAzLTA3VDE2OjAwOjAwLjAwMFoiLCJfX3YiOjAsImRlbGV0ZWQiOmZhbHNlfSwiaWF0IjoxNTI0MzQwNDg4LCJleHAiOjE1MjQ1MTMyODh9.Co3cyQ8FL-q8EHapZbE0RhWUPfZJkol7ayQ2RzgU8uo"
+    
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var customer: UILabel!
     @IBOutlet weak var address: UILabel!
@@ -20,10 +22,11 @@ class AppoitmentViewController: UIViewController {
     @IBOutlet weak var cancelledSwitch: UISwitch!
     
     @IBAction func confirmedChanged(_ sender: Any) {
-        
+        self.statusChanged(isConfirmed: confirmedSwitch.isOn, isCancelled: cancelledSwitch.isOn )
     }
     
     @IBAction func cancelledChanged(_ sender: Any) {
+        self.statusChanged(isConfirmed: confirmedSwitch.isOn, isCancelled: cancelledSwitch.isOn)
     }
     
 
@@ -57,11 +60,20 @@ class AppoitmentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func statusChanged(status: Bool){
+    func statusChanged(isConfirmed: Bool, isCancelled: Bool){
         let updateAppointment: UpdateAppointmentInteractor = UpdateAppointmentIntImpl()
-        /*updateAppointment.execute(token: "",
+        updateAppointment.execute(token: token,
                                   id: appointment.id,
-                                  isConfirmed: <#T##Bool#>, isCancelled: <#T##Bool#>, onSuccess: <#T##(Bool, String) -> Void#>, onError: <#T##(String) -> Void#>)*/
+                                  isConfirmed: isConfirmed,
+                                  isCancelled: isCancelled,
+                                  onSuccess: { (ok, msg) in
+                                    if (ok == true){
+                                        self.alertSuccessControllerToView(message: msg)
+                                    }
+        },
+                                  onError: { (errorMessage) in
+                                    self.alertControllerToView(message: errorMessage)
+        })
     }
     
     

@@ -14,10 +14,11 @@ class UpdateAppointmentInBackEndIntImpl: UpdateAppointmentInBackEndInteractor {
     func execute(token: String, id: String, isConfirmed: Bool, isCancelled: Bool, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
         
         let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USER_SERVER_PATH + "/" + id)
-        let headers = [ "x-access-token" : token, "Content-Type": "application/x-www-form-urlencoded"  ]
-        let parameters = ["isConfirmed" : isConfirmed, "isCancelled" : isCancelled]
+        let headers: HTTPHeaders = ["x-access-token":token]
+        let parameters = ["isConfirmed":isConfirmed, "isCancelled":isCancelled]
         
-        Alamofire.request(urlAPI!, method: .put, parameters: parameters, encoding: URLEncoding.httpBody, headers: headers).validate().responseJSON { (response) in
+        Alamofire.request(urlAPI!, method: .put, parameters: parameters, encoding: URLEncoding(destination: .httpBody), headers: headers).validate().responseJSON { (response) in
+            //print(parameters)
             
             switch response.result {
             case .success:
