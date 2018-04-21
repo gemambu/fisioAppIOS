@@ -19,6 +19,12 @@ class AppoitmentViewController: UIViewController {
     @IBOutlet weak var confirmedSwitch: UISwitch!
     @IBOutlet weak var cancelledSwitch: UISwitch!
     
+    @IBAction func confirmedChanged(_ sender: Any) {
+        
+    }
+    
+    @IBAction func cancelledChanged(_ sender: Any) {
+    }
     
 
     override func viewDidLoad() {
@@ -50,6 +56,17 @@ class AppoitmentViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func statusChanged(status: Bool){
+        let updateAppointment: UpdateAppointmentInteractor = UpdateAppointmentIntImpl()
+        /*updateAppointment.execute(token: "",
+                                  id: appointment.id,
+                                  isConfirmed: <#T##Bool#>, isCancelled: <#T##Bool#>, onSuccess: <#T##(Bool, String) -> Void#>, onError: <#T##(String) -> Void#>)*/
+    }
+    
+    
+    
+    
     
 
    

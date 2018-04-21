@@ -68,7 +68,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     
     func updateAppointment(token: String, id: String, isConfirmed: Bool, isCancelled: Bool, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
         
-        let updateAppointmentInBackEnd: UpdateAppointmentInBackEndInteractor = UpdateAppointmentinBackEndIntImpl()
+        let updateAppointmentInBackEnd: UpdateAppointmentInBackEndInteractor = UpdateAppointmentInBackEndIntImpl()
         
         updateAppointmentInBackEnd.execute(token: token,
                                            id: id,

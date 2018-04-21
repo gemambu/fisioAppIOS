@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class UpdateAppointmentinBackEndIntImpl: UpdateAppointmentInBackEndInteractor {
+class UpdateAppointmentInBackEndIntImpl: UpdateAppointmentInBackEndInteractor {
     func execute(token: String, id: String, isConfirmed: Bool, isCancelled: Bool, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
         
         let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USER_SERVER_PATH + "/" + id)

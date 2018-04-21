@@ -2,6 +2,7 @@
 import Foundation
 
 final class AppointmentModel {
+    let id: String
     let customer: String
     let address: String
     let date: String
@@ -11,7 +12,8 @@ final class AppointmentModel {
     let lat: Float
     let long: Float
     
-    init(customer: String,
+    init(id: String,
+         customer: String,
          address: String,
          date: String,
          isConfirmed: Bool,
@@ -19,7 +21,7 @@ final class AppointmentModel {
          price: Int,
          lat: Float,
          long: Float){
-        (self.customer, self.address, self.date, self.isConfirmed, self.isCancelled, self.price, self.lat, self.long) = (customer, address, date, isConfirmed, isCancelled, price, lat, long)
+        (self.id, self.customer, self.address, self.date, self.isConfirmed, self.isCancelled, self.price, self.lat, self.long) = (id, customer, address, date, isConfirmed, isCancelled, price, lat, long)
     }
 }
 
