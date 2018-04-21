@@ -29,19 +29,21 @@ class GetAppointmentsForDateIntImpl: GetAppointmentsForDateInteractor {
                                                     })
     }
     
+
     private func entityMapper(appointmentData: AppointmentData) -> AppointmentDomain {
         let appointment = AppointmentDomain(
                                       id: appointmentData.id,
                                       service: CatalogData(databaseID: appointmentData.service.databaseID,
                                                            name: appointmentData.service.name,
                                                            description: appointmentData.service.description,
-                                                           price: appointmentData.service.price),
+                                                           price: appointmentData.service.price,
+                                                           professional: professional,
+                                                           isActive: appointmentData.service.isActive,
+                                                           type: appointmentData.service.type),
                                       customer: UserData(id: appointmentData.customer.id,
                                                          name: appointmentData.customer.name,
                                                          lastName: appointmentData.customer.lastName),
-                                      professional: UserData(id: appointmentData.professional.id,
-                                                             name: appointmentData.professional.name,
-                                                             lastName: appointmentData.professional.lastName),
+                                      professional: professional,
                                       date: appointmentData.date,
                                       latitude: appointmentData.latitude,
                                       longitude: appointmentData.longitude,

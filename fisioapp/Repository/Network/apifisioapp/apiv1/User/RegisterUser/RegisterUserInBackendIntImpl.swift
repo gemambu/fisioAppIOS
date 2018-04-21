@@ -20,27 +20,32 @@ class RegisterUserInBackendIntImpl: RegisterUserInBackendInteractor {
         let parameters = [ "name": name, "email": email, "password": password ]
         let headers = [ "Content-Type": "application/x-www-form-urlencoded" ]
         print(urlAPI!)
-
+        
         Alamofire.request(urlAPI!,method: .post, parameters: parameters, headers: headers).responseJSON { (response) in
             print("Response: \(response)")
             switch response.result{
-                case .success:
-                    if let value = response.data {
-                        let json = JSON(data: value)
-                        let ok = json["ok"].bool ?? false
-                        var msg = json["message"].string ?? ""
-                        if (msg == "") {
-                            msg = json["error"]["message"].string ?? ""
-                        }
-
-                        onSuccess(ok, msg)
+            case .success:
+                if let value = response.data {
+                    let json = JSON(data: value)
+                    let ok = json["ok"].bool ?? false
+                    var msg = json["message"].string ?? ""
+                    if (msg == "") {
+                        let errors = json["error"]["err"]["errors"].array
+                        errors!.forEach({ (json) in
+                            var jsonArray = json["message"].string
+                            print(jsonArray!)
+                            msg.append(jsonArray!)
+                        })
                     }
-                    break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    onError(error.localizedDescription)
-                    break
-
+                    
+                    onSuccess(ok, msg)
+                }
+                break
+            case .failure(let error):
+                print(error.localizedDescription)
+                onError(error.localizedDescription)
+                break
+                
             }
         }
         
