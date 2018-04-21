@@ -46,5 +46,51 @@ class RepositoryIntImpl: RepositoryInteractor {
                                                     onError(msg)
                                                     })
     }
+    
+    
+    /******** appointments ********/
+    func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {
+        
+        let getAppointmentsForDateFromBackendInteractor: GetAppointmentsForDateFromBackEndInteractor = GetAppointmentsForDateFromBackEndIntImpl()
+        
+//        getAppointmentsForDateFromBackendInteractor.execute(token: token,
+//                                                            date: date,
+//                                                            onSuccess: {([AppointmentData]) -> Void in
+//                                                                onSuccess([AppointmentData])
+//        },
+//                                                            onError: { (msg: String) -> Void in
+//                                                                onError(msg)
+//        })
+        
+        getAppointmentsForDateFromBackendInteractor.execute(token: "", date: "", onSuccess: {_ in
+            
+        }, onError: {_ in
+            
+        })
+        
+    }
+    
+    /******** catalog ********/
+    
+    func getCatalogItems(token: String, type: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
+        let getCatalogItemsFromBackendInteractor: GetCatalogItemsFromBackEndInteractor = GetCatalogItemsFromBackEndIntImpl() as! GetCatalogItemsFromBackEndInteractor
+        
+        getCatalogItemsFromBackendInteractor.execute(token: token,
+                                                     type: type,
+                                                     onSuccess: {(itemsFromBackend: [CatalogData]) -> Void in
+                                                        onSuccess(itemsFromBackend)
+        },
+                                                     onError: { (msg: String) -> Void in
+                                                        onError(msg)
+        })
+    }
+    
+    func saveCatalogItem(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        //
+    }
+    
+    func deleteCatalogItem(token: String, id: String, type: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        //
+    }
 
 }

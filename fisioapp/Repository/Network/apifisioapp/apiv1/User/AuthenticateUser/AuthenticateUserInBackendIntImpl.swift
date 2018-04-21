@@ -41,9 +41,19 @@ class AuthenticateUserInBackendIntImpl: AuthenticateUserInBackendInteractor {
                     
                     let userData = UserData(id: id, name: name, lastName: lastName, email: email, isProfessional: isProfessional, fellowshipNumber: fellowshipNumber, gender: gender, address: address, phone: phone, birthDate: birthDate, nationalId: nationalId, registrationDate: registrationDate, lastLoginDate: lastLoginDate)
                     
-                    let token = json["token"].string ?? ""
-                    onSuccess(userData, token)
                     
+                    
+                    let token = json["result"]["token"].string ?? ""
+                    let userId = json["result"]["user"]["_id"].string ?? ""
+                    print(json["result"])
+
+                    let defaults = UserDefaults.standard
+                    
+                    defaults.set(token, forKey: "token")
+                    defaults.set(userId, forKey: "userId")
+                    
+                    onSuccess(userData, token)
+
                 }
                 break
             case .failure(let error):

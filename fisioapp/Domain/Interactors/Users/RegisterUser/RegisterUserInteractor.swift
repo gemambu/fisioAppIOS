@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RegisterUserInteractor {
-    func execute(name: String, email: String, password: String, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void)
+    func execute(name: String, email: String, password: String, isProfessional: Bool, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void)
 }

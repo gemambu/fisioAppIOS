@@ -9,7 +9,7 @@
 import Foundation
 
 class RegisterUserIntImpl: RegisterUserInteractor {
-    func execute(name: String, email: String, password: String, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
+    func execute(name: String, email: String, password: String, isProfessional: Bool, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
         let repositoryInteractor: RepositoryInteractor = RepositoryIntImpl()
         repositoryInteractor.registerUser(name: name, email: email, password: password,
                                      onSuccess: { (ok: Bool, msg: String) -> Void in

@@ -20,29 +20,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window?.backgroundColor = UIColor.orange
         self.window?.makeKeyAndVisible()
-        //let rootVC = LoginAndRegisterController()
+        let loginVC = LoginAndRegisterController()
         
-        // Blank page
-        let rootVC = BlankViewController()
-        window?.rootViewController = rootVC
-        return true
-
         //********************  UITabBarController  ********************//
         let servicesCollection = ServicesViewController()
         let productsCollection = ProductsViewController()
         let appoitmentsCollection = AppoitmentsViewController()
+        let userProfileController = UserProfileViewController()
         
         //********************  UITabBarController  ********************//
         let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
         let productsTableNavVC = UINavigationController(rootViewController: productsCollection)
         let appoitmentsTableNavVC = UINavigationController(rootViewController: appoitmentsCollection)
-
+        let userProfileNavigation = UINavigationController(rootViewController: userProfileController)
+        
         //********************  UITabBarController  ********************//
         let tabVC = UITabBarController()
-        tabVC.viewControllers = [ productsTableNavVC, servicesTableNavVC, appoitmentsTableNavVC]
+        tabVC.viewControllers = [appoitmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
         
-//        window?.rootViewController = rootVC
-        window?.rootViewController = tabVC
+        
+        window?.rootViewController = loginVC
 
         return true
     }

@@ -58,6 +58,7 @@ class BlankViewController: UIViewController {
         registerUserInteractor.execute(name: newName,
                                        email: newEmail,
                                        password: password,
+                                       isProfessional: false,
                                        onSuccess: { (ok: Bool, msg: String) -> Void in
                                         print("REGISTER USER")
                                         print("====================")

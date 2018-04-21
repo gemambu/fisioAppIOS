@@ -7,129 +7,201 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class LoginAndRegisterController: UIViewController {
+class LoginAndRegisterController: UIViewController, UITextFieldDelegate {
     
-        @IBOutlet weak var textViews: UIView!
-        @IBOutlet weak var registerButton: UIButton!
-        @IBOutlet weak var profileImageView: UIImageView!
-        @IBOutlet weak var nameTextField: UITextField!
-        @IBOutlet weak var emailTextField: UITextField!
-        @IBOutlet weak var passwordTextField: UITextField!
-        @IBOutlet weak var loginRegisterSegmentedControl: UISegmentedControl!
-        @IBOutlet weak var textFieldStackView: UIStackView!
+    @IBOutlet weak var textViews: UIView!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginRegisterSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var textFieldStackView: UIStackView!
+    
+    @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var textViewToRegisterButtonConstraint: NSLayoutConstraint!
+    @IBOutlet weak var textViewToSegmentedControlConstraint: NSLayoutConstraint!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
+    @IBAction func registerButton(_ sender: UIButton) {
+        handleLoginRegister()
+    }
+    
+    @IBAction func registerSegmentedController(_ sender: UISegmentedControl) {
+        handleLoginRegisterChangeSegmentedControl()
+    }
+}
+
+// MARK: - SetupUI
+extension LoginAndRegisterController{
+    
+    func setupUI()  {
         
-        @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
-        @IBOutlet weak var textViewToRegisterButtonConstraint: NSLayoutConstraint!
-        @IBOutlet weak var textViewToSegmentedControlConstraint: NSLayoutConstraint!
+        view.backgroundColor = UIColor(red: 61, green: 91, blue: 151)
         
+        textViews.layer.cornerRadius = 5
+        textViews.layer.masksToBounds = true
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            setupUI()
+        registerButton.backgroundColor = UIColor(red: 80, green: 101, blue: 161)
+        registerButton.layer.cornerRadius = 5
+        registerButton.layer.masksToBounds = true
+        
+    }
+}
+
+// MARK: - SegmentedControl Register
+extension LoginAndRegisterController{
+    func handleLoginRegisterChangeSegmentedControl() {
+        let titleSegmentedControl = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
+        registerButton.setTitle(titleSegmentedControl, for: .normal)
+        
+        //Cambiar la vista de los textFields tenemos el textView
+        
+        if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
+            textViewHeightConstraint.constant = 126
+            textViewToRegisterButtonConstraint.constant = 71.5
+            textViewToSegmentedControlConstraint.constant = 71.5
+            textFieldStackView.removeArrangedSubview(nameTextField)
+        }else{
+            textViewHeightConstraint.constant = 189
+            textViewToRegisterButtonConstraint.constant = 40
+            textViewToSegmentedControlConstraint.constant = 40
+            textFieldStackView.removeArrangedSubview(emailTextField)
+            textFieldStackView.removeArrangedSubview(passwordTextField)
+            
+            textFieldStackView.addArrangedSubview(nameTextField)
+            textFieldStackView.addArrangedSubview(emailTextField)
+            textFieldStackView.addArrangedSubview(passwordTextField)
         }
         
-        override var preferredStatusBarStyle: UIStatusBarStyle{
-            return .lightContent
-        }
-        
-        @IBAction func registerButton(_ sender: UIButton) {
-            handleLoginRegister()
-        }
-        
-        @IBAction func registerSegmentedController(_ sender: UISegmentedControl) {
-            handleLoginRegisterChangeSegmentedControl()
+    }
+}
+
+// MARK: - Login Register
+extension LoginAndRegisterController{
+    
+    func handleLoginRegister (){
+        if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
+            handleLogin()
+        }else{
+            handleRegister()
         }
     }
     
-    // MARK: - SetupUI
-    extension LoginAndRegisterController{
+}
+
+// MARK: - Login
+extension LoginAndRegisterController{
+    func handleLogin (){
         
-        func setupUI()  {
-            
-            view.backgroundColor = UIColor(red: 61, green: 91, blue: 151)
-            
-            textViews.layer.cornerRadius = 5
-            textViews.layer.masksToBounds = true
-            
-            registerButton.backgroundColor = UIColor(red: 80, green: 101, blue: 161)
-            registerButton.layer.cornerRadius = 5
-            registerButton.layer.masksToBounds = true
-            
+        
+        print("Login button pushed")
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            print("Form is not complete")
+            return
         }
-    }
-    
-    // MARK: - SegmentedControl Register
-    extension LoginAndRegisterController{
-        func handleLoginRegisterChangeSegmentedControl() {
-            let titleSegmentedControl = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
-            registerButton.setTitle(titleSegmentedControl, for: .normal)
+        
+        let authenticateUserIntImpl : AuthenticateUserInteractor = AuthenticateUserIntImpl()
+        
+        authenticateUserIntImpl.execute(email: email, password: password, onSuccess: { (user, message) in
             
-            //Cambiar la vista de los textFields tenemos el textView
-            
-            if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
-                textViewHeightConstraint.constant = 126
-                textViewToRegisterButtonConstraint.constant = 71.5
-                textViewToSegmentedControlConstraint.constant = 71.5
-                textFieldStackView.removeArrangedSubview(nameTextField)
-            }else{
-                textViewHeightConstraint.constant = 189
-                textViewToRegisterButtonConstraint.constant = 40
-                textViewToSegmentedControlConstraint.constant = 40
-                textFieldStackView.removeArrangedSubview(emailTextField)
-                textFieldStackView.removeArrangedSubview(passwordTextField)
+            print("El user es: ")
+            print(user)
+            print("El mensaje es: ")
+            print(message)
+            self.alertSuccessControllerToView(message: message, completionHandler: { (alert) in
                 
-                textFieldStackView.addArrangedSubview(nameTextField)
-                textFieldStackView.addArrangedSubview(emailTextField)
-                textFieldStackView.addArrangedSubview(passwordTextField)
-            }
+                let servicesCollection = ServicesViewController()
+                let productsCollection = ProductsViewController()
+                let appoitmentsCollection = AppoitmentsViewController()
+                let userProfileController = UserProfileViewController()
+                
+                //********************  UITabBarController  ********************//
+                let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
+                let productsTableNavVC = UINavigationController(rootViewController: productsCollection)
+                let appoitmentsTableNavVC = UINavigationController(rootViewController: appoitmentsCollection)
+                let userProfileNavigation = UINavigationController(rootViewController: userProfileController)
+                
+                //********************  UITabBarController  ********************//
+                let tabVC = UITabBarController()
+                tabVC.viewControllers = [appoitmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
+                
+                self.present(tabVC, animated: true, completion: nil)
+            })
             
+        }) { (errorMessage) in
+            self.alertControllerToView(message: errorMessage)
         }
-    }
-    
-    // MARK: - Login Register
-    extension LoginAndRegisterController{
         
-        func handleLoginRegister (){
-            if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
-                handleLogin()
-            }else{
-                handleRegister()
-            }
+    }
+}
+
+// MARK: - Login Register
+extension LoginAndRegisterController{
+    func handleRegister(){
+        
+        print("Register button pushed")
+        guard let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text else {
+            let errorMessage = "Form is not complete"
+            self.alertControllerToView(message: errorMessage)
+            return
         }
         
-    }
-    
-    // MARK: - Login
-    extension LoginAndRegisterController{
-        func handleLogin (){
-            print("Login button pushed")
-            guard let email = emailTextField.text, let password = passwordTextField.text else {
-                print("Form is not complete")
-                return
-            }
-        }
-    }
-    
-    
-    // MARK: - Login Register
-    extension LoginAndRegisterController{
-        func handleRegister(){
+        let registerUserInteractorImplementation : RegisterUserInteractor = RegisterUserIntImpl()
+        
+        registerUserInteractorImplementation.execute(name: name, email: email, password: password, isProfessional: false, onSuccess: { (success, message) in
             
-            print("Register button pushed")
-            guard let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text else {
-                print("Form is not complete")
-                return
-            }
+            print("¿Ha salido bien?")
+            print(success)
             
+            if success == true {
+                self.alertSuccessControllerToView(message: message, completionHandler: { (alert) in
+                })
+                
+            }
+            self.alertControllerToView(message: message)
+            
+        }) { (errorMessage) in
+            self.alertControllerToView(message: errorMessage)
         }
+        
+        
+    }
+}
+
+extension LoginAndRegisterController {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
     }
     
-    // MARK: - UIColor Extension
-    extension UIColor {
-        convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {
-            self.init(red: red/255, green: green/255, blue: blue/255, alpha: 1)
-        }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
+
+// MARK: - UIColor Extension
+extension UIColor {
+    convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {
+        self.init(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+    }
 }
 
 
