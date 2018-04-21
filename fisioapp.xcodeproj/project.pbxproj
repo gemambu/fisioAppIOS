@@ -414,7 +414,6 @@
 				075DA5FD207D645D00199EFC /* User.swift */,
 				5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */,
 				1FA57499208B69610092427C /* Catalog.swift */,
-
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -811,8 +810,6 @@
 		5B5824EE208948C1006399A1 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
-				5B5824D42084DB62006399A1 /* AppoitmentsViewController.swift */,
-				5B5824D32084DB62006399A1 /* AppointmentsVCExtension.swift */,
 				5B5824E92084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift */,
 			);
 			path = Appointments;
@@ -821,7 +818,6 @@
 		5B5824EF208948CB006399A1 /* AppointmentDetail */ = {
 			isa = PBXGroup;
 			children = (
-				5B5824D52084DB62006399A1 /* AppoitmentViewController.swift */,
 			);
 			path = AppointmentDetail;
 			sourceTree = "<group>";
@@ -841,7 +837,6 @@
 			children = (
 				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
 				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
-				5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1539,6 +1534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3A5KS2DHER;
 				INFOPLIST_FILE = fisioapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp;
@@ -1554,6 +1550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3A5KS2DHER;
 				INFOPLIST_FILE = fisioapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp;
