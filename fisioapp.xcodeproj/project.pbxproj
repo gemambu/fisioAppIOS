@@ -97,6 +97,10 @@
 		51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */; };
 		51FA462C2076A15E005F317F /* AppoitmentsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */; };
 		5B036C55208A2EB4008284DD /* map_placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5B036C54208A2EB4008284DD /* map_placeholder.gif */; };
+		5B036C5F208BFC3F008284DD /* GetAppointmentsForDateFromBackEndInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B036C5E208BFC3E008284DD /* GetAppointmentsForDateFromBackEndInteractor.swift */; };
+		5B036C64208BFCC0008284DD /* AppoitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */; };
+		5B036C68208BFCE6008284DD /* AppointmentsVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B036C66208BFCE6008284DD /* AppointmentsVCExtension.swift */; };
+		5B036C6B208BFD72008284DD /* AppoitmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */; };
 		5B5824D22084DAFA006399A1 /* AppointmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D12084DAFA006399A1 /* AppointmentModel.swift */; };
 		5B5824DC2084DC9E006399A1 /* AppointmentDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */; };
 		5B5824E12084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824DF2084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift */; };
@@ -274,6 +278,10 @@
 		51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsViewCell.swift; sourceTree = "<group>"; };
 		51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewCell.xib; sourceTree = "<group>"; };
 		5B036C54208A2EB4008284DD /* map_placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = map_placeholder.gif; sourceTree = "<group>"; };
+		5B036C5E208BFC3E008284DD /* GetAppointmentsForDateFromBackEndInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAppointmentsForDateFromBackEndInteractor.swift; sourceTree = "<group>"; };
+		5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppoitmentViewController.swift; path = fisioapp/Appointments/AppointmentDetail/AppoitmentViewController.swift; sourceTree = SOURCE_ROOT; };
+		5B036C66208BFCE6008284DD /* AppointmentsVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppointmentsVCExtension.swift; path = fisioapp/Appointments/Appointments/AppointmentsVCExtension.swift; sourceTree = SOURCE_ROOT; };
+		5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppoitmentsViewController.swift; path = fisioapp/Appointments/Appointments/AppoitmentsViewController.swift; sourceTree = SOURCE_ROOT; };
 		5B5824D12084DAFA006399A1 /* AppointmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentModel.swift; sourceTree = "<group>"; };
 		5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDomain.swift; sourceTree = "<group>"; };
 		5B5824DF2084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppointmentsForDateIntImpl.swift; sourceTree = "<group>"; };
@@ -761,6 +769,25 @@
 			path = UpdateUserImage;
 			sourceTree = "<group>";
 		};
+		5B036C62208BFCB1008284DD /* AppointmentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */,
+			);
+			name = AppointmentDetail;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5B036C65208BFCD8008284DD /* Appointments */ = {
+			isa = PBXGroup;
+			children = (
+				5B036C66208BFCE6008284DD /* AppointmentsVCExtension.swift */,
+				5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */,
+			);
+			name = Appointments;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		5B5824E32084DCED006399A1 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
@@ -775,6 +802,7 @@
 		5B5824E82084DD89006399A1 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
+				5B036C5E208BFC3E008284DD /* GetAppointmentsForDateFromBackEndInteractor.swift */,
 				5B5824EA2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift */,
 				5B5824F220895214006399A1 /* UpdateAppointmentInBackEndInteractor.swift */,
 				5B5824F420895532006399A1 /* UpdateAppointmentInBackEndIntImpl.swift */,
@@ -785,26 +813,12 @@
 		5B5824ED208948AE006399A1 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
-				5B5824EE208948C1006399A1 /* Appointments */,
-				5B5824EF208948CB006399A1 /* AppointmentDetail */,
+				5B036C65208BFCD8008284DD /* Appointments */,
+				5B036C62208BFCB1008284DD /* AppointmentDetail */,
 				5B5824F0208948EB006399A1 /* Utils */,
 				5B5824F120894926006399A1 /* Views */,
 			);
 			path = Appointments;
-			sourceTree = "<group>";
-		};
-		5B5824EE208948C1006399A1 /* Appointments */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Appointments;
-			sourceTree = "<group>";
-		};
-		5B5824EF208948CB006399A1 /* AppointmentDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AppointmentDetail;
 			sourceTree = "<group>";
 		};
 		5B5824F0208948EB006399A1 /* Utils */ = {
@@ -1253,6 +1267,8 @@
 				07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */,
 				1FA5749A208B69610092427C /* Catalog.swift in Sources */,
 				519D197A2089FF250049FB00 /* DomainUserPictureInteractorImplementation.swift in Sources */,
+				5B036C6B208BFD72008284DD /* AppoitmentsViewController.swift in Sources */,
+				5B036C68208BFCE6008284DD /* AppointmentsVCExtension.swift in Sources */,
 				519D19782089FF140049FB00 /* DomainUserPictureInteractor.swift in Sources */,
 				51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */,
 				5B5824F320895214006399A1 /* UpdateAppointmentInBackEndInteractor.swift in Sources */,
@@ -1277,6 +1293,7 @@
 				5B5824E12084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift in Sources */,
 				07B63443207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift in Sources */,
 				075DA5E4207D1CCB00199EFC /* BlankViewController.swift in Sources */,
+				5B036C5F208BFC3F008284DD /* GetAppointmentsForDateFromBackEndInteractor.swift in Sources */,
 				51666FB1208A65BB0085D0D5 /* DomainUserProfileImplementation.swift in Sources */,
 				51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */,
 				075DA5FC207D624500199EFC /* UserData.swift in Sources */,
@@ -1298,6 +1315,7 @@
 				07F295BC208B9660009D939A /* DeleteServiceFromBackendIntImpl.swift in Sources */,
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
 				075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */,
+				5B036C64208BFCC0008284DD /* AppoitmentViewController.swift in Sources */,
 				075DA5FE207D645D00199EFC /* User.swift in Sources */,
 				1FA5749D208B69920092427C /* GetCatalogItemsIntImpl.swift in Sources */,
 				51666FB3208A66110085D0D5 /* RepositoryUserProfileInteractor.swift in Sources */,

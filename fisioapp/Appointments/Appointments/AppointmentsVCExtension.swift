@@ -43,7 +43,7 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
                                                 date: appointment.date,
                                                 isConfirmed: appointment.isConfirmed,
                                                 isCancelled: appointment.isCancelled,
-                                                price: appointment.service.price,
+                                                price: Int(appointment.service.price),
                                                 lat: appointment.latitude,
                                                 long: appointment.longitude)
         

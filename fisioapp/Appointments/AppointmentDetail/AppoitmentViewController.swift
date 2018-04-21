@@ -68,7 +68,7 @@ class AppoitmentViewController: UIViewController {
                                   isCancelled: isCancelled,
                                   onSuccess: { (ok, msg) in
                                     if (ok == true){
-                                        self.alertSuccessControllerToView(message: msg)
+                                        //self.alertSuccessControllerToView(message: msg)
                                     }
         },
                                   onError: { (errorMessage) in
