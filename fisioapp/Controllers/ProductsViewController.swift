@@ -15,7 +15,7 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     var collectionView: UICollectionView!
     
     var itemsArray: [Catalog] = []
-   
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         title = "Productos"
@@ -29,11 +29,11 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Productos"
-
+        
         getProductList()
         
         let frame = CGRect(x: 16, y: 16, width: self.view.frame.width, height: self.view.frame.height)
-
+        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: frame.width , height: 200)
@@ -56,9 +56,42 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         return itemsArray.count
     }
     
-    func getProductsList() {
+    func getProductList() {
         
-    }
+        let getProductListInteractor: GetCatalogItemsInteractor = GetCatalogItemsIntImpl()
+        
+        getProductListInteractor.execute(token: "",
+                                         
+                                         type: "PRODUCTS",
+                                         
+                                         onSuccess: { (itemsFromDomain: [Catalog]) in
+                                            
+                                            if (itemsFromDomain.count == 0) {
+                                                
+                                                self.itemsArray = []
+                                                
+                                                self.collectionView.reloadData()
+                                                
+                                            } else {
+                                                
+                                                for product in itemsFromDomain {
+                                                    self.itemsArray.append(product)
+                                                }
+                                                print(self.itemsArray.count)
+                                                
+                                                self.collectionView.reloadData()
+                                                
+                                            }
+                                            
+        },
+                                         onError: { (msg: String) -> Void in
+                                            
+                                            print("Error: \(msg)")
+                                            
+                                            
+                                            
+        })
+    }    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -68,9 +101,9 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         cell.backgroundColor = UIColor.orange
         
-     //   cell.imageView.image = itemToDisplay.image
+        //   cell.imageView.image = itemToDisplay.image
         cell.nameLabel.text = itemToDisplay.name
-        cell.commentLabel.text = itemToDisplay.price + " €"
+        cell.commentLabel.text = "$\(itemToDisplay.price) €"
         
         return cell
     }

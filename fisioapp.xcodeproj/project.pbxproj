@@ -47,6 +47,11 @@
 		07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; };
 		07BAE7EB2072BF9600BDA03E /* repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F9B05C2AC4C3C80FDA8A6D1 /* Pods_fisioapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */; };
+		1FA57496208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57495208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift */; };
+		1FA57498208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57497208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift */; };
+		1FA5749A208B69610092427C /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57499208B69610092427C /* Catalog.swift */; };
+		1FA5749D208B69920092427C /* GetCatalogItemsIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5749C208B69920092427C /* GetCatalogItemsIntImpl.swift */; };
+		1FA5749F208B699D0092427C /* GetCatalogItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5749E208B699D0092427C /* GetCatalogItemsInteractor.swift */; };
 		51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8120760F8400CB3756 /* ProductViewController.swift */; };
 		51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8220760F8400CB3756 /* ProductViewController.xib */; };
 		51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8520760F9500CB3756 /* ServiceViewController.swift */; };
@@ -211,6 +216,11 @@
 		07BAE7E42072BF9600BDA03E /* repositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repositoryTests.swift; sourceTree = "<group>"; };
 		07BAE7E62072BF9600BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C5A2298EBD8218EC5968D97 /* Pods-fisioapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp.release.xcconfig"; sourceTree = "<group>"; };
+		1FA57495208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogItemsFromBackEndIntImpl.swift; sourceTree = "<group>"; };
+		1FA57497208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogItemsFromBackEndInteractor.swift; sourceTree = "<group>"; };
+		1FA57499208B69610092427C /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		1FA5749C208B69920092427C /* GetCatalogItemsIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogItemsIntImpl.swift; sourceTree = "<group>"; };
+		1FA5749E208B699D0092427C /* GetCatalogItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogItemsInteractor.swift; sourceTree = "<group>"; };
 		3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51266D8120760F8400CB3756 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		51266D8220760F8400CB3756 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
@@ -353,6 +363,7 @@
 		075DA5E7207D275300199EFC /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				1FA5749B208B69830092427C /* Catalog */,
 				5B5824E32084DCED006399A1 /* Appointments */,
 				07B63446207EC12600DBB501 /* Users */,
 			);
@@ -376,6 +387,7 @@
 			children = (
 				075DA5FD207D645D00199EFC /* User.swift */,
 				5B5824DB2084DC9E006399A1 /* Appointment.swift */,
+				1FA57499208B69610092427C /* Catalog.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,6 +419,7 @@
 		075DA601207D658B00199EFC /* apiv1 */ = {
 			isa = PBXGroup;
 			children = (
+				1FA57494208B69010092427C /* Catalog */,
 				5B5824E82084DD89006399A1 /* Appointments */,
 				075DA602207D659A00199EFC /* User */,
 			);
@@ -582,6 +595,24 @@
 				07BAE7E62072BF9600BDA03E /* Info.plist */,
 			);
 			path = repositoryTests;
+			sourceTree = "<group>";
+		};
+		1FA57494208B69010092427C /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				1FA57495208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift */,
+				1FA57497208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		1FA5749B208B69830092427C /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5749C208B69920092427C /* GetCatalogItemsIntImpl.swift */,
+				1FA5749E208B699D0092427C /* GetCatalogItemsInteractor.swift */,
+			);
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 		51266D9120760FF600CB3756 /* View */ = {
@@ -1099,8 +1130,10 @@
 				076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */,
 				075DA609207D660300199EFC /* GetUserFromBackendFakeInteractor.swift in Sources */,
 				075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */,
+				1FA57496208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift in Sources */,
 				51FA461C20769BC5005F317F /* DummyModel.swift in Sources */,
 				07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */,
+				1FA5749A208B69610092427C /* Catalog.swift in Sources */,
 				519D197A2089FF250049FB00 /* DomainUserPictureInteractorImplementation.swift in Sources */,
 				519D19782089FF140049FB00 /* DomainUserPictureInteractor.swift in Sources */,
 				51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */,
@@ -1135,6 +1168,7 @@
 				075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */,
+				1FA5749F208B699D0092427C /* GetCatalogItemsInteractor.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
 				516B17C6207FA12400B86965 /* ViewControllers+AlertMessage.swift in Sources */,
 				5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */,
@@ -1143,9 +1177,11 @@
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
 				075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */,
 				075DA5FE207D645D00199EFC /* User.swift in Sources */,
+				1FA5749D208B69920092427C /* GetCatalogItemsIntImpl.swift in Sources */,
 				51666FB3208A66110085D0D5 /* RepositoryUserProfileInteractor.swift in Sources */,
 				5B5824E72084DD63006399A1 /* CatalogData.swift in Sources */,
 				5B5824E22084DCDD006399A1 /* GetAppointmentsForDateInteractor.swift in Sources */,
+				1FA57498208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
