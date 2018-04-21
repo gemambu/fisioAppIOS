@@ -638,8 +638,8 @@
 		07F295AF208B9595009D939A /* Update */ = {
 			isa = PBXGroup;
 			children = (
-				07F295B7208B960A009D939A /* UpdateProductFromBackendIntImpl.swift */,
 				07F295B9208B9628009D939A /* UpdateProductFromBackendInteractor.swift */,
+				07F295B7208B960A009D939A /* UpdateProductFromBackendIntImpl.swift */,
 			);
 			path = Update;
 			sourceTree = "<group>";
@@ -647,8 +647,8 @@
 		07F295B0208B959B009D939A /* Delete */ = {
 			isa = PBXGroup;
 			children = (
-				07F295B3208B95C1009D939A /* DeleteProductFromBackendIntImpl.swift */,
 				07F295B5208B95E2009D939A /* DeleteProductFromBackendInteractor.swift */,
+				07F295B3208B95C1009D939A /* DeleteProductFromBackendIntImpl.swift */,
 			);
 			path = Delete;
 			sourceTree = "<group>";
@@ -656,8 +656,8 @@
 		07F295B1208B95A2009D939A /* Update */ = {
 			isa = PBXGroup;
 			children = (
-				07F295BF208B968F009D939A /* UpdateServiceFromBackendIntImpl.swift */,
 				07F295C1208B96A1009D939A /* UpdateServiceFromBackendInteractor.swift */,
+				07F295BF208B968F009D939A /* UpdateServiceFromBackendIntImpl.swift */,
 			);
 			path = Update;
 			sourceTree = "<group>";
@@ -665,8 +665,8 @@
 		07F295B2208B95A8009D939A /* Delete */ = {
 			isa = PBXGroup;
 			children = (
-				07F295BB208B9660009D939A /* DeleteServiceFromBackendIntImpl.swift */,
 				07F295BD208B9677009D939A /* DeleteServiceFromBackendInteractor.swift */,
+				07F295BB208B9660009D939A /* DeleteServiceFromBackendIntImpl.swift */,
 			);
 			path = Delete;
 			sourceTree = "<group>";
@@ -674,8 +674,8 @@
 		1FA57494208B69010092427C /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				1FA57495208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift */,
 				1FA57497208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift */,
+				1FA57495208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -780,8 +780,8 @@
 		5B5824E82084DD89006399A1 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
-				5B5824E92084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift */,
 				5B5824EA2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift */,
+				5B5824E92084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift */,
 			);
 			path = Appointments;
 			sourceTree = "<group>";

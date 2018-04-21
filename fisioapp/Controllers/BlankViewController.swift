@@ -85,16 +85,23 @@ class BlankViewController: UIViewController {
         
         // Fake data for testing
         let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImZlbGxvd3NoaXBOdW1iZXIiOjMzLCJnZW5kZXIiOiJtYWxlIiwibmFtZSI6ImZpc2lvIiwibGFzdE5hbWUiOiJsYXN0bmFtZSIsImVtYWlsIjoiZmlzaW9AaW52YWxpZC5jb20iLCJwYXNzd29yZCI6ImVmNzk3YzgxMThmMDJkZmI2NDk2MDdkZDVkM2Y4Yzc2MjMwNDhjOWMwNjNkNTMyY2M5NWM1ZWQ3YTg5OGE2NGYiLCJhZGRyZXNzIjoiRmlzaW8gQWRkcmVzcywgMzMiLCJwaG9uZSI6IjYyNjYyNjYyNiIsImJpcnRoRGF0ZSI6IjE5NzAtMTItMzBUMDA6MDA6MDAuMDAwWiIsIm5hdGlvbmFsSWQiOiIxMjM0NTY3OFoiLCJyZWdpc3RyYXRpb25EYXRlIjoiMjAxOC0wMS0wMVQwMTowMTowMC4wMDBaIiwibGFzdExvZ2luRGF0ZSI6IjIwMTgtMDMtMDdUMTY6MDA6MDAuMDAwWiIsIl9fdiI6MCwiaW1nIjoiNWE5ZjA1NGY2MDJkZDBlNTQwYzcxYmM2LTE4LmpwZyIsImRlbGV0ZWQiOmZhbHNlLCJpc1Byb2Zlc3Npb25hbCI6dHJ1ZX0sImlhdCI6MTUyNDMxODI2NSwiZXhwIjoxNTMyMDk0MjY1fQ.EiE86zqmlY-Ok-Vm_8k7nxPyN8HeOuT5PwXdS2_xZY0"
-        let productId = "5a9f054f602dd0e540c71bd1"
-        let serviceId = "5aa00e386281ea2d347d4732"
-        let productCatalogItem = CatalogData(databaseID: productId, name: "Product name Changed", description: "Product description changed", price: 10.0, professional: UserData, isActive: 1, type: "PRODUCT")
-        let serviceCatalogItem = CatalogData(databaseID: serviceId, name: "Service name Changed", description: "Service description changed", price: 20.0, professional: UserData, isActive: 1, type: "SERVICE")
+        let userId = "5a9f054f602dd0e540c71bc6"
+        let userName = "Fisio"
+        let userLastName = "LastName"
+        
+        let productId1 = "5a9f054f602dd0e540c71bd1"
+        let productId2 = "5a9f054f602dd0e540c71bd2"
+        let serviceId1 = "5aa00e386281ea2d347d4732"
+        let serviceId2 = "5aa00e386281ea2d347d4733"
+        let user = UserData(id: userId, name: userName, lastName: userLastName)
+        let productCatalogItem = CatalogData(databaseID: productId2, name: "Product name changed", description: "Product description changed", price: 10.0, professional: user, isActive: 1, type: "PRODUCT")
+        let serviceCatalogItem = CatalogData(databaseID: serviceId2, name: "Service name changed", description: "Service description changed", price: 20.0, professional: user, isActive: 1, type: "SERVICE")
         
         
         // DeleteProduct
         let deleteProductInteractor: DeleteProductFromBackendInteractor = DeleteProductFromBackendIntImpl()
         deleteProductInteractor.execute(token: token,
-                                        id: productId,
+                                        id: productId1,
                                         onSuccess: { (msg: String) -> Void in
                                             print("DELETE PRODUCT")
                                             print("====================")
@@ -123,7 +130,7 @@ class BlankViewController: UIViewController {
         // DeleteService
         let deleteServiceInteractor: DeleteServiceFromBackendInteractor = DeleteServiceFromBackendIntImpl()
         deleteServiceInteractor.execute(token: token,
-                                        id: serviceId,
+                                        id: serviceId1,
                                         onSuccess: { (msg: String) -> Void in
                                             print("DELETE SERVICE")
                                             print("====================")
@@ -131,6 +138,20 @@ class BlankViewController: UIViewController {
         },
                                         onError: { (msg: String) -> Void in
                                             print("DELETE SERVICE")
+                                            print("====================")
+                                            print("Error: \(msg)")
+        })
+        // UpdateService
+        let updateServiceInteractor: UpdateServiceFromBackendInteractor = UpdateServiceFromBackendIntImpl()
+        updateServiceInteractor.execute(token: token,
+                                        item: serviceCatalogItem,
+                                        onSuccess: { (msg: String) -> Void in
+                                            print("UPDATE SERVICE")
+                                            print("====================")
+                                            print("msg: \(msg)")
+        },
+                                        onError: { (msg: String) -> Void in
+                                            print("UPDATE SERVICE")
                                             print("====================")
                                             print("Error: \(msg)")
         })
