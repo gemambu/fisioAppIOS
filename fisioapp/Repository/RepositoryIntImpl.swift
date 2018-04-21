@@ -69,5 +69,28 @@ class RepositoryIntImpl: RepositoryInteractor {
         })
         
     }
+    
+    /******** catalog ********/
+    
+    func getCatalogItems(token: String, type: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
+        let getCatalogItemsFromBackendInteractor: GetCatalogItemsFromBackEndInteractor = GetCatalogItemsFromBackEndIntImpl() as! GetCatalogItemsFromBackEndInteractor
+        
+        getCatalogItemsFromBackendInteractor.execute(token: token,
+                                                     type: type,
+                                                     onSuccess: {(itemsFromBackend: [CatalogData]) -> Void in
+                                                        onSuccess(itemsFromBackend)
+        },
+                                                     onError: { (msg: String) -> Void in
+                                                        onError(msg)
+        })
+    }
+    
+    func saveCatalogItem(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        //
+    }
+    
+    func deleteCatalogItem(token: String, id: String, type: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        //
+    }
 
 }

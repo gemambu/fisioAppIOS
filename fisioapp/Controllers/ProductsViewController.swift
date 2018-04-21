@@ -14,11 +14,8 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     var collectionView: UICollectionView!
     
-    var arrayOfAnimal: [DummyModel] = []
-    let Juancho: DummyModel = DummyModel(name: "Juancho", comment: "Lagarto", image: #imageLiteral(resourceName: "lizard"))
-    let Pepe: DummyModel = DummyModel(name: "Pepe", comment: "Perros", image: #imageLiteral(resourceName: "dogMassage"))
-    let Cami: DummyModel = DummyModel(name: "Cami", comment: "Camaleon", image: #imageLiteral(resourceName: "camaleon"))
-    
+    var itemsArray: [Catalog] = []
+   
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         title = "Productos"
@@ -33,24 +30,7 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         super.viewDidLoad()
         title = "Productos"
 
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
-        arrayOfAnimal.append(Juancho)
-        arrayOfAnimal.append(Pepe)
-        arrayOfAnimal.append(Cami)
+        getProductList()
         
         let frame = CGRect(x: 16, y: 16, width: self.view.frame.width, height: self.view.frame.height)
 
@@ -73,20 +53,24 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayOfAnimal.count
+        return itemsArray.count
+    }
+    
+    func getProductsList() {
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let animalToShow = arrayOfAnimal[indexPath.row]
+        let itemToDisplay = itemsArray[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productCellID, for: indexPath) as! ProductsViewCell
         
         cell.backgroundColor = UIColor.orange
         
-        cell.imageView.image = animalToShow.image
-        cell.nameLabel.text = animalToShow.name
-        cell.commentLabel.text = animalToShow.comment
+     //   cell.imageView.image = itemToDisplay.image
+        cell.nameLabel.text = itemToDisplay.name
+        cell.commentLabel.text = itemToDisplay.price + " €"
         
         return cell
     }

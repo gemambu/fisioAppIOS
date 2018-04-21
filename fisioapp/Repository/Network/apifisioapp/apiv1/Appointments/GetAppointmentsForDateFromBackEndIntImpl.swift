@@ -28,6 +28,10 @@ class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEn
                     let rows = json["result"]["rows"].arrayValue
                     
                     for appointment in rows {
+                        let professional = UserData(
+                            id: appointment["professional"]["_id"].stringValue,
+                            name: appointment["professional"]["name"].stringValue,
+                            lastName: appointment["professional"]["lastName"].stringValue)
                         
                         let appointment = AppointmentData(
                             id: appointment["_id"].stringValue,
@@ -35,15 +39,15 @@ class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEn
                                 databaseID: appointment["service"]["_id"].stringValue,
                                 name: appointment["service"]["name"].stringValue,
                                 description: appointment["service"]["description"].stringValue,
-                                price: appointment["service"]["price"].intValue),
+                                price: appointment["service"]["price"].floatValue,
+                                professional: professional,
+                                isActive: appointment["service"]["isActive"].intValue,
+                                type: "SERVICE"),
                             customer: UserData(
                                     id: appointment["customer"]["_id"].stringValue,
                                     name: appointment["customer"]["name"].stringValue,
                                     lastName: appointment["customer"]["lastName"].stringValue),
-                            professional: UserData(
-                                    id: appointment["professional"]["_id"].stringValue,
-                                    name: appointment["professional"]["name"].stringValue,
-                                    lastName: appointment["professional"]["lastName"].stringValue),
+                            professional: professional,
                             date: appointment["date"].stringValue,
                             latitude: appointment["latitude"].floatValue,
                             longitude: appointment["longitude"].floatValue,
