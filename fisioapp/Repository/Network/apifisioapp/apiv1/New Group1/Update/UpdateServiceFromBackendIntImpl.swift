@@ -18,7 +18,7 @@ class UpdateServiceFromBackendIntImpl: UpdateServiceFromBackendInteractor {
         
         let parameters = [ "name": item.name, "description": item.description ] as [String : Any]
         
-        Alamofire.request(urlAPI!, method: .put, parameters: parameters, headers: headers).responseJSON { (response) in
+        Alamofire.request(urlAPI!, method: .put, parameters: parameters, headers: headers).validate().responseJSON { (response) in
             switch response.result{
             case .success:
                 if let value = response.data {
