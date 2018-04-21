@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //window?.rootViewController = loginVC
         let blankVC = BlankViewController()
-        window?.rootViewController = blankVC
+        window?.rootViewController = tabVC
 
         return true
     }

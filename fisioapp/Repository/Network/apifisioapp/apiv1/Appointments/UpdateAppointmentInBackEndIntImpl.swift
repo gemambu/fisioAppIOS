@@ -15,7 +15,7 @@ class UpdateAppointmentInBackEndIntImpl: UpdateAppointmentInBackEndInteractor {
         
         let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USER_SERVER_PATH + "/" + id)
         let headers: HTTPHeaders = [ "x-access-token" : token, "Content-Type": "application/x-www-form-urlencoded" ]
-        let parameters = ["isConfirmed" : isConfirmed, "isCancelled" : isCancelled]
+        let parameters = ["isConfirmed": isConfirmed, "isCancelled": isCancelled] as [String : Any]
         
         Alamofire.request(urlAPI!, method: .put, parameters: parameters, headers: headers).validate().responseJSON { (response) in
             

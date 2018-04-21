@@ -101,6 +101,7 @@
 		5B036C64208BFCC0008284DD /* AppoitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */; };
 		5B036C68208BFCE6008284DD /* AppointmentsVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B036C66208BFCE6008284DD /* AppointmentsVCExtension.swift */; };
 		5B036C6B208BFD72008284DD /* AppoitmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */; };
+		5B036C6D208C00FD008284DD /* AppoitmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B036C6C208C00FD008284DD /* AppoitmentViewController.xib */; };
 		5B5824D22084DAFA006399A1 /* AppointmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824D12084DAFA006399A1 /* AppointmentModel.swift */; };
 		5B5824DC2084DC9E006399A1 /* AppointmentDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */; };
 		5B5824E12084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5824DF2084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift */; };
@@ -282,6 +283,7 @@
 		5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppoitmentViewController.swift; path = fisioapp/Appointments/AppointmentDetail/AppoitmentViewController.swift; sourceTree = SOURCE_ROOT; };
 		5B036C66208BFCE6008284DD /* AppointmentsVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppointmentsVCExtension.swift; path = fisioapp/Appointments/Appointments/AppointmentsVCExtension.swift; sourceTree = SOURCE_ROOT; };
 		5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppoitmentsViewController.swift; path = fisioapp/Appointments/Appointments/AppoitmentsViewController.swift; sourceTree = SOURCE_ROOT; };
+		5B036C6C208C00FD008284DD /* AppoitmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppoitmentViewController.xib; sourceTree = "<group>"; };
 		5B5824D12084DAFA006399A1 /* AppointmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentModel.swift; sourceTree = "<group>"; };
 		5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDomain.swift; sourceTree = "<group>"; };
 		5B5824DF2084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppointmentsForDateIntImpl.swift; sourceTree = "<group>"; };
@@ -835,6 +837,7 @@
 			isa = PBXGroup;
 			children = (
 				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
+				5B036C6C208C00FD008284DD /* AppoitmentViewController.xib */,
 				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
 			);
 			path = Views;
@@ -1069,6 +1072,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				513B29C12088E4E0008D5394 /* UserProfileViewController.xib in Resources */,
+				5B036C6D208C00FD008284DD /* AppoitmentViewController.xib in Resources */,
 				51266D9020760FD700CB3756 /* EditProfileViewController.xib in Resources */,
 				51FA462020769DB6005F317F /* ServicesViewCell.xib in Resources */,
 				51266D8820760F9500CB3756 /* ServiceViewController.xib in Resources */,
