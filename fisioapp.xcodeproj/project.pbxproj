@@ -46,6 +46,14 @@
 		07BAE7E72072BF9600BDA03E /* repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7D72072BF9600BDA03E /* repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07BAE7EA2072BF9600BDA03E /* repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; };
 		07BAE7EB2072BF9600BDA03E /* repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7D52072BF9600BDA03E /* repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07F295B4208B95C1009D939A /* DeleteProductFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F295B3208B95C1009D939A /* DeleteProductFromBackendIntImpl.swift */; };
+		07F295B6208B95E2009D939A /* DeleteProductFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F295B5208B95E2009D939A /* DeleteProductFromBackendInteractor.swift */; };
+		07F295B8208B960A009D939A /* UpdateProductFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F295B7208B960A009D939A /* UpdateProductFromBackendIntImpl.swift */; };
+		07F295BA208B9628009D939A /* UpdateProductFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F295B9208B9628009D939A /* UpdateProductFromBackendInteractor.swift */; };
+		07F295BC208B9660009D939A /* DeleteServiceFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F295BB208B9660009D939A /* DeleteServiceFromBackendIntImpl.swift */; };
+		07F295BE208B9677009D939A /* DeleteServiceFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F295BD208B9677009D939A /* DeleteServiceFromBackendInteractor.swift */; };
+		07F295C0208B968F009D939A /* UpdateServiceFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F295BF208B968F009D939A /* UpdateServiceFromBackendIntImpl.swift */; };
+		07F295C2208B96A1009D939A /* UpdateServiceFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F295C1208B96A1009D939A /* UpdateServiceFromBackendInteractor.swift */; };
 		0F9B05C2AC4C3C80FDA8A6D1 /* Pods_fisioapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C389A02E3AF1398B670269D4 /* Pods_fisioapp.framework */; };
 		1FA57496208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57495208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift */; };
 		1FA57498208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57497208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift */; };
@@ -215,6 +223,14 @@
 		07BAE7DD2072BF9600BDA03E /* repositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = repositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7E42072BF9600BDA03E /* repositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repositoryTests.swift; sourceTree = "<group>"; };
 		07BAE7E62072BF9600BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07F295B3208B95C1009D939A /* DeleteProductFromBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductFromBackendIntImpl.swift; sourceTree = "<group>"; };
+		07F295B5208B95E2009D939A /* DeleteProductFromBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductFromBackendInteractor.swift; sourceTree = "<group>"; };
+		07F295B7208B960A009D939A /* UpdateProductFromBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductFromBackendIntImpl.swift; sourceTree = "<group>"; };
+		07F295B9208B9628009D939A /* UpdateProductFromBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductFromBackendInteractor.swift; sourceTree = "<group>"; };
+		07F295BB208B9660009D939A /* DeleteServiceFromBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServiceFromBackendIntImpl.swift; sourceTree = "<group>"; };
+		07F295BD208B9677009D939A /* DeleteServiceFromBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServiceFromBackendInteractor.swift; sourceTree = "<group>"; };
+		07F295BF208B968F009D939A /* UpdateServiceFromBackendIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateServiceFromBackendIntImpl.swift; sourceTree = "<group>"; };
+		07F295C1208B96A1009D939A /* UpdateServiceFromBackendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateServiceFromBackendInteractor.swift; sourceTree = "<group>"; };
 		1C5A2298EBD8218EC5968D97 /* Pods-fisioapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fisioapp/Pods-fisioapp.release.xcconfig"; sourceTree = "<group>"; };
 		1FA57495208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogItemsFromBackEndIntImpl.swift; sourceTree = "<group>"; };
 		1FA57497208B692E0092427C /* GetCatalogItemsFromBackEndInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogItemsFromBackEndInteractor.swift; sourceTree = "<group>"; };
@@ -419,8 +435,10 @@
 		075DA601207D658B00199EFC /* apiv1 */ = {
 			isa = PBXGroup;
 			children = (
-				1FA57494208B69010092427C /* Catalog */,
 				5B5824E82084DD89006399A1 /* Appointments */,
+				1FA57494208B69010092427C /* Catalog */,
+				07F295AD208B9513009D939A /* Products */,
+				07F295AE208B9533009D939A /* Services */,
 				075DA602207D659A00199EFC /* User */,
 			);
 			path = apiv1;
@@ -595,6 +613,62 @@
 				07BAE7E62072BF9600BDA03E /* Info.plist */,
 			);
 			path = repositoryTests;
+			sourceTree = "<group>";
+		};
+		07F295AD208B9513009D939A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07F295B0208B959B009D939A /* Delete */,
+				07F295AF208B9595009D939A /* Update */,
+			);
+			name = Products;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		07F295AE208B9533009D939A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07F295B2208B95A8009D939A /* Delete */,
+				07F295B1208B95A2009D939A /* Update */,
+			);
+			name = Services;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		07F295AF208B9595009D939A /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				07F295B7208B960A009D939A /* UpdateProductFromBackendIntImpl.swift */,
+				07F295B9208B9628009D939A /* UpdateProductFromBackendInteractor.swift */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
+		07F295B0208B959B009D939A /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				07F295B3208B95C1009D939A /* DeleteProductFromBackendIntImpl.swift */,
+				07F295B5208B95E2009D939A /* DeleteProductFromBackendInteractor.swift */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
+		07F295B1208B95A2009D939A /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				07F295BF208B968F009D939A /* UpdateServiceFromBackendIntImpl.swift */,
+				07F295C1208B96A1009D939A /* UpdateServiceFromBackendInteractor.swift */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
+		07F295B2208B95A8009D939A /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				07F295BB208B9660009D939A /* DeleteServiceFromBackendIntImpl.swift */,
+				07F295BD208B9677009D939A /* DeleteServiceFromBackendInteractor.swift */,
+			);
+			path = Delete;
 			sourceTree = "<group>";
 		};
 		1FA57494208B69010092427C /* Catalog */ = {
@@ -1124,10 +1198,13 @@
 				519D19732089FCF70049FB00 /* RepositoryUserPictureInteractor.swift in Sources */,
 				51FA461920769B24005F317F /* ProductsViewCell.swift in Sources */,
 				51666FAF208A65840085D0D5 /* DomainUserProfileInteractor.swift in Sources */,
+				07F295C2208B96A1009D939A /* UpdateServiceFromBackendInteractor.swift in Sources */,
 				516474A1207609A900DCFA9B /* LoginAndRegisterController.swift in Sources */,
 				5B5824E62084DD63006399A1 /* AppointmentData.swift in Sources */,
 				51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */,
 				076E051D2072AAFB00554F97 /* fisioapp.xcdatamodeld in Sources */,
+				07F295C0208B968F009D939A /* UpdateServiceFromBackendIntImpl.swift in Sources */,
+				07F295BA208B9628009D939A /* UpdateProductFromBackendInteractor.swift in Sources */,
 				075DA609207D660300199EFC /* GetUserFromBackendFakeInteractor.swift in Sources */,
 				075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */,
 				1FA57496208B69160092427C /* GetCatalogItemsFromBackEndIntImpl.swift in Sources */,
@@ -1155,6 +1232,7 @@
 				075DA5ED207D2B4F00199EFC /* GetUserIntImpl.swift in Sources */,
 				075DA60B207D678500199EFC /* CompletionInterfaces.swift in Sources */,
 				51FA461F20769DB6005F317F /* ServicesViewCell.swift in Sources */,
+				07F295BE208B9677009D939A /* DeleteServiceFromBackendInteractor.swift in Sources */,
 				5B5824D82084DB62006399A1 /* AppoitmentViewController.swift in Sources */,
 				5B5824E12084DCDD006399A1 /* GetAppointmentsForDateIntImpl.swift in Sources */,
 				07B63443207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift in Sources */,
@@ -1165,14 +1243,18 @@
 				075DA5FC207D624500199EFC /* UserData.swift in Sources */,
 				5B5824DC2084DC9E006399A1 /* Appointment.swift in Sources */,
 				07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */,
+				07F295B4208B95C1009D939A /* DeleteProductFromBackendIntImpl.swift in Sources */,
 				075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */,
 				1FA5749F208B699D0092427C /* GetCatalogItemsInteractor.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
+				07F295B8208B960A009D939A /* UpdateProductFromBackendIntImpl.swift in Sources */,
 				516B17C6207FA12400B86965 /* ViewControllers+AlertMessage.swift in Sources */,
 				5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */,
 				5B5824D22084DAFA006399A1 /* AppointmentModel.swift in Sources */,
+				07F295B6208B95E2009D939A /* DeleteProductFromBackendInteractor.swift in Sources */,
+				07F295BC208B9660009D939A /* DeleteServiceFromBackendIntImpl.swift in Sources */,
 				5B5824EB2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndInteractor.swift in Sources */,
 				51FA462B2076A15E005F317F /* AppoitmentsViewCell.swift in Sources */,
 				075DA5F2207D2CB800199EFC /* RepositoryFakeInteractor.swift in Sources */,
