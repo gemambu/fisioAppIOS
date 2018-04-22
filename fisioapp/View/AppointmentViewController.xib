@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppoitmentViewController" customModule="fisioapp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppointmentViewController" customModule="fisioapp" customModuleProvider="target">
             <connections>
                 <outlet property="address" destination="ikS-dQ-EVl" id="imM-hV-lhe"/>
                 <outlet property="cancelled" destination="YTf-bh-r6G" id="SfH-cd-rCx"/>
