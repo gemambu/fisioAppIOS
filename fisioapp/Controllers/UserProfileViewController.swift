@@ -21,10 +21,10 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var nationalIdTextField: UITextField!
     @IBOutlet weak var genderSegmentControl: UISegmentedControl!
     
-    private let userToUpdate:User
+    private var userToUpdate: User? = nil
     
-    init(model: User){
-        self.userToUpdate = model
+    init(){
+        //self.userToUpdate = model
         super.init(nibName: nil, bundle: nil)
         title = "Perfil"
         tabBarItem.image = #imageLiteral(resourceName: "007-businessman")
@@ -50,6 +50,7 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         birthDateTextField.delegate = self
         nationalIdTextField.delegate = self
         
+        getUser()
         
         setupUI()
     }
@@ -57,6 +58,22 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getUser() {
+        let getUserInteractor: GetUserInteractor = GetUserIntImpl()
+        getUserInteractor.execute(token: CustomUserDefaults.token,
+                                  id: CustomUserDefaults.userId,
+                                  onSuccess: { (user: User) -> Void in
+                                    print("GET USER")
+                                    print("====================")
+                                    print("Name: \(user.name)")
+                                    print("Email: \(user.email)")
+                                    self.userToUpdate = user
+        },
+                                  onError: { (msg: String) -> Void in
+                                    print("Error: \(msg)")
+        })
     }
     
     func setupUI(){
@@ -71,13 +88,13 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         navigationItem.rightBarButtonItem = picture
         navigationItem.leftBarButtonItem = save
         
-        nameTextField.text = userToUpdate.name ?? ""
-        lastNameTextField.text = userToUpdate.lastName ?? ""
-        emailTextField.text = userToUpdate.email ?? ""
-        addressTextField.text = userToUpdate.address ?? ""
-        phoneTextField.text = userToUpdate.phone ?? ""
-        birthDateTextField.text = "\(userToUpdate.birthDate)" ?? ""
-        nationalIdTextField.text = userToUpdate.nationalId ?? ""
+        nameTextField.text = userToUpdate?.name ?? ""
+        lastNameTextField.text = userToUpdate?.lastName ?? ""
+        emailTextField.text = userToUpdate?.email ?? ""
+        addressTextField.text = userToUpdate?.address ?? ""
+        phoneTextField.text = userToUpdate?.phone ?? ""
+        birthDateTextField.text = "\(String(describing: userToUpdate?.birthDate))"
+        nationalIdTextField.text = userToUpdate?.nationalId ?? ""
         
     }
     
