@@ -72,25 +72,90 @@ class RepositoryIntImpl: RepositoryInteractor {
     
     /******** catalog ********/
     
-    func getCatalogItems(token: String, type: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
-        let getCatalogItemsFromBackendInteractor: GetCatalogItemsFromBackEndInteractor = GetCatalogItemsFromBackEndIntImpl() as! GetCatalogItemsFromBackEndInteractor
+    func getServices(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
+
         
-        getCatalogItemsFromBackendInteractor.execute(token: token,
-                                                     type: type,
-                                                     onSuccess: {(itemsFromBackend: [CatalogData]) -> Void in
-                                                        onSuccess(itemsFromBackend)
+        let getServicesFromBackendInteractor: GetServicesFromBackEndInteractor = GetServicesFromBackEndIntImpl() as GetServicesFromBackEndInteractor
+        
+        getServicesFromBackendInteractor.execute(token: token,
+                                                 onSuccess: {(itemsFromBackend: [CatalogData]) -> Void in
+                                                    onSuccess(itemsFromBackend)
         },
-                                                     onError: { (msg: String) -> Void in
-                                                        onError(msg)
+                                                 onError: { (msg: String) -> Void in
+                                                    onError(msg)
+        })
+       
+        
+    }
+    
+    func getProducts(token: String,  onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
+
+        let getProductsFromBackendInteractor: GetProductsFromBackEndInteractor = GetProductsFromBackEndIntImpl() as GetProductsFromBackEndInteractor
+        
+        getProductsFromBackendInteractor.execute(token: token,
+                                                 onSuccess: {(itemsFromBackend: [CatalogData]) -> Void in
+                                                    onSuccess(itemsFromBackend)
+        },
+                                                 onError: { (msg: String) -> Void in
+                                                    onError(msg)
+        })
+        
+        
+    }
+    
+    func insertProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+
+    }
+    
+    func insertService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        
+    }
+    
+    func updateProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        
+        let updateProductInteractor: UpdateProductFromBackendInteractor = UpdateProductFromBackendIntImpl() as UpdateProductFromBackendInteractor
+        updateProductInteractor.execute(token: token, item: item,
+                                        onSuccess: { (msg: String) -> Void in
+                                            onSuccess(msg)
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError(msg)
         })
     }
     
-    func saveCatalogItem(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
-        //
+    func updateService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        
+        let updateServiceInteractor: UpdateServiceFromBackendInteractor = UpdateServiceFromBackendIntImpl() as UpdateServiceFromBackendInteractor
+        updateServiceInteractor.execute(token: token, item: item,
+                                        onSuccess: { (msg: String) -> Void in
+                                            onSuccess(msg)
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError(msg)
+        })
     }
     
-    func deleteCatalogItem(token: String, id: String, type: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
-        //
+    func deleteProduct(token: String, id: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        
+        let deleteProductInteractor: DeleteProductFromBackendInteractor = DeleteProductFromBackendIntImpl() as DeleteProductFromBackendInteractor
+        deleteProductInteractor.execute(token: token, id: id,
+                                        onSuccess: { (msg: String) -> Void in
+                                            onSuccess(msg)
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError(msg)
+        })
+    }
+    
+    func deleteService(token: String, id: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        let deleteServiceInteractor: DeleteServiceFromBackendInteractor = DeleteServiceFromBackendIntImpl() as DeleteServiceFromBackendInteractor
+        deleteServiceInteractor.execute(token: token, id: id,
+                                        onSuccess: { (msg: String) -> Void in
+                                            onSuccess(msg)
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError(msg)
+        })
     }
 
 }

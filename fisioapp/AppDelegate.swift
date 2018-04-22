@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let blankVC = BlankViewController()
         window?.rootViewController = blankVC
 
+
         return true
     }
 

@@ -10,15 +10,11 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class GetCatalogItemsFromBackEndIntImpl: GetCatalogItemsFromBackEndInteractor {
+class GetServicesFromBackEndIntImpl: GetServicesFromBackEndInteractor {
     
-    func execute(token: String, type: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
+    func execute(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
         
-        var urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_SERVICES_SERVER_PATH)
-        if(type == "PRODUCTS"){
-            urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_PRODUCTS_SERVER_PATH)
-        }
-        
+        let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_SERVICES_SERVER_PATH)
         let headers = [ "x-access-token" : token ]
         let queryParams: Parameters = [:]
         
@@ -46,7 +42,7 @@ class GetCatalogItemsFromBackEndIntImpl: GetCatalogItemsFromBackEndInteractor {
                                 name: item["professional"]["name"].stringValue,
                                 lastName: item["professional"]["lastName"].stringValue),
                             isActive: item["isActive"].intValue,
-                            type: type)
+                            type: "SERVICE")
                         
                         itemsFromJson.append(itemParsed)
                     }
