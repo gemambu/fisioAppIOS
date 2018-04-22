@@ -8,7 +8,7 @@
 
 import Foundation
 
-class InsertServiceImpl: InsertServiceInteractor {
+class InsertServiceIntImpl: InsertServiceInteractor {
     func execute(token: String, item: Catalog, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
         
         let repositoryInteractor: RepositoryInteractor = RepositoryIntImpl()

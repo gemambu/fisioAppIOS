@@ -28,7 +28,7 @@ class InsertProductFromBackendIntImpl: InsertProductFromBackendInteractor {
                     let description = json["result"]["description"].string ?? ""
                     let price = json["result"]["price"].float ?? Float(0)
                     let isActive = json["result"]["isActive"].int ?? 0
-                    let message = json["message"].string ?? ""
+                    var message = json["message"].string ?? ""
                     
                     let professionalId = (json["result"]["professional"].string)!
                     let professional = UserData(id: professionalId, name: "fakeName", lastName: "fakeLastname")

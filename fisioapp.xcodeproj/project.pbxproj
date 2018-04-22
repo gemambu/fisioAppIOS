@@ -493,9 +493,9 @@
 		075DA5E7207D275300199EFC /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				1FA574A9208B9DA30092427C /* Services */,
-				1FA574A8208B9D9D0092427C /* Products */,
 				5B5824E32084DCED006399A1 /* Appointments */,
+				1FA574A8208B9D9D0092427C /* Products */,
+				1FA574A9208B9DA30092427C /* Services */,
 				07B63446207EC12600DBB501 /* Users */,
 			);
 			path = Interactors;
@@ -660,8 +660,8 @@
 				07B63447207EC13A00DBB501 /* AuthenticateUser */,
 				07B63449207EC16300DBB501 /* GetUser */,
 				07B63448207EC15700DBB501 /* RegisterUser */,
-				519D197B2089FF2E0049FB00 /* UpdateUserImage */,
 				51666FB8208A6A280085D0D5 /* UpdateUser */,
+				519D197B2089FF2E0049FB00 /* UpdateUserImage */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -763,10 +763,10 @@
 		1FA574A8208B9D9D0092427C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FA574B1208B9DE90092427C /* Update */,
-				1FA574AF208B9DC60092427C /* Insert */,
 				1FA574AE208B9DC10092427C /* Delete */,
 				1FA574AD208B9DBD0092427C /* Get */,
+				1FA574AF208B9DC60092427C /* Insert */,
+				1FA574B1208B9DE90092427C /* Update */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -774,10 +774,10 @@
 		1FA574A9208B9DA30092427C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1FA574B0208B9DE00092427C /* Update */,
-				1FA574AC208B9DB60092427C /* Insert */,
 				1FA574AB208B9DB10092427C /* Delete */,
 				1FA574AA208B9DAC0092427C /* Get */,
+				1FA574AC208B9DB60092427C /* Insert */,
+				1FA574B0208B9DE00092427C /* Update */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -865,20 +865,20 @@
 		51266D9120760FF600CB3756 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				513B29C52088F56C008D5394 /* UserPictureViewController.xib */,
-				513B29BF2088E4E0008D5394 /* UserProfileViewController.xib */,
+				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
+				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
 				5B5824D92084DB91006399A1 /* AppoitmentViewController.xib */,
+				51266D8E20760FD700CB3756 /* EditProfileViewController.xib */,
 				076E05202072AAFB00554F97 /* LaunchScreen.storyboard */,
 				516474A0207609A900DCFA9B /* LoginAndRegisterController.xib */,
-				51266D8E20760FD700CB3756 /* EditProfileViewController.xib */,
+				51FA461820769B24005F317F /* ProductsViewCell.xib */,
 				51FA461420769AD4005F317F /* ProductsViewController.xib */,
 				51266D8220760F8400CB3756 /* ProductViewController.xib */,
-				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
+				51FA461E20769DB6005F317F /* ServicesViewCell.xib */,
 				51FA462220769E07005F317F /* ServicesViewController.xib */,
 				51266D8620760F9500CB3756 /* ServiceViewController.xib */,
-				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
-				51FA461820769B24005F317F /* ProductsViewCell.xib */,
-				51FA461E20769DB6005F317F /* ServicesViewCell.xib */,
+				513B29C52088F56C008D5394 /* UserPictureViewController.xib */,
+				513B29BF2088E4E0008D5394 /* UserProfileViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -104,11 +104,27 @@ class RepositoryIntImpl: RepositoryInteractor {
     }
     
     func insertProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
-
+        let insertProductInteractor: InsertProductFromBackendInteractor = InsertProductFromBackendIntImpl() as InsertProductFromBackendInteractor
+        insertProductInteractor.execute(token: token, item: item,
+                                        onSuccess: { (itemCatalogData: CatalogData) -> Void in
+                                            //insertCatalogInCache(it, success)
+                                            onSuccess("Item \(item.name) inserted successfully")
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError("Error inserting item: \(item.name)")
+        })
     }
     
     func insertService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
-        
+        let insertServiceInteractor: InsertServiceFromBackendInteractor = InsertServiceFromBackendIntImpl() as InsertServiceFromBackendInteractor
+        insertServiceInteractor.execute(token: token, item: item,
+                                        onSuccess: { (itemCatalogData: CatalogData) -> Void in
+                                            //insertCatalogInCache(it, success)
+                                            onSuccess("Item \(item.name) inserted successfully")
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError("Error inserting item: \(item.name)")
+        })
     }
     
     func updateProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){

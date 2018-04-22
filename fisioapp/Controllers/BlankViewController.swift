@@ -93,11 +93,12 @@ class BlankViewController: UIViewController {
         let productId2 = "5a9f054f602dd0e540c71bd2"
         let serviceId1 = "5aa00e386281ea2d347d4732"
         let serviceId2 = "5aa00e386281ea2d347d4733"
-        let user = UserData(id: userId, name: userName, lastName: userLastName)
-        let productCatalogItem = CatalogData(databaseID: productId2, name: "Product name changed", description: "Product description changed", price: 10.0, professional: user, isActive: 1, type: "PRODUCT")
-        let newProductCatalogItem = CatalogData(databaseID: "", name: "New product 11", description: "New product description", price: 10.0, professional: user, isActive: 1, type: "PRODUCT")
-        let serviceCatalogItem = CatalogData(databaseID: serviceId2, name: "Service name changed", description: "Service description changed", price: 20.0, professional: user, isActive: 1, type: "SERVICE")
-        let newServiceCatalogItem = CatalogData(databaseID: "", name: "New service 11", description: "New service description", price: 10.0, professional: user, isActive: 1, type: "SERVICE")
+        let user = User(id: userId, name: userName, lastName: userLastName)
+        let userData = UserData(id: userId, name: userName, lastName: userLastName)
+        let productCatalogItem = CatalogData(databaseID: productId2, name: "Product name changed", description: "Product description changed", price: 10.0, professional: userData, isActive: 1, type: "PRODUCT")
+        let newProductCatalogItem = Catalog(id: "", name: "New product 11", description: "New product description", price: 10.0, professional: user, isActive: 1, type: "PRODUCT")
+        let serviceCatalogItem = CatalogData(databaseID: serviceId2, name: "Service name changed", description: "Service description changed", price: 20.0, professional: userData, isActive: 1, type: "SERVICE")
+        let newServiceCatalogItem = Catalog(id: "", name: "New service 11", description: "New service description", price: 10.0, professional: user, isActive: 1, type: "SERVICE")
         
         
         // DeleteProduct
@@ -129,10 +130,10 @@ class BlankViewController: UIViewController {
                                             print("Error: \(msg)")
         })
         // InsertProduct
-        let insertProductInteractor: InsertProductFromBackendInteractor = InsertProductFromBackendIntImpl()
+        let insertProductInteractor: InsertProductInteractor = InsertProductIntImpl()
         insertProductInteractor.execute(token: token,
                                         item: newProductCatalogItem,
-                                        onSuccess: { (productCatalogItem: CatalogData) -> Void in
+                                        onSuccess: { (msg: String) -> Void in
                                             print("INSERT PRODUCT")
                                             print("====================")
                                             print("msg: \(productCatalogItem)")
@@ -172,10 +173,10 @@ class BlankViewController: UIViewController {
                                             print("Error: \(msg)")
         })
         // InsertService
-        let insertServiceInteractor: InsertServiceFromBackendInteractor = InsertServiceFromBackendIntImpl()
+        let insertServiceInteractor: InsertServiceInteractor = InsertServiceIntImpl()
         insertServiceInteractor.execute(token: token,
                                         item: newServiceCatalogItem,
-                                        onSuccess: { (serviceCatalogItem: CatalogData) -> Void in
+                                        onSuccess: { (msg: String) -> Void in
                                             print("INSERT SERVICE")
                                             print("====================")
                                             print("msg: \(serviceCatalogItem)")
