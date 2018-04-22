@@ -14,6 +14,12 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     var collectionView: UICollectionView!
     
+    @IBOutlet weak var addButton: UIButton!
+    @IBAction func buttonClick(_ sender: UIButton) {
+        let detailVC = ProductViewController()
+        self.present(detailVC, animated: true, completion: nil)
+    }
+    
     var itemsArray: [Catalog] = []
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -44,6 +50,7 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         collectionView!.register(UINib(nibName: "ProductsViewCell", bundle: nil), forCellWithReuseIdentifier: productCellID)
         collectionView.backgroundColor = UIColor.white
         self.view.addSubview(collectionView)
+        self.view.addSubview(addButton)
         
     }
     
@@ -79,6 +86,13 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
                                          onError: { (msg: String) -> Void in
                                             print("Error: \(msg)")
         })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = itemsArray[indexPath.row]
+        let detailVC = ProductViewController()
+        detailVC.loadProductInfo(product: item)
+        self.present(detailVC, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

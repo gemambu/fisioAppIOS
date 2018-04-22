@@ -16,6 +16,11 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     var itemsArray: [Catalog] = []
     
+    @IBOutlet weak var addButton: UIButton!
+    @IBAction func buttonClick(_ sender: UIButton) {
+        let detailVC = ServiceViewController()
+        self.present(detailVC, animated: true, completion: nil)
+    }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         title = "Servicios"
@@ -45,6 +50,7 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
         collectionView!.register(UINib(nibName: "ServicesViewCell", bundle: nil), forCellWithReuseIdentifier: serviceCellID)
         collectionView.backgroundColor = UIColor.yellow
         self.view.addSubview(collectionView)
+        self.view.addSubview(addButton)
         
     }
     
@@ -55,6 +61,13 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemsArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = itemsArray[indexPath.row]
+        let detailVC = ServiceViewController()
+        detailVC.loadServiceInfo(service: item)
+        self.present(detailVC, animated: true, completion: nil)
     }
     
     func getServicesList() {

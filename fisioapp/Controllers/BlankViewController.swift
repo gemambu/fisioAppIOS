@@ -87,8 +87,9 @@ class BlankViewController: UIViewController {
         let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImZlbGxvd3NoaXBOdW1iZXIiOjMzLCJnZW5kZXIiOiJtYWxlIiwibmFtZSI6ImZpc2lvIiwibGFzdE5hbWUiOiJsYXN0bmFtZSIsImVtYWlsIjoiZmlzaW9AaW52YWxpZC5jb20iLCJwYXNzd29yZCI6ImVmNzk3YzgxMThmMDJkZmI2NDk2MDdkZDVkM2Y4Yzc2MjMwNDhjOWMwNjNkNTMyY2M5NWM1ZWQ3YTg5OGE2NGYiLCJhZGRyZXNzIjoiRmlzaW8gQWRkcmVzcywgMzMiLCJwaG9uZSI6IjYyNjYyNjYyNiIsImJpcnRoRGF0ZSI6IjE5NzAtMTItMzBUMDA6MDA6MDAuMDAwWiIsIm5hdGlvbmFsSWQiOiIxMjM0NTY3OFoiLCJyZWdpc3RyYXRpb25EYXRlIjoiMjAxOC0wMS0wMVQwMTowMTowMC4wMDBaIiwibGFzdExvZ2luRGF0ZSI6IjIwMTgtMDMtMDdUMTY6MDA6MDAuMDAwWiIsIl9fdiI6MCwiaW1nIjoiNWE5ZjA1NGY2MDJkZDBlNTQwYzcxYmM2LTE4LmpwZyIsImRlbGV0ZWQiOmZhbHNlLCJpc1Byb2Zlc3Npb25hbCI6dHJ1ZX0sImlhdCI6MTUyNDMxODI2NSwiZXhwIjoxNTMyMDk0MjY1fQ.EiE86zqmlY-Ok-Vm_8k7nxPyN8HeOuT5PwXdS2_xZY0"
         let productId = "5a9f054f602dd0e540c71bd1"
         let serviceId = "5aa00e386281ea2d347d4732"
-        let productCatalogItem = CatalogData(databaseID: productId, name: "Product name Changed", description: "Product description changed", price: 10.0, professional: nil, isActive: 1, type: "PRODUCT")
-        let serviceCatalogItem = CatalogData(databaseID: serviceId, name: "Service name Changed", description: "Service description changed", price: 20.0, professional: nil, isActive: 1, type: "SERVICE")
+        let professional = UserData(id: "aa", name: "bb", lastName: "cc")
+        let productCatalogItem = CatalogData(databaseID: productId, name: "Product name Changed", description: "Product description changed", price: 10.0, professional: professional, isActive: 1, type: "PRODUCT")
+        let serviceCatalogItem = CatalogData(databaseID: serviceId, name: "Service name Changed", description: "Service description changed", price: 20.0, professional: professional, isActive: 1, type: "SERVICE")
         
         
         // DeleteProduct

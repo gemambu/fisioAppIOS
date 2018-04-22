@@ -18,23 +18,23 @@ class UpdateProductFromBackendIntImpl: UpdateProductFromBackendInteractor {
         
         let parameters = [ "name": item.name, "description": item.description, "price": item.price, "isActive": item.isActive ] as [String : Any]
         
-        Alamofire.request(urlAPI!, method: .put, headers: headers, parameters: parameters).validate().responseJSON { (response) in
-            switch response.result{
-            case .success:
-                if let value = response.data {
-                    let json = JSON(data: value)
-                    let message = json["message"].string ?? ""
-                    onSuccess(message)
-                }
-                
-                break
-            case .failure(let error):
-                print(error.localizedDescription)
-                onError(error.localizedDescription)
-                break
-            }
-            
-        }
+//        Alamofire.request(urlAPI!, method: .put, headers: headers, parameters: parameters).validate().responseJSON { (response) in
+//            switch response.result{
+//            case .success:
+//                if let value = response.data {
+//                    let json = JSON(data: value)
+//                    let message = json["message"].string ?? ""
+//                    onSuccess(message)
+//                }
+//                
+//                break
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//                onError(error.localizedDescription)
+//                break
+//            }
+//            
+//        }
     }
     
 }
