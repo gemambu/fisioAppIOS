@@ -52,6 +52,8 @@
 		07B93562208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93560208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift */; };
 		07B93566208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93564208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift */; };
 		07B93567208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93565208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift */; };
+		07B9356D208CD7D0004F5DF8 /* CacheInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9356C208CD7D0004F5DF8 /* CacheInteractor.swift */; };
+		07B9356F208CD7DA004F5DF8 /* CacheIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9356E208CD7DA004F5DF8 /* CacheIntImpl.swift */; };
 		07BAE7BA2072BEB500BDA03E /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7B12072BEB500BDA03E /* domain.framework */; };
 		07BAE7C12072BEB500BDA03E /* domainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE7C02072BEB500BDA03E /* domainTests.swift */; };
 		07BAE7C32072BEB500BDA03E /* domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7B32072BEB500BDA03E /* domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -248,6 +250,8 @@
 		07B93560208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertServiceFromBackendInteractor.swift; sourceTree = "<group>"; };
 		07B93564208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertProductFromBackendInteractor.swift; sourceTree = "<group>"; };
 		07B93565208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertProductFromBackendIntImpl.swift; sourceTree = "<group>"; };
+		07B9356C208CD7D0004F5DF8 /* CacheInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheInteractor.swift; sourceTree = "<group>"; };
+		07B9356E208CD7DA004F5DF8 /* CacheIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheIntImpl.swift; sourceTree = "<group>"; };
 		07BAE7B12072BEB500BDA03E /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7B32072BEB500BDA03E /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; };
 		07BAE7B42072BEB500BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -504,6 +508,7 @@
 		075DA5EE207D2C7500199EFC /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				07B93569208CD77F004F5DF8 /* Cache */,
 				075DA5E5207D268800199EFC /* EntityModel */,
 				075DA5FF207D655700199EFC /* Network */,
 				075DA5F1207D2CB800199EFC /* RepositoryFakeInteractor.swift */,
@@ -711,6 +716,15 @@
 			);
 			name = Insert;
 			path = Products/Insert;
+			sourceTree = "<group>";
+		};
+		07B93569208CD77F004F5DF8 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				07B9356C208CD7D0004F5DF8 /* CacheInteractor.swift */,
+				07B9356E208CD7DA004F5DF8 /* CacheIntImpl.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		07BAE7B22072BEB500BDA03E /* domain */ = {
@@ -1365,6 +1379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B9356F208CD7DA004F5DF8 /* CacheIntImpl.swift in Sources */,
 				075DA607207D65E900199EFC /* GetUserFromBackendIntImpl.swift in Sources */,
 				070B33EB208CAA1C00C06852 /* UpdateServiceFromBackendIntImpl.swift in Sources */,
 				513B29C02088E4E0008D5394 /* UserProfileViewController.swift in Sources */,
@@ -1458,6 +1473,7 @@
 				1FA574DC208C9A270092427C /* InsertProductIntImpl.swift in Sources */,
 				5B5824E22084DCDD006399A1 /* GetAppointmentsForDateInteractor.swift in Sources */,
 				1FA574BC208B9ECB0092427C /* GetServicesInteractor.swift in Sources */,
+				07B9356D208CD7D0004F5DF8 /* CacheInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
