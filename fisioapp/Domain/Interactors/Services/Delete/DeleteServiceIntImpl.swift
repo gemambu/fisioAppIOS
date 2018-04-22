@@ -13,9 +13,8 @@ class DeleteServiceImpl: DeleteServiceInteractor {
         
         let repositoryInteractor: RepositoryInteractor = RepositoryIntImpl()
         
-        repositoryInteractor.deleteCatalogItem(token: token,
+        repositoryInteractor.deleteService(token: token,
                                                id: id,
-                                               type: "SERVICE",
                                          onSuccess: { (msg: String) -> Void in
                                             onSuccess(msg)},
                                          onError: { (msg: String) -> Void in

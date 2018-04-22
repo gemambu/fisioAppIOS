@@ -18,8 +18,7 @@ class GetServicesIntImpl: GetServicesInteractor {
                                                 var catalogItemsResult = [Catalog]()
                                                 
                                                 for item in items {
-                                                    let catalogInfo = self.entityMapper(itemData: item)
-                                                    
+                                                    let catalogInfo = convert(item: item)
                                                     catalogItemsResult.append(catalogInfo)
                                                 }
                                                 onSuccess(catalogItemsResult)},
@@ -27,21 +26,5 @@ class GetServicesIntImpl: GetServicesInteractor {
                                                 onError(msg)
         })
     }
-    
-    private func entityMapper(itemData: CatalogData) -> Catalog {
-        let item = Catalog(
-            id: itemData.databaseID,
-            name: itemData.name,
-            description: itemData.description,
-            price: itemData.price,
-            professional: UserData(id: itemData.professional.id,
-                                   name: itemData.professional.name,
-                                   lastName: itemData.professional.lastName),
-            isActive: itemData.isActive,
-            type: itemData.type)
-        
-        return item
-    }
-    
     
 }

@@ -103,12 +103,59 @@ class RepositoryIntImpl: RepositoryInteractor {
         
     }
     
-    func saveCatalogItem(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
-        //
+    func insertProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+
     }
     
-    func deleteCatalogItem(token: String, id: String, type: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
-        //
+    func insertService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        
+    }
+    
+    func updateProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        
+        let updateProductInteractor: UpdateProductFromBackendInteractor = UpdateProductFromBackendIntImpl() as UpdateProductFromBackendInteractor
+        updateProductInteractor.execute(token: token, item: item,
+                                        onSuccess: { (msg: String) -> Void in
+                                            onSuccess(msg)
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError(msg)
+        })
+    }
+    
+    func updateService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        
+        let updateServiceInteractor: UpdateServiceFromBackendInteractor = UpdateServiceFromBackendIntImpl() as UpdateServiceFromBackendInteractor
+        updateServiceInteractor.execute(token: token, item: item,
+                                        onSuccess: { (msg: String) -> Void in
+                                            onSuccess(msg)
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError(msg)
+        })
+    }
+    
+    func deleteProduct(token: String, id: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        
+        let deleteProductInteractor: DeleteProductFromBackendInteractor = DeleteProductFromBackendIntImpl() as DeleteProductFromBackendInteractor
+        deleteProductInteractor.execute(token: token, id: id,
+                                        onSuccess: { (msg: String) -> Void in
+                                            onSuccess(msg)
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError(msg)
+        })
+    }
+    
+    func deleteService(token: String, id: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
+        let deleteServiceInteractor: DeleteServiceFromBackendInteractor = DeleteServiceFromBackendIntImpl() as DeleteServiceFromBackendInteractor
+        deleteServiceInteractor.execute(token: token, id: id,
+                                        onSuccess: { (msg: String) -> Void in
+                                            onSuccess(msg)
+        },
+                                        onError: { (msg: String) -> Void in
+                                            onError(msg)
+        })
     }
 
 }

@@ -40,4 +40,8 @@ public class User {
         self.lastLoginDate = lastLoginDate ?? ""
     }
     
+    public init (id: String, name: String, lastName: String){
+        (self.id, self.name, self.lastName) = (id, name, lastName)
+    }
+    
 }
