@@ -1,5 +1,5 @@
 //
-//  AppoitmentViewController.swift
+//  AppointmentViewController.swift
 //  fisioapp
 //
 //  Created by Alan Casas on 5/4/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppoitmentViewController: UIViewController {
+class AppointmentViewController: UIViewController {
     
     var appointment: AppointmentModel!
     

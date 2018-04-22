@@ -1,5 +1,5 @@
 //
-//  AppoitmentsViewController.swift
+//  AppointmentsViewController.swift
 //  fisioapp
 //
 //  Created by Alan Casas on 5/4/18.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-let appoitmentsCellID = "AppoitmentsViewCell"
+let appointmentsCellID = "AppointmentsViewCell"
 
-class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class AppointmentsViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     var collectionView: UICollectionView!
     var datePicker: UIDatePicker!
@@ -56,7 +56,7 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
         collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView!.register(UINib(nibName: "AppoitmentsViewCell", bundle: nil), forCellWithReuseIdentifier: appoitmentsCellID)
+        collectionView!.register(UINib(nibName: "AppointmentsViewCell", bundle: nil), forCellWithReuseIdentifier: appointmentsCellID)
         collectionView.backgroundColor = UIColor.white
         
         initializeDatePicker()
@@ -78,7 +78,7 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
         
         let appointmentToShow = appointments[indexPath.row]
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: appoitmentsCellID, for: indexPath) as! AppoitmentsViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: appointmentsCellID, for: indexPath) as! AppointmentsViewCell
         
         cell.backgroundColor = UIColor.orange
         cell.nameLabel.text = appointmentToShow.customer
