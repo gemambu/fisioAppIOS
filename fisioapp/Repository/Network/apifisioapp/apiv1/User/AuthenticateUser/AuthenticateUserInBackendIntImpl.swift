@@ -38,10 +38,9 @@ class AuthenticateUserInBackendIntImpl: AuthenticateUserInBackendInteractor {
                     let nationalId = json["result"]["nationalId"].string ?? ""
                     let registrationDate = json["result"]["registrationDate"].string ?? ""
                     let lastLoginDate = json["result"]["lastLoginDate"].string ?? ""
+                    let image = json["result"]["user"]["img"]
                     
                     let userData = UserData(id: id, name: name, lastName: lastName, email: email, isProfessional: isProfessional, fellowshipNumber: fellowshipNumber, gender: gender, address: address, phone: phone, birthDate: birthDate, nationalId: nationalId, registrationDate: registrationDate, lastLoginDate: lastLoginDate)
-                    
-                    
                     
                     let token = json["result"]["token"].string ?? ""
                     let userId = json["result"]["user"]["_id"].string ?? ""
