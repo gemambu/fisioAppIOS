@@ -48,6 +48,10 @@
 		07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6344C207EC19E00DBB501 /* AuthenticateUserIntImpl.swift */; };
 		07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B6344E207EC1CD00DBB501 /* RegisterUserIntImpl.swift */; };
 		07B63451207EC1ED00DBB501 /* RegisterUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B63450207EC1ED00DBB501 /* RegisterUserInteractor.swift */; };
+		07B93561208CB104004F5DF8 /* InsertServiceFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9355F208CB104004F5DF8 /* InsertServiceFromBackendIntImpl.swift */; };
+		07B93562208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93560208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift */; };
+		07B93566208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93564208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift */; };
+		07B93567208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93565208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift */; };
 		07BAE7BA2072BEB500BDA03E /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7B12072BEB500BDA03E /* domain.framework */; };
 		07BAE7C12072BEB500BDA03E /* domainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE7C02072BEB500BDA03E /* domainTests.swift */; };
 		07BAE7C32072BEB500BDA03E /* domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7B32072BEB500BDA03E /* domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -240,6 +244,10 @@
 		07B6344C207EC19E00DBB501 /* AuthenticateUserIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserIntImpl.swift; sourceTree = "<group>"; };
 		07B6344E207EC1CD00DBB501 /* RegisterUserIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserIntImpl.swift; sourceTree = "<group>"; };
 		07B63450207EC1ED00DBB501 /* RegisterUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInteractor.swift; sourceTree = "<group>"; };
+		07B9355F208CB104004F5DF8 /* InsertServiceFromBackendIntImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertServiceFromBackendIntImpl.swift; sourceTree = "<group>"; };
+		07B93560208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertServiceFromBackendInteractor.swift; sourceTree = "<group>"; };
+		07B93564208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertProductFromBackendInteractor.swift; sourceTree = "<group>"; };
+		07B93565208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertProductFromBackendIntImpl.swift; sourceTree = "<group>"; };
 		07BAE7B12072BEB500BDA03E /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7B32072BEB500BDA03E /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; };
 		07BAE7B42072BEB500BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -382,6 +390,7 @@
 			children = (
 				070B33D9208CAA0700C06852 /* Delete */,
 				070B33D6208CAA0600C06852 /* Get */,
+				07B93563208CB114004F5DF8 /* Insert */,
 				070B33D3208CAA0600C06852 /* Update */,
 			);
 			name = Products;
@@ -684,6 +693,26 @@
 			path = GetUser;
 			sourceTree = "<group>";
 		};
+		07B9355E208CB104004F5DF8 /* Insert */ = {
+			isa = PBXGroup;
+			children = (
+				07B93560208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift */,
+				07B9355F208CB104004F5DF8 /* InsertServiceFromBackendIntImpl.swift */,
+			);
+			name = Insert;
+			path = Services/Insert;
+			sourceTree = "<group>";
+		};
+		07B93563208CB114004F5DF8 /* Insert */ = {
+			isa = PBXGroup;
+			children = (
+				07B93564208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift */,
+				07B93565208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift */,
+			);
+			name = Insert;
+			path = Products/Insert;
+			sourceTree = "<group>";
+		};
 		07BAE7B22072BEB500BDA03E /* domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -725,6 +754,7 @@
 			children = (
 				070B33E8208CAA1C00C06852 /* Delete */,
 				070B33E5208CAA1C00C06852 /* Get */,
+				07B9355E208CB104004F5DF8 /* Insert */,
 				070B33E2208CAA1C00C06852 /* Update */,
 			);
 			name = Services;
@@ -1352,6 +1382,7 @@
 				075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */,
 				51FA461C20769BC5005F317F /* DummyModel.swift in Sources */,
 				07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */,
+				07B93567208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift in Sources */,
 				070B33ED208CAA1C00C06852 /* GetServicesFromBackEndInteractor.swift in Sources */,
 				1FA5749A208B69610092427C /* Catalog.swift in Sources */,
 				519D197A2089FF250049FB00 /* DomainUserPictureInteractorImplementation.swift in Sources */,
@@ -1395,6 +1426,7 @@
 				51666FB1208A65BB0085D0D5 /* DomainUserProfileImplementation.swift in Sources */,
 				070B33DD208CAA0700C06852 /* UpdateProductFromBackendIntImpl.swift in Sources */,
 				5B5824D72084DB62006399A1 /* AppoitmentsViewController.swift in Sources */,
+				07B93566208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift in Sources */,
 				1FA574D0208C91750092427C /* ModelConverter.swift in Sources */,
 				070B33DF208CAA0700C06852 /* GetProductsFromBackEndIntImpl.swift in Sources */,
 				51FA461520769AD4005F317F /* ProductsViewController.swift in Sources */,
@@ -1408,6 +1440,7 @@
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				070B33E1208CAA0700C06852 /* DeleteProductFromBackendInteractor.swift in Sources */,
 				5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */,
+				07B93562208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
 				516B17C6207FA12400B86965 /* ViewControllers+AlertMessage.swift in Sources */,
 				5176A05A207F4FD000F3C81E /* BackEndURLConstants.swift in Sources */,
@@ -1420,6 +1453,7 @@
 				075DA5FE207D645D00199EFC /* User.swift in Sources */,
 				51666FB3208A66110085D0D5 /* RepositoryUserProfileInteractor.swift in Sources */,
 				5B5824E72084DD63006399A1 /* CatalogData.swift in Sources */,
+				07B93561208CB104004F5DF8 /* InsertServiceFromBackendIntImpl.swift in Sources */,
 				070B33DE208CAA0700C06852 /* GetProductsFromBackEndInteractor.swift in Sources */,
 				1FA574DC208C9A270092427C /* InsertProductIntImpl.swift in Sources */,
 				5B5824E22084DCDD006399A1 /* GetAppointmentsForDateInteractor.swift in Sources */,

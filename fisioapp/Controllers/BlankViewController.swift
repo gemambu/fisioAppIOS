@@ -95,7 +95,9 @@ class BlankViewController: UIViewController {
         let serviceId2 = "5aa00e386281ea2d347d4733"
         let user = UserData(id: userId, name: userName, lastName: userLastName)
         let productCatalogItem = CatalogData(databaseID: productId2, name: "Product name changed", description: "Product description changed", price: 10.0, professional: user, isActive: 1, type: "PRODUCT")
+        let newProductCatalogItem = CatalogData(databaseID: "", name: "New product 11", description: "New product description", price: 10.0, professional: user, isActive: 1, type: "PRODUCT")
         let serviceCatalogItem = CatalogData(databaseID: serviceId2, name: "Service name changed", description: "Service description changed", price: 20.0, professional: user, isActive: 1, type: "SERVICE")
+        let newServiceCatalogItem = CatalogData(databaseID: "", name: "New service 11", description: "New service description", price: 10.0, professional: user, isActive: 1, type: "SERVICE")
         
         
         // DeleteProduct
@@ -126,6 +128,20 @@ class BlankViewController: UIViewController {
                                             print("====================")
                                             print("Error: \(msg)")
         })
+        // InsertProduct
+        let insertProductInteractor: InsertProductFromBackendInteractor = InsertProductFromBackendIntImpl()
+        insertProductInteractor.execute(token: token,
+                                        item: newProductCatalogItem,
+                                        onSuccess: { (productCatalogItem: CatalogData) -> Void in
+                                            print("INSERT PRODUCT")
+                                            print("====================")
+                                            print("msg: \(productCatalogItem)")
+        },
+                                        onError: { (msg: String) -> Void in
+                                            print("INSERT PRODUCT")
+                                            print("====================")
+                                            print("Error: \(msg)")
+        })
         
         // DeleteService
         let deleteServiceInteractor: DeleteServiceFromBackendInteractor = DeleteServiceFromBackendIntImpl()
@@ -152,6 +168,20 @@ class BlankViewController: UIViewController {
         },
                                         onError: { (msg: String) -> Void in
                                             print("UPDATE SERVICE")
+                                            print("====================")
+                                            print("Error: \(msg)")
+        })
+        // InsertService
+        let insertServiceInteractor: InsertServiceFromBackendInteractor = InsertServiceFromBackendIntImpl()
+        insertServiceInteractor.execute(token: token,
+                                        item: newServiceCatalogItem,
+                                        onSuccess: { (serviceCatalogItem: CatalogData) -> Void in
+                                            print("INSERT SERVICE")
+                                            print("====================")
+                                            print("msg: \(serviceCatalogItem)")
+        },
+                                        onError: { (msg: String) -> Void in
+                                            print("INSERT SERVICE")
                                             print("====================")
                                             print("Error: \(msg)")
         })
