@@ -8,7 +8,7 @@
 
 import Foundation
 
-class InsertProductImpl: InsertProductInteractor {
+class InsertProductIntImpl: InsertProductInteractor {
     func execute(token: String, item: Catalog, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
         
         let repositoryInteractor: RepositoryInteractor = RepositoryIntImpl()
