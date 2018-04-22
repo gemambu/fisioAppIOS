@@ -9,6 +9,43 @@
 import Foundation
 
 class RepositoryFakeInteractor: RepositoryInteractor {
+    func getProducts(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
+
+    }
+    
+    func getServices(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
+
+    }
+    
+    func insertProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        
+    }
+    
+    func insertService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        
+    }
+    
+    func updateProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        
+    }
+    
+    func updateService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        
+    }
+    
+    func deleteProduct(token: String, id: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        
+    }
+    
+    func deleteService(token: String, id: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void) {
+        
+    }
+    
+
+    
+   
+    
+    
     
     /******** users ********/
     func authenticateUser(email: String, password: String, onSuccess: @escaping (UserData, String) -> Void, onError: @escaping (String) -> Void) {

@@ -12,11 +12,12 @@ public class CatalogData {
     var databaseID: String = ""
     var name: String = ""
     var description: String = ""
-    var price: Int = 0
+    var price: Float = 0.0
+    var professional: UserData
+    var isActive: Int = 0
+    var type: String
     
-    public init(databaseID: String, name: String, description: String, price: Int){
-        (self.databaseID, self.name, self.description, self.price) = (databaseID, name, description, price)
+    public init(databaseID: String, name: String, description: String, price: Float, professional: UserData, isActive: Int, type: String){
+        (self.databaseID, self.name, self.description, self.price, self.professional, self.isActive, self.type) = (databaseID, name, description, price, professional, isActive, type)
     }
 }
-
-
