@@ -74,7 +74,7 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         let getListInteractor: GetServicesInteractor = GetServicesIntImpl()
         
-        getListInteractor.execute(token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImlzUHJvZmVzc2lvbmFsIjp0cnVlLCJmZWxsb3dzaGlwTnVtYmVyIjozMywiZ2VuZGVyIjoibWFsZSIsIm5hbWUiOiJmaXNpbyIsImxhc3ROYW1lIjoibGFzdG5hbWUiLCJlbWFpbCI6ImZpc2lvQGludmFsaWQuY29tIiwicGFzc3dvcmQiOiJlZjc5N2M4MTE4ZjAyZGZiNjQ5NjA3ZGQ1ZDNmOGM3NjIzMDQ4YzljMDYzZDUzMmNjOTVjNWVkN2E4OThhNjRmIiwiYWRkcmVzcyI6IkZpc2lvIEFkZHJlc3MsIDMzIiwicGhvbmUiOiI2MjY2MjY2MjYiLCJiaXJ0aERhdGUiOiIyMDE4LTA0LTA3VDEwOjI0OjU3LjAwMFoiLCJuYXRpb25hbElkIjoiMTIzNDU2NzhaIiwicmVnaXN0cmF0aW9uRGF0ZSI6IjIwMTgtMDEtMDFUMDE6MDE6MDAuMDAwWiIsImxhc3RMb2dpbkRhdGUiOiIyMDE4LTAzLTA3VDE2OjAwOjAwLjAwMFoiLCJfX3YiOjAsImRlbGV0ZWQiOmZhbHNlfSwiaWF0IjoxNTI0MzI0ODU4LCJleHAiOjE1MjQ0OTc2NTh9.zZPf99zuDDMy7DNXvD7qpL8WHyP8i5gNfQpsN6_0KB4",
+        getListInteractor.execute(token: CustomUserDefaults.token,
                                          onSuccess: { (itemsFromDomain: [Catalog]) in
                                             if (itemsFromDomain.count == 0) {
                                                 self.itemsArray = []

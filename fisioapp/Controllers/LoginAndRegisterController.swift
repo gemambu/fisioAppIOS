@@ -27,6 +27,11 @@ class LoginAndRegisterController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (!CustomUserDefaults.checkToken()) {
+            //Nav 2 AppointmentsViewController
+        }
+        
         setupUI()
         
         nameTextField.delegate = self
@@ -108,11 +113,7 @@ extension LoginAndRegisterController{
 // MARK: - Login
 extension LoginAndRegisterController{
     func handleLogin (){
-        let userDefault = UserDefaults.standard
-        
-        let token = userDefault.string(forKey: "token")
-        let id = userDefault.string(forKey: "userId")
-        
+
         print("Login button pushed")
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             print("Form is not complete")
@@ -121,24 +122,24 @@ extension LoginAndRegisterController{
         
         let authenticateUserIntImpl : AuthenticateUserInteractor = AuthenticateUserIntImpl()
         
-        authenticateUserIntImpl.execute(email: email, password: password, onSuccess: { (user, message) in
+        authenticateUserIntImpl.execute(email: email, password: password, onSuccess: { (user, token) in
             
-            if (token?.count)! > 2 {
-                self.alertSuccessControllerToView(message: message, completionHandler: { (alert) in
+            CustomUserDefaults.token = token
+            
+            if (CustomUserDefaults.checkToken()) {
+                self.alertSuccessControllerToView(message: token, completionHandler: { (alert) in
                     
                     let userFromBackEnd : GetUserInteractor = GetUserIntImpl()
                     
-                    userFromBackEnd.execute(token: token!, id: id!, onSuccess: { (user) in
+                    userFromBackEnd.execute(token: CustomUserDefaults.token, id: CustomUserDefaults.userId, onSuccess: { (user) in
                         self.present(self.getControllerToNavigate(user: user), animated: true, completion: nil)
                     }, onError: { (error) in
                         self.alertControllerToView(message: error)
                     })
                     
-                   
-                    
                 })
                 
-            }else {
+            } else {
                 self.alertControllerToView(message: "El usuario no esta en nuestra base de datos")
             }
             
