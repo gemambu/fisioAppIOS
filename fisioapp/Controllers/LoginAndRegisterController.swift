@@ -132,7 +132,7 @@ extension LoginAndRegisterController{
                     let userFromBackEnd : GetUserInteractor = GetUserIntImpl()
                     
                     userFromBackEnd.execute(token: CustomUserDefaults.token, id: CustomUserDefaults.userId, onSuccess: { (user) in
-                        self.present(self.getControllerToNavigate(user: user), animated: true, completion: nil)
+                        self.present(self.getControllerToNavigate(), animated: true, completion: nil)
                     }, onError: { (error) in
                         self.alertControllerToView(message: error)
                     })
@@ -152,13 +152,13 @@ extension LoginAndRegisterController{
 }
 
 extension LoginAndRegisterController {
-    func getControllerToNavigate (user: User) -> UITabBarController {
+    func getControllerToNavigate () -> UITabBarController {
         
         //********************  UIViewControllers  ********************//
         let servicesCollection = ServicesViewController()
         let productsCollection = ProductsViewController()
         let appointmentsCollection = AppointmentsViewController()
-        let userProfileController = UserProfileViewController(model: user)
+        let userProfileController = UserProfileViewController()
         
         //********************  UITabBarController  ********************//
         let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
