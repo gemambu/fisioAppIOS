@@ -21,7 +21,10 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var nationalIdTextField: UITextField!
     @IBOutlet weak var genderSegmentControl: UISegmentedControl!
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    private let userToUpdate:User
+    
+    init(model: User){
+        self.userToUpdate = model
         super.init(nibName: nil, bundle: nil)
         title = "Perfil"
         tabBarItem.image = #imageLiteral(resourceName: "007-businessman")
@@ -67,6 +70,15 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         navigationItem.rightBarButtonItem = picture
         navigationItem.leftBarButtonItem = save
+        
+        nameTextField.text = userToUpdate.name ?? ""
+        lastNameTextField.text = userToUpdate.lastName ?? ""
+        emailTextField.text = userToUpdate.email ?? ""
+        addressTextField.text = userToUpdate.address ?? ""
+        phoneTextField.text = userToUpdate.phone ?? ""
+        birthDateTextField.text = "\(userToUpdate.birthDate)" ?? ""
+        nationalIdTextField.text = userToUpdate.nationalId ?? ""
+        
     }
     
 }
@@ -99,8 +111,16 @@ extension UserProfileViewController {
             print("Form is not complete")
             return
         }
+                
+        let userProfileUpdateImplementation: DomainUserProfileInteractor = DomainUserProfileImplementation()
         
-        print(" \(name), \(lastName), \(email), \(address), \(phone), \(birhdate), \(nationalID), \(gender) ")
+        userProfileUpdateImplementation.execute(name: name, lastname: lastName, email: email, address: address, phone: phone, birthdate: birhdate, nationalId: nationalID, gender: gender, onSuccess: { (success, message) in
+            
+            print(" \(name), \(lastName), \(email), \(address), \(phone), \(birhdate), \(nationalID), \(gender) ")
+
+        }) { (errorMessage) in
+            self.alertControllerToView(message: errorMessage)
+        }
         
     }
 }

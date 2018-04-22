@@ -28,7 +28,7 @@ class LoginAndRegisterController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-
+        
         nameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -108,7 +108,10 @@ extension LoginAndRegisterController{
 // MARK: - Login
 extension LoginAndRegisterController{
     func handleLogin (){
+        let userDefault = UserDefaults.standard
         
+        let token = userDefault.string(forKey: "token")
+        let id = userDefault.string(forKey: "userId")
         
         print("Login button pushed")
         guard let email = emailTextField.text, let password = passwordTextField.text else {
@@ -120,29 +123,25 @@ extension LoginAndRegisterController{
         
         authenticateUserIntImpl.execute(email: email, password: password, onSuccess: { (user, message) in
             
-            print("El user es: ")
-            print(user)
-            print("El mensaje es: ")
-            print(message)
-            self.alertSuccessControllerToView(message: message, completionHandler: { (alert) in
+            if (token?.count)! > 2 {
+                self.alertSuccessControllerToView(message: message, completionHandler: { (alert) in
+                    
+                    let userFromBackEnd : GetUserInteractor = GetUserIntImpl()
+                    
+                    userFromBackEnd.execute(token: token!, id: id!, onSuccess: { (user) in
+                        self.present(self.getControllerToNavigate(user: user), animated: true, completion: nil)
+                    }, onError: { (error) in
+                        self.alertControllerToView(message: error)
+                    })
+                    
+                   
+                    
+                })
                 
-                let servicesCollection = ServicesViewController()
-                let productsCollection = ProductsViewController()
-                let appoitmentsCollection = AppoitmentsViewController()
-                let userProfileController = UserProfileViewController()
-                
-                //********************  UITabBarController  ********************//
-                let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
-                let productsTableNavVC = UINavigationController(rootViewController: productsCollection)
-                let appoitmentsTableNavVC = UINavigationController(rootViewController: appoitmentsCollection)
-                let userProfileNavigation = UINavigationController(rootViewController: userProfileController)
-                
-                //********************  UITabBarController  ********************//
-                let tabVC = UITabBarController()
-                tabVC.viewControllers = [appoitmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
-                
-                self.present(tabVC, animated: true, completion: nil)
-            })
+            }else {
+                self.alertControllerToView(message: "El usuario no esta en nuestra base de datos")
+            }
+            
             
         }) { (errorMessage) in
             self.alertControllerToView(message: errorMessage)
@@ -150,6 +149,30 @@ extension LoginAndRegisterController{
         
     }
 }
+
+extension LoginAndRegisterController {
+    func getControllerToNavigate (user: User) -> UITabBarController {
+        
+        //********************  UIViewControllers  ********************//
+        let servicesCollection = ServicesViewController()
+        let productsCollection = ProductsViewController()
+        let appoitmentsCollection = AppoitmentsViewController()
+        let userProfileController = UserProfileViewController(model: user)
+        
+        //********************  UITabBarController  ********************//
+        let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
+        let productsTableNavVC = UINavigationController(rootViewController: productsCollection)
+        let appoitmentsTableNavVC = UINavigationController(rootViewController: appoitmentsCollection)
+        let userProfileNavigation = UINavigationController(rootViewController: userProfileController)
+        
+        //********************  UITabBarController  ********************//
+        let tabVC = UITabBarController()
+        tabVC.viewControllers = [appoitmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
+        
+        return tabVC
+    }
+}
+
 
 // MARK: - Login Register
 extension LoginAndRegisterController{

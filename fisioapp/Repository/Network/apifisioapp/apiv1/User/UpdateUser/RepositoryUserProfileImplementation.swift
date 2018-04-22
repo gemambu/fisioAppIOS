@@ -11,8 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class RepositoryUserProfileImplementation : RepositoryUserProfileInteractor {
-    
-    
+
     let defaults = UserDefaults.standard
     
     func execute(name: String, lastname: String?, email: String, address: String?, phone: String?, birthdate: String?, nationalId: String?, gender: String?, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
@@ -21,34 +20,52 @@ class RepositoryUserProfileImplementation : RepositoryUserProfileInteractor {
         let userId = defaults.string(forKey: "userId")
         
         let headers: HTTPHeaders = [
-            "Authorization": token!,
+            "x-access-token": token!,
             "Content-type": "multipart/form-data"
         ]
         
         let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USERS_UPDATE_SERVER_PATH + "/" + userId! )
-
-        let parameters = [ "name": name, "email": email ] as [String : Any]
-
         
-        Alamofire.upload(multipartFormData: { (form: MultipartFormData) in
-            
-            for ( key, value ) in parameters {
-                
-                form.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
-                
-            }
-            
-        },usingThreshold: UInt64.init(), to: urlAPI!, method: .put, headers: headers) { (result) in
-            switch result{
-            case .success(let upload, _, _):
-                upload.responseJSON { response in
-                    print("Succesfully uploaded")
-                    print(response)
+        let parameters = [
+            "name": name,
+            "lastname": lastname!,
+            "email": email,
+            "address": address!,
+            "phone" : phone!,
+            "birthdate": birthdate!,
+            "nationalId": nationalId!,
+            "gender": gender!
+            ] as [String : Any]
+        
+        
+        Alamofire.request(urlAPI!,method: .put, parameters: parameters, headers: headers).responseJSON { (response) in
+            print("Response: \(response)")
+            switch response.result{
+            case .success:
+                if let value = response.data {
+                    let json = JSON(data: value)
+                    let ok = json["ok"].bool ?? false
+                    var msg = json["message"].string ?? ""
+                    if (msg == "") {
+//                        let errors = json["error"]["err"]["errors"].array
+//                        errors!.forEach({ (json) in
+//                            var jsonArray = json["message"].string
+//                            print(jsonArray!)
+//                            msg.append(jsonArray!)
+//                        })
+                    }
+                    
+                    onSuccess(ok, msg)
                 }
+                break
             case .failure(let error):
-                print("Error in upload: \(error.localizedDescription)")
+                print(error.localizedDescription)
+                onError(error.localizedDescription)
+                break
+                
             }
         }
+
     }
     
     

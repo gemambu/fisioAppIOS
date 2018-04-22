@@ -27,7 +27,7 @@ class RepositoryUserPictureInteractorImplementation : RepositoryUserPictureInter
             "Content-type": "multipart/form-data"
         ]
 
-        let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USERS_UPDATE_SERVER_PATH + "/" + userId! )
+        let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USERS_UPDATE_IMAGE_SERVER_PATH + "/" + userId! )
 
         let imageData = UIImageJPEGRepresentation(image, 0.5)
 
