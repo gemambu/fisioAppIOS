@@ -16,13 +16,15 @@ extension AppoitmentsViewController {
         
         datePicker = UIDatePicker(frame: datePickerFrame)
         datePicker.datePickerMode = .date
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        self.selectedDate = dateFormatter.string(from: datePicker.date)
+        
         datePicker.addTarget(self, action: #selector(selectedDate(sender:)), for: .allEvents)
     }
     
     
     @objc func selectedDate(sender: UIDatePicker){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
         self.selectedDate = dateFormatter.string(from: datePicker.date)
         self.getAppointmentsForDate(date: self.selectedDate)
     }
