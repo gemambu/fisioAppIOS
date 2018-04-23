@@ -10,8 +10,8 @@ import Foundation
 
 // FIXME: Cambiar ip
 // Server
-let DEBUG_HTTP_SERVER = "http://192.168.1.41:3000"
-let RELEASE_HTTP_SERVER = "http://192.168.1.41:3000"
+let DEBUG_HTTP_SERVER = "http://192.168.2.48:3000"
+let RELEASE_HTTP_SERVER = "http://192.168.2.48:3000"
 
 
 // Files

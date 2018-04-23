@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class LoginAndRegisterController: UIViewController, UITextFieldDelegate {
+
     
     @IBOutlet weak var textViews: UIView!
     @IBOutlet weak var registerButton: UIButton!

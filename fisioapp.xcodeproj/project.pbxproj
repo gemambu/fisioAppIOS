@@ -84,6 +84,9 @@
 		1FA574D8208C9A080092427C /* UpdateProductIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA574D7208C9A080092427C /* UpdateProductIntImpl.swift */; };
 		1FA574DA208C9A130092427C /* InsertProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA574D9208C9A130092427C /* InsertProductInteractor.swift */; };
 		1FA574DC208C9A270092427C /* InsertProductIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA574DB208C9A270092427C /* InsertProductIntImpl.swift */; };
+		1FDE3C9C208D00C40028786D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE3C9B208D00C40028786D /* CoreDataStack.swift */; };
+		1FDE3CA0208D03480028786D /* FisioApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE3C9E208D03480028786D /* FisioApp.xcdatamodeld */; };
+		1FDE3CA8208E76780028786D /* CDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE3CA7208E76780028786D /* CDMapper.swift */; };
 		51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8120760F8400CB3756 /* ProductViewController.swift */; };
 		51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8220760F8400CB3756 /* ProductViewController.xib */; };
 		51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8520760F9500CB3756 /* ServiceViewController.swift */; };
@@ -285,6 +288,9 @@
 		1FA574D7208C9A080092427C /* UpdateProductIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductIntImpl.swift; sourceTree = "<group>"; };
 		1FA574D9208C9A130092427C /* InsertProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertProductInteractor.swift; sourceTree = "<group>"; };
 		1FA574DB208C9A270092427C /* InsertProductIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertProductIntImpl.swift; sourceTree = "<group>"; };
+		1FDE3C9B208D00C40028786D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1FDE3C9F208D03480028786D /* FisioApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FisioApp.xcdatamodel; sourceTree = "<group>"; };
+		1FDE3CA7208E76780028786D /* CDMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMapper.swift; sourceTree = "<group>"; };
 		3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51266D8120760F8400CB3756 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		51266D8220760F8400CB3756 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
@@ -724,8 +730,11 @@
 		07B93569208CD77F004F5DF8 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
+				1FDE3CA6208E76690028786D /* Mapper */,
+				1FDE3C9D208D03300028786D /* Model */,
 				07B9356C208CD7D0004F5DF8 /* CacheInteractor.swift */,
 				07B9356E208CD7DA004F5DF8 /* CacheIntImpl.swift */,
+				1FDE3C9B208D00C40028786D /* CoreDataStack.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -875,6 +884,22 @@
 			isa = PBXGroup;
 			children = (
 				1FA574CF208C91750092427C /* ModelConverter.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		1FDE3C9D208D03300028786D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FDE3C9E208D03480028786D /* FisioApp.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FDE3CA6208E76690028786D /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				1FDE3CA7208E76780028786D /* CDMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -1422,8 +1447,10 @@
 				07B6344B207EC18200DBB501 /* AuthenticateUserInteractor.swift in Sources */,
 				5B5824EC2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift in Sources */,
 				5B5824D62084DB62006399A1 /* AppointmentsVCExtension.swift in Sources */,
+				1FDE3C9C208D00C40028786D /* CoreDataStack.swift in Sources */,
 				1FA574D8208C9A080092427C /* UpdateProductIntImpl.swift in Sources */,
 				075DA5F0207D2CA500199EFC /* RepositoryInteractor.swift in Sources */,
+				1FDE3CA8208E76780028786D /* CDMapper.swift in Sources */,
 				070B33EF208CAA1C00C06852 /* DeleteServiceFromBackendInteractor.swift in Sources */,
 				519D19752089FD060049FB00 /* RepositoryUserPictureInteractorImplementation.swift in Sources */,
 				075DA5E9207D278500199EFC /* GetUserInteractor.swift in Sources */,
@@ -1454,6 +1481,7 @@
 				5B5824DC2084DC9E006399A1 /* Appointment.swift in Sources */,
 				07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */,
 				1FA574D2208C93CB0092427C /* InsertServiceInteractor.swift in Sources */,
+				1FDE3CA0208D03480028786D /* FisioApp.xcdatamodeld in Sources */,
 				1FA574C7208BA2450092427C /* DeleteProductInteractor.swift in Sources */,
 				075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
@@ -1974,6 +2002,16 @@
 			);
 			currentVersion = 076E051C2072AAFB00554F97 /* fisioapp.xcdatamodel */;
 			path = fisioapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		1FDE3C9E208D03480028786D /* FisioApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FDE3C9F208D03480028786D /* FisioApp.xcdatamodel */,
+			);
+			currentVersion = 1FDE3C9F208D03480028786D /* FisioApp.xcdatamodel */;
+			path = FisioApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
