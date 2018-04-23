@@ -23,14 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         
-        
         // Old main view
         /*
          let loginVC = LoginAndRegisterController()
          window?.rootViewController = loginVC
          */
         
-        CustomUserDefaults.token = ""
         
         // New main view
         
@@ -50,10 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //********************  UITabBarController  ********************//
         let tabVC = UITabBarController()
-        
         tabVC.viewControllers = [appointmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
-        
         window?.rootViewController = tabVC
+
         
         // Main controller for test purposes
         /*

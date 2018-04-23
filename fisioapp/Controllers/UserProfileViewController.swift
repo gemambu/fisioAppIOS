@@ -55,8 +55,8 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         nationalIdTextField.delegate = self
         
         getUser()
-        
         setupUI()
+        setupUser()
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,6 +74,7 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
                                     print("Name: \(user.name)")
                                     print("Email: \(user.email)")
                                     self.userToUpdate = user
+                                    self.setupUser()
         },
                                   onError: { (msg: String) -> Void in
                                     print("Error: \(msg)")
@@ -92,6 +93,9 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         navigationItem.rightBarButtonItem = picture
         navigationItem.leftBarButtonItem = save
         
+    }
+    
+    func setupUser() {
         nameTextField.text = userToUpdate?.name ?? ""
         lastNameTextField.text = userToUpdate?.lastName ?? ""
         emailTextField.text = userToUpdate?.email ?? ""
@@ -99,7 +103,6 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         phoneTextField.text = userToUpdate?.phone ?? ""
         birthDateTextField.text = "\(String(describing: userToUpdate?.birthDate))"
         nationalIdTextField.text = userToUpdate?.nationalId ?? ""
-        
     }
     
 }
