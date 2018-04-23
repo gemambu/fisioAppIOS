@@ -1,5 +1,12 @@
+# Custom files
+.DS_Store
 
-# Created by https://www.gitignore.io/api/xcode,swift,objective-c
+### API_KEYS ###
+
+# Created by https://www.gitignore.io/api/git,xcode,swift,objective-c
+
+### Git ###
+*.orig
 
 ### Objective-C ###
 # Xcode
@@ -20,6 +27,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+*xcworkspace/xcuserdata
 
 ## Other
 *.moved-aside
@@ -113,4 +121,4 @@ playground.xcworkspace
 /*.gcno
 
 
-# End of https://www.gitignore.io/api/xcode,swift,objective-c
+# End of https://www.gitignore.io/api/git,xcode,swift,objective-c
