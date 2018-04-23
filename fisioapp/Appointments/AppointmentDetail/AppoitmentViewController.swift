@@ -18,6 +18,7 @@ class AppoitmentViewController: UIViewController {
     @IBOutlet weak var customer: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var extraInfo: UILabel!
     @IBOutlet weak var confirmedSwitch: UISwitch!
     @IBOutlet weak var cancelledSwitch: UISwitch!
     
@@ -47,6 +48,13 @@ class AppoitmentViewController: UIViewController {
         price.text = "\(appointment.price)€"
         confirmedSwitch.isOn = appointment.isConfirmed
         cancelledSwitch.isOn = appointment.isCancelled
+        //extraInfo.text = appointment.extraInfo
+        
+        if (appointment.extraInfo == "false"){
+            extraInfo.text = "No extra info provided"
+        } else {
+            extraInfo.text = appointment.extraInfo
+        }
         
         if (appointment.isCancelled) {
             confirmedSwitch.isEnabled = false

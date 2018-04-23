@@ -11,6 +11,7 @@ final class AppointmentModel {
     let price: Int
     let lat: Float
     let long: Float
+    let extraInfo: String
     
     init(id: String,
          customer: String,
@@ -20,8 +21,9 @@ final class AppointmentModel {
          isCancelled: Bool,
          price: Int,
          lat: Float,
-         long: Float){
-        (self.id, self.customer, self.address, self.date, self.isConfirmed, self.isCancelled, self.price, self.lat, self.long) = (id, customer, address, date, isConfirmed, isCancelled, price, lat, long)
+         long: Float,
+         extraInfo: String){
+        (self.id, self.customer, self.address, self.date, self.isConfirmed, self.isCancelled, self.price, self.lat, self.long, self.extraInfo) = (id, customer, address, date, isConfirmed, isCancelled, price, lat, long, extraInfo)
     }
 }
 

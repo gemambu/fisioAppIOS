@@ -60,7 +60,7 @@ extension AppoitmentsViewController {
     /******** Appointment mapper ********/
     func appointmentMapper(appointment: AppointmentDomain) -> AppointmentModel{
         
-        let customerName = appointment.customer.name + " " + appointment.customer.lastName
+        let customerName = appointment.customer.name.capitalized + " " + appointment.customer.lastName.capitalized
         let appointmentModel = AppointmentModel(id: appointment.id,
                                                 customer: customerName,
                                                 address: appointment.address,
@@ -69,7 +69,8 @@ extension AppoitmentsViewController {
                                                 isCancelled: appointment.isCancelled,
                                                 price: Int(appointment.service.price),
                                                 lat: appointment.latitude,
-                                                long: appointment.longitude)
+                                                long: appointment.longitude,
+                                                extraInfo: appointment.extraInfo)
         
         return appointmentModel
     }
