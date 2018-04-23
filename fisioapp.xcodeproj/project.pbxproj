@@ -472,10 +472,10 @@
 			isa = PBXGroup;
 			children = (
 				075DA60A207D678500199EFC /* CompletionInterfaces.swift */,
+				0701F8E2208D14CF00C4577A /* CustomUserDefaults.swift */,
 				07B6343A207EB61300DBB501 /* Formatter.swift */,
 				075DA60C207D68B100199EFC /* Paths.swift */,
 				075DA5EA207D2A5400199EFC /* Typealias.swift */,
-				0701F8E2208D14CF00C4577A /* CustomUserDefaults.swift */,
 				516B17C5207FA12400B86965 /* ViewControllers+AlertMessage.swift */,
 			);
 			path = Utils;
