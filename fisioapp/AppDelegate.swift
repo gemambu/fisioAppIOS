@@ -16,40 +16,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        // Override point for customization after application launch.
         self.window?.backgroundColor = UIColor.orange
         self.window?.makeKeyAndVisible()
-        let loginVC = LoginAndRegisterController()
         
-        window?.rootViewController = loginVC
-
+        // Old main view
         /*
+        let loginVC = LoginAndRegisterController()
+        window?.rootViewController = loginVC
+        */
+        
+        CustomUserDefaults.token = ""
+        
+        // New main view
+
         //********************  UITabBarController  ********************//
-        let servicesCollection = ServicesViewController()
-        let productsCollection = ProductsViewController()
         let appointmentsCollection = AppointmentsViewController()
+        let productsCollection = ProductsViewController()
+        let servicesCollection = ServicesViewController()
         let userProfileController = UserProfileViewController()
         
         //********************  UITabBarController  ********************//
-        let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
-        let productsTableNavVC = UINavigationController(rootViewController: productsCollection)
         let appointmentsTableNavVC = UINavigationController(rootViewController: appointmentsCollection)
+        let productsTableNavVC = UINavigationController(rootViewController: productsCollection)
+        let servicesTableNavVC = UINavigationController(rootViewController: servicesCollection)
         let userProfileNavigation = UINavigationController(rootViewController: userProfileController)
         
         //********************  UITabBarController  ********************//
         let tabVC = UITabBarController()
         tabVC.viewControllers = [appointmentsTableNavVC, productsTableNavVC, servicesTableNavVC, userProfileNavigation]
+        window?.rootViewController = tabVC
         
-        
-        //window?.rootViewController = loginVC
+        // Main controller for test purposes
+        /*
         let blankVC = BlankViewController()
         window?.rootViewController = blankVC
-
-        */
-
+         */
 
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {}
