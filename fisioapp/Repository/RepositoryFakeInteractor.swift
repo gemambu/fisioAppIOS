@@ -8,10 +8,13 @@
 
 import Foundation
 
+
 class RepositoryFakeInteractor: RepositoryInteractor {
     func getProducts(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
-
+        
     }
+    
+ 
     
     func getServices(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
 

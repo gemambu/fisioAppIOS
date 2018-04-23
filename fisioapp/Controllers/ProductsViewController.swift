@@ -31,7 +31,7 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,6 +72,7 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         let getProductListInteractor: GetProductsInteractor = GetProductsIntImpl()
         
+
         getProductListInteractor.execute(token: CustomUserDefaults.token,
                                          onSuccess: { (itemsFromDomain: [Catalog]) in
                                             if (itemsFromDomain.count == 0) {
@@ -114,6 +115,8 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         return cell
     }
+    
+    
     
 }
 

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 class GetProductsIntImpl: GetProductsInteractor {
     func execute(token: String, onSuccess: @escaping ([Catalog]) -> Void, onError: @escaping (String) -> Void) {
         

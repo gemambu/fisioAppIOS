@@ -7,10 +7,27 @@
 //
 
 import Foundation
+
+
 class RepositoryIntImpl: RepositoryInteractor {
     
+    private var cache: CacheInteractor = CacheIntImpl() as CacheInteractor
+    
+    let authenticateUserInBackendInteractor: AuthenticateUserInBackendInteractor = AuthenticateUserInBackendIntImpl()
+    let getUserFromBackendInteractor: GetUserFromBackendInteractor = GetUserFromBackendIntImpl()
+    let registerUserInBackendInteractor: RegisterUserInBackendInteractor = RegisterUserInBackendIntImpl()
+    let getAppointmentsForDateFromBackendInteractor: GetAppointmentsForDateFromBackEndInteractor = GetAppointmentsForDateFromBackEndIntImpl()
+    let getServicesFromBackendInteractor: GetServicesFromBackEndInteractor = GetServicesFromBackEndIntImpl() as GetServicesFromBackEndInteractor
+    let getProductsFromBackendInteractor: GetProductsFromBackEndInteractor = GetProductsFromBackEndIntImpl() as GetProductsFromBackEndInteractor
+    let insertProductInteractor: InsertProductFromBackendInteractor = InsertProductFromBackendIntImpl() as InsertProductFromBackendInteractor
+    let insertServiceInteractor: InsertServiceFromBackendInteractor = InsertServiceFromBackendIntImpl() as InsertServiceFromBackendInteractor
+    let updateProductInteractor: UpdateProductFromBackendInteractor = UpdateProductFromBackendIntImpl() as UpdateProductFromBackendInteractor
+    let updateServiceInteractor: UpdateServiceFromBackendInteractor = UpdateServiceFromBackendIntImpl() as UpdateServiceFromBackendInteractor
+    let deleteProductInteractor: DeleteProductFromBackendInteractor = DeleteProductFromBackendIntImpl() as DeleteProductFromBackendInteractor
+    let deleteServiceInteractor: DeleteServiceFromBackendInteractor = DeleteServiceFromBackendIntImpl() as DeleteServiceFromBackendInteractor
+    
     func authenticateUser(email: String, password: String, onSuccess: @escaping (UserData, String) -> Void, onError: @escaping (String) -> Void) {
-        let authenticateUserInBackendInteractor: AuthenticateUserInBackendInteractor = AuthenticateUserInBackendIntImpl()
+        
         authenticateUserInBackendInteractor.execute(email: email,
                                                     password: password,
                                                     onSuccess: { (userData: UserData, token: String) -> Void in
@@ -22,7 +39,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     }
     
     func getUser(token: String, id: String, onSuccess: @escaping (UserData) -> Void, onError: @escaping (String) -> Void) {
-        let getUserFromBackendInteractor: GetUserFromBackendInteractor = GetUserFromBackendIntImpl()
+        
         getUserFromBackendInteractor.execute(token: token,
                                              id: id,
                                              onSuccess: { (userData: UserData) -> Void in
@@ -35,7 +52,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     }
     
     func registerUser(name: String, email: String, password: String, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
-        let registerUserInBackendInteractor: RegisterUserInBackendInteractor = RegisterUserInBackendIntImpl()
+        
         registerUserInBackendInteractor.execute(name: name,
                                                 email: email,
                                                 password: password,
@@ -51,7 +68,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     /******** appointments ********/
     func getAppointmentsForDate(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {
         
-        let getAppointmentsForDateFromBackendInteractor: GetAppointmentsForDateFromBackEndInteractor = GetAppointmentsForDateFromBackEndIntImpl()
+       
         
 //        getAppointmentsForDateFromBackendInteractor.execute(token: token,
 //                                                            date: date,
@@ -75,7 +92,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     func getServices(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
 
         
-        let getServicesFromBackendInteractor: GetServicesFromBackEndInteractor = GetServicesFromBackEndIntImpl() as GetServicesFromBackEndInteractor
+        
         
         getServicesFromBackendInteractor.execute(token: token,
                                                  onSuccess: {(itemsFromBackend: [CatalogData]) -> Void in
@@ -90,21 +107,32 @@ class RepositoryIntImpl: RepositoryInteractor {
     
     func getProducts(token: String,  onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
 
-        let getProductsFromBackendInteractor: GetProductsFromBackEndInteractor = GetProductsFromBackEndIntImpl() as GetProductsFromBackEndInteractor
+        cache.getProducts(onSuccess:
+            {
+                (itemsFromBackend: [CatalogData]) -> Void in
+                onSuccess(itemsFromBackend)
+                
+        },onError: {_ in 
+            self.populateProductsCache(token: token, onSuccess: onSuccess, onError: onError)
+            
+        })
+    
         
+    }
+    
+    private func populateProductsCache(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void){
         getProductsFromBackendInteractor.execute(token: token,
                                                  onSuccess: {(itemsFromBackend: [CatalogData]) -> Void in
+                                                    self.cache.saveAllProducts(products: itemsFromBackend)
                                                     onSuccess(itemsFromBackend)
         },
                                                  onError: { (msg: String) -> Void in
                                                     onError(msg)
         })
-        
-        
     }
     
     func insertProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
-        let insertProductInteractor: InsertProductFromBackendInteractor = InsertProductFromBackendIntImpl() as InsertProductFromBackendInteractor
+        
         insertProductInteractor.execute(token: token, item: item,
                                         onSuccess: { (itemCatalogData: CatalogData) -> Void in
                                             //insertCatalogInCache(it, success)
@@ -116,7 +144,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     }
     
     func insertService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
-        let insertServiceInteractor: InsertServiceFromBackendInteractor = InsertServiceFromBackendIntImpl() as InsertServiceFromBackendInteractor
+        
         insertServiceInteractor.execute(token: token, item: item,
                                         onSuccess: { (itemCatalogData: CatalogData) -> Void in
                                             //insertCatalogInCache(it, success)
@@ -129,7 +157,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     
     func updateProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
         
-        let updateProductInteractor: UpdateProductFromBackendInteractor = UpdateProductFromBackendIntImpl() as UpdateProductFromBackendInteractor
+        
         updateProductInteractor.execute(token: token, item: item,
                                         onSuccess: { (msg: String) -> Void in
                                             onSuccess(msg)
@@ -141,7 +169,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     
     func updateService(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
         
-        let updateServiceInteractor: UpdateServiceFromBackendInteractor = UpdateServiceFromBackendIntImpl() as UpdateServiceFromBackendInteractor
+        
         updateServiceInteractor.execute(token: token, item: item,
                                         onSuccess: { (msg: String) -> Void in
                                             onSuccess(msg)
@@ -153,7 +181,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     
     func deleteProduct(token: String, id: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
         
-        let deleteProductInteractor: DeleteProductFromBackendInteractor = DeleteProductFromBackendIntImpl() as DeleteProductFromBackendInteractor
+        
         deleteProductInteractor.execute(token: token, id: id,
                                         onSuccess: { (msg: String) -> Void in
                                             onSuccess(msg)
@@ -164,7 +192,7 @@ class RepositoryIntImpl: RepositoryInteractor {
     }
     
     func deleteService(token: String, id: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
-        let deleteServiceInteractor: DeleteServiceFromBackendInteractor = DeleteServiceFromBackendIntImpl() as DeleteServiceFromBackendInteractor
+        
         deleteServiceInteractor.execute(token: token, id: id,
                                         onSuccess: { (msg: String) -> Void in
                                             onSuccess(msg)
