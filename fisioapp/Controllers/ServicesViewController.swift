@@ -33,6 +33,11 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(!CustomUserDefaults.checkToken()) {
+            checkLogin()
+        }
+        
         title = "Servicios"
         
         getServicesList()
@@ -111,3 +116,21 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     
 }
+
+// MARK: - checkLogin
+extension ServicesViewController {
+    func checkLogin()  {
+        if let navigator = navigationController {
+            navigator.pushViewController(LoginAndRegisterController(), animated: false)
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

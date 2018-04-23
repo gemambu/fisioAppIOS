@@ -42,6 +42,10 @@ class UserProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (!CustomUserDefaults.checkToken()) {
+            checkLogin()
+        }
+        
         nameTextField.delegate = self
         lastNameTextField.delegate = self
         emailTextField.delegate = self
@@ -185,21 +189,14 @@ extension UserProfileViewController{
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// MARK: - checkLogin
+extension UserProfileViewController {
+    func checkLogin()  {
+        if let navigator = navigationController {
+            navigator.pushViewController(LoginAndRegisterController(), animated: false)
+        }
+    }
+}
 
 
 

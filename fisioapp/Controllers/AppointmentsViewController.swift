@@ -34,8 +34,13 @@ class AppointmentsViewController: UIViewController, UICollectionViewDelegateFlow
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Citas"
         
+        if (!CustomUserDefaults.checkToken()) {
+            checkLogin()
+        }
+        
+        title = "Citas"
+
         appointments.append(appointment1)
         appointments.append(appointment2)
         appointments.append(appointment3)
@@ -100,8 +105,23 @@ class AppointmentsViewController: UIViewController, UICollectionViewDelegateFlow
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
     }
-    
-    
-    
 
 }
+
+// MARK: - checkLogin
+extension AppointmentsViewController {
+    func checkLogin()  {
+        if let navigator = navigationController {
+            navigator.pushViewController(LoginAndRegisterController(), animated: false)
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

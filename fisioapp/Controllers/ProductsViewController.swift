@@ -34,6 +34,11 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (!CustomUserDefaults.checkToken()) {
+            checkLogin()
+        }
+        
         title = "Productos"
         
         getProductList()
@@ -111,3 +116,21 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
 }
+
+// MARK: - checkLogin
+extension ProductsViewController {
+    func checkLogin()  {
+        if let navigator = navigationController {
+            navigator.pushViewController(LoginAndRegisterController(), animated: false)
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

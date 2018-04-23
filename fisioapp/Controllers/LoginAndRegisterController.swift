@@ -29,7 +29,7 @@ class LoginAndRegisterController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         if (!CustomUserDefaults.checkToken()) {
-            //Nav 2 AppointmentsViewController
+            hideUIElementsFromTabBar()
         }
         
         setupUI()
@@ -132,7 +132,8 @@ extension LoginAndRegisterController{
                     let userFromBackEnd : GetUserInteractor = GetUserIntImpl()
                     
                     userFromBackEnd.execute(token: CustomUserDefaults.token, id: CustomUserDefaults.userId, onSuccess: { (user) in
-                        self.present(self.getControllerToNavigate(), animated: true, completion: nil)
+                        self.showUIElementsFromTabBarAndGoBack()
+                        //self.present(self.getControllerToNavigate(), animated: true, completion: nil)
                     }, onError: { (error) in
                         self.alertControllerToView(message: error)
                     })
@@ -151,6 +152,7 @@ extension LoginAndRegisterController{
     }
 }
 
+/*
 extension LoginAndRegisterController {
     func getControllerToNavigate () -> UITabBarController {
         
@@ -173,6 +175,7 @@ extension LoginAndRegisterController {
         return tabVC
     }
 }
+ */
 
 
 // MARK: - Login Register
@@ -228,6 +231,20 @@ extension UIColor {
     }
 }
 
+// MARK: - hide or show tabBarController elements
+extension LoginAndRegisterController {
+    
+    func hideUIElementsFromTabBar() {
+        navigationItem.hidesBackButton = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func showUIElementsFromTabBarAndGoBack() {
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+}
 
 
 
