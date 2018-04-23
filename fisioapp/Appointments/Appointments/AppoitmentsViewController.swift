@@ -16,7 +16,7 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
     var datePicker: UIDatePicker!
     var appointmentsForCV: [AppointmentModel] = []
     
-    let myToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImlzUHJvZmVzc2lvbmFsIjp0cnVlLCJmZWxsb3dzaGlwTnVtYmVyIjozMywiZ2VuZGVyIjoibWFsZSIsIm5hbWUiOiJmaXNpbyIsImxhc3ROYW1lIjoibGFzdG5hbWUiLCJlbWFpbCI6ImZpc2lvQGludmFsaWQuY29tIiwicGFzc3dvcmQiOiJlZjc5N2M4MTE4ZjAyZGZiNjQ5NjA3ZGQ1ZDNmOGM3NjIzMDQ4YzljMDYzZDUzMmNjOTVjNWVkN2E4OThhNjRmIiwiYWRkcmVzcyI6IkZpc2lvIEFkZHJlc3MsIDMzIiwicGhvbmUiOiI2MjY2MjY2MjYiLCJiaXJ0aERhdGUiOiIxOTcwLTEyLTMwVDEyOjMwOjAwLjAwMFoiLCJuYXRpb25hbElkIjoiMTIzNDU2NzhaIiwicmVnaXN0cmF0aW9uRGF0ZSI6IjIwMTgtMDEtMDFUMDE6MDE6MDAuMDAwWiIsImxhc3RMb2dpbkRhdGUiOiIyMDE4LTAzLTA3VDE2OjAwOjAwLjAwMFoiLCJfX3YiOjAsImRlbGV0ZWQiOmZhbHNlfSwiaWF0IjoxNTI0MjUyMDAzLCJleHAiOjE1MjQ0MjQ4MDN9.iGo-1K6NguipH6cW_wXsT9Kp-VTcIgYzkmrqiUQWesk"
+    let myToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImZlbGxvd3NoaXBOdW1iZXIiOjMzLCJnZW5kZXIiOiJtYWxlIiwibmFtZSI6ImZpc2lvIiwibGFzdE5hbWUiOiJsYXN0bmFtZSIsImVtYWlsIjoiZmlzaW9AaW52YWxpZC5jb20iLCJwYXNzd29yZCI6ImVmNzk3YzgxMThmMDJkZmI2NDk2MDdkZDVkM2Y4Yzc2MjMwNDhjOWMwNjNkNTMyY2M5NWM1ZWQ3YTg5OGE2NGYiLCJhZGRyZXNzIjoiRmlzaW8gQWRkcmVzcywgMzMiLCJwaG9uZSI6IjYyNjYyNjYyNiIsImJpcnRoRGF0ZSI6IjE5NzAtMTItMzBUMTI6MzA6MDAuMDAwWiIsIm5hdGlvbmFsSWQiOiIxMjM0NTY3OFoiLCJyZWdpc3RyYXRpb25EYXRlIjoiMjAxOC0wMS0wMVQwMTowMTowMC4wMDBaIiwibGFzdExvZ2luRGF0ZSI6IjIwMTgtMDMtMDdUMTY6MDA6MDAuMDAwWiIsIl9fdiI6MCwiZGVsZXRlZCI6ZmFsc2UsImlzUHJvZmVzc2lvbmFsIjp0cnVlfSwiaWF0IjoxNTI0NDI1NDI0LCJleHAiOjE1MjQ1OTgyMjR9.tDNL_PydUzkvhffYGUer8mn4kh6fIe-rmDZ846RhaWk"
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -98,15 +98,16 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
                                             
                                                 if (appointmentsFromDomain.count == 0) {
                                                     self.appointmentsForCV = []
-                                                    self.collectionView.reloadData()
+                                                    //self.collectionView.reloadData()
                                                 } else {
                                                     for appointment in appointmentsFromDomain {
                                                         let appointment = self.appointmentMapper(appointment: appointment)
                                                         self.appointmentsForCV.append(appointment)
                                                         print(self.appointmentsForCV.count)
                                                     }
-                                                    self.collectionView.reloadData()
+                                                    //self.collectionView.reloadData()
                                                 }
+                                            self.collectionView.reloadData()
                                             },
                                            onError: { (msg: String) -> Void in
                                             print("Error: \(msg)")

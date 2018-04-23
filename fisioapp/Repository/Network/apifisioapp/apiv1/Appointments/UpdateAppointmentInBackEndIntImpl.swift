@@ -13,11 +13,12 @@ import SwiftyJSON
 class UpdateAppointmentInBackEndIntImpl: UpdateAppointmentInBackEndInteractor {
     func execute(token: String, id: String, isConfirmed: Bool, isCancelled: Bool, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
         
-        let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_USER_SERVER_PATH + "/" + id)
+        let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_APPOINTMENTS_SERVER_PATH + "/" + id)
         let headers: HTTPHeaders = [ "x-access-token" : token, "Content-Type": "application/x-www-form-urlencoded" ]
         let parameters = ["isConfirmed": isConfirmed, "isCancelled": isCancelled] as [String : Any]
         
         Alamofire.request(urlAPI!, method: .put, parameters: parameters, headers: headers).validate().responseJSON { (response) in
+            print(response.request?.url)
             
             switch response.result {
             case .success:

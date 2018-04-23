@@ -27,6 +27,9 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
         
         let appointment = AppoitmentViewController()
         appointment.appointment = selected
+        print(selected.id)
+        print(selected.isConfirmed)
+        print(selected.isCancelled)
         
         navigationController?.pushViewController(appointment, animated: true)
     }
