@@ -15,6 +15,7 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
     var collectionView: UICollectionView!
     var datePicker: UIDatePicker!
     var appointmentsForCV: [AppointmentModel] = []
+    lazy var selectedDate = String()
     
     let myToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImZlbGxvd3NoaXBOdW1iZXIiOjMzLCJnZW5kZXIiOiJtYWxlIiwibmFtZSI6ImZpc2lvIiwibGFzdE5hbWUiOiJsYXN0bmFtZSIsImVtYWlsIjoiZmlzaW9AaW52YWxpZC5jb20iLCJwYXNzd29yZCI6ImVmNzk3YzgxMThmMDJkZmI2NDk2MDdkZDVkM2Y4Yzc2MjMwNDhjOWMwNjNkNTMyY2M5NWM1ZWQ3YTg5OGE2NGYiLCJhZGRyZXNzIjoiRmlzaW8gQWRkcmVzcywgMzMiLCJwaG9uZSI6IjYyNjYyNjYyNiIsImJpcnRoRGF0ZSI6IjE5NzAtMTItMzBUMTI6MzA6MDAuMDAwWiIsIm5hdGlvbmFsSWQiOiIxMjM0NTY3OFoiLCJyZWdpc3RyYXRpb25EYXRlIjoiMjAxOC0wMS0wMVQwMTowMTowMC4wMDBaIiwibGFzdExvZ2luRGF0ZSI6IjIwMTgtMDMtMDdUMTY6MDA6MDAuMDAwWiIsIl9fdiI6MCwiZGVsZXRlZCI6ZmFsc2UsImlzUHJvZmVzc2lvbmFsIjp0cnVlfSwiaWF0IjoxNTI0NDI1NDI0LCJleHAiOjE1MjQ1OTgyMjR9.tDNL_PydUzkvhffYGUer8mn4kh6fIe-rmDZ846RhaWk"
     
@@ -35,12 +36,15 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
         super.viewDidLoad()
         
         title = "Citas"
-        
+
         initializeDatePicker()
         initializeCollectionView()
-        self.view.addSubview(collectionView)
         self.view.addSubview(datePicker)
+        self.view.addSubview(collectionView)
+        
+        
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,9 +67,10 @@ class AppoitmentsViewController: UIViewController, UICollectionViewDelegateFlowL
     @objc func selectedDate(sender: UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.string(from: datePicker.date)
-        //print(date)
-        self.getAppointmentsForDate(date: date)
+        //let date = dateFormatter.string(from: datePicker.date)
+        //self.selectedDate = date
+        self.selectedDate = dateFormatter.string(from: datePicker.date)
+        self.getAppointmentsForDate(date: self.selectedDate)
     }
     
     
