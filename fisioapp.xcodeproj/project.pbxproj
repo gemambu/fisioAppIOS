@@ -380,6 +380,7 @@
 		075DA5E6207D271B00199EFC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5B036C70208F7733008284DD /* CoreData */,
 				075DA5F9207D620600199EFC /* Model */,
 				075DA5E7207D275300199EFC /* Interactors */,
 				5176A057207F4F6400F3C81E /* RemoteBackEndConections.swift */,
@@ -791,6 +792,13 @@
 			);
 			name = Appointments;
 			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		5B036C70208F7733008284DD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		5B5824E32084DCED006399A1 /* Appointments */ = {
