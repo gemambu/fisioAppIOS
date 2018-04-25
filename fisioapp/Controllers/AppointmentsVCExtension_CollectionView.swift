@@ -54,7 +54,7 @@ extension AppointmentsViewController: UICollectionViewDelegate, UICollectionView
         
         refreshControl.addTarget(self, action: #selector(refreshCVData(_:)), for: .valueChanged)
         
-        collectionView!.register(UINib(nibName: "AppoitmentsViewCell", bundle: nil), forCellWithReuseIdentifier: appointmentsCellID)
+        collectionView!.register(UINib(nibName: "AppointmentsViewCell", bundle: nil), forCellWithReuseIdentifier: appointmentsCellID)
         collectionView.backgroundColor = UIColor.white
     }
     

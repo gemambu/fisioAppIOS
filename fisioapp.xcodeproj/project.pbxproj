@@ -133,6 +133,7 @@
 		5BBB1B732090E02400497825 /* AppointmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB1B722090E02400497825 /* AppointmentData.swift */; };
 		5BBB1B752090E04E00497825 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB1B742090E04E00497825 /* UserData.swift */; };
 		5BBB1B772090E06000497825 /* AppointmentDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB1B762090E06000497825 /* AppointmentDomain.swift */; };
+		5BBB1B792090E1CA00497825 /* fisioapp.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB1B782090E1CA00497825 /* fisioapp.xcdatamodel */; };
 		5BED8A062090A30100B39116 /* AppointmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8A032090A30100B39116 /* AppointmentsViewCell.swift */; };
 		5BED8A072090A30100B39116 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8A042090A30100B39116 /* AppointmentViewController.swift */; };
 		5BED8A082090A30100B39116 /* AppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8A052090A30100B39116 /* AppointmentsViewController.swift */; };
@@ -341,6 +342,7 @@
 		5BBB1B722090E02400497825 /* AppointmentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentData.swift; sourceTree = "<group>"; };
 		5BBB1B742090E04E00497825 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		5BBB1B762090E06000497825 /* AppointmentDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDomain.swift; sourceTree = "<group>"; };
+		5BBB1B782090E1CA00497825 /* fisioapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fisioapp.xcdatamodel; sourceTree = "<group>"; };
 		5BED8A032090A30100B39116 /* AppointmentsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentsViewCell.swift; sourceTree = "<group>"; };
 		5BED8A042090A30100B39116 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		5BED8A052090A30100B39116 /* AppointmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentsViewController.swift; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 				076E051E2072AAFB00554F97 /* Assets.xcassets */,
 				076E05232072AAFB00554F97 /* Info.plist */,
 				51FA461B20769BC5005F317F /* DummyModel.swift */,
+				5BBB1B782090E1CA00497825 /* fisioapp.xcdatamodel */,
 				51266D922076100A00CB3756 /* Controllers */,
 				51266D9120760FF600CB3756 /* View */,
 				075DA5E6207D271B00199EFC /* Domain */,
@@ -1502,6 +1505,7 @@
 				5BED8A062090A30100B39116 /* AppointmentsViewCell.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				070B33E1208CAA0700C06852 /* DeleteProductFromBackendInteractor.swift in Sources */,
+				5BBB1B792090E1CA00497825 /* fisioapp.xcdatamodel in Sources */,
 				5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */,
 				07B93562208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
