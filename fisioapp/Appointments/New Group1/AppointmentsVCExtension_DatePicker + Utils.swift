@@ -44,7 +44,8 @@ extension AppoitmentsViewController {
                                         } else {
                                             self.appointmentsForCV.removeAll()
                                             for appointment in appointmentsFromDomain {
-                                                let appointment = self.appointmentMapper(appointment: appointment)
+                                                //let appointment = self.appointmentMapper(appointment: appointment)
+                                                let appointment = appointment
                                                 self.appointmentsForCV.append(appointment)
                                                 print(self.appointmentsForCV.count)
                                             }
@@ -55,26 +56,6 @@ extension AppoitmentsViewController {
                                         print("Error: \(msg)")
                                         
         })
-    }
-    
-    
-    
-    /******** Appointment mapper ********/
-    func appointmentMapper(appointment: AppointmentDomain) -> AppointmentModel{
-        
-        let customerName = appointment.customer.name.capitalized + " " + appointment.customer.lastName.capitalized
-        let appointmentModel = AppointmentModel(id: appointment.id,
-                                                customer: customerName,
-                                                address: appointment.address,
-                                                date: appointment.date,
-                                                isConfirmed: appointment.isConfirmed,
-                                                isCancelled: appointment.isCancelled,
-                                                price: Int(appointment.service.price),
-                                                lat: appointment.latitude,
-                                                long: appointment.longitude,
-                                                extraInfo: appointment.extraInfo)
-        
-        return appointmentModel
     }
     
 }

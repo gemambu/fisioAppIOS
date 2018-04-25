@@ -15,7 +15,8 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: appoitmentsCellID, for: indexPath) as! AppoitmentsViewCell
         
         cell.backgroundColor = UIColor.orange
-        cell.nameLabel.text = appointmentToShow.customer
+        let customerName = appointmentToShow.customer.name.capitalized + " " + appointmentToShow.customer.lastName.capitalized
+        cell.nameLabel.text = customerName
         cell.commentLabel.text = appointmentToShow.address
         
         return cell

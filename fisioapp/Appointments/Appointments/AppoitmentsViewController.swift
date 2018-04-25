@@ -17,7 +17,7 @@ class AppoitmentsViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     let dateFormatter = DateFormatter()
     
-    var appointmentsForCV: [AppointmentModel] = []
+    var appointmentsForCV: [AppointmentDomain] = []
     lazy var selectedDate = String()
     
     

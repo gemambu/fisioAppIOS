@@ -10,7 +10,7 @@ import UIKit
 
 class AppoitmentViewController: UIViewController {
     
-    var appointment: AppointmentModel!
+    var appointment: AppointmentDomain!
     
     let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImZlbGxvd3NoaXBOdW1iZXIiOjMzLCJnZW5kZXIiOiJtYWxlIiwibmFtZSI6ImFsYW4iLCJsYXN0TmFtZSI6ImNhc2FzIiwiZW1haWwiOiJmaXNpb0BpbnZhbGlkLmNvbSIsInBhc3N3b3JkIjoiZWY3OTdjODExOGYwMmRmYjY0OTYwN2RkNWQzZjhjNzYyMzA0OGM5YzA2M2Q1MzJjYzk1YzVlZDdhODk4YTY0ZiIsImFkZHJlc3MiOiJBdi4gRmVsaXBlIElJLCBzL24iLCJwaG9uZSI6IjYyNjYyNjYyNiIsImJpcnRoRGF0ZSI6IjE5NzgtMTItMzBUMTI6MzA6MDAuMDAwWiIsIm5hdGlvbmFsSWQiOiIxMjM0NTY3OFoiLCJyZWdpc3RyYXRpb25EYXRlIjoiMjAxOC0wMS0wMVQwMTowMTowMC4wMDBaIiwibGFzdExvZ2luRGF0ZSI6IjIwMTgtMDMtMDdUMTY6MDA6MDAuMDAwWiIsIl9fdiI6MCwiZGVsZXRlZCI6ZmFsc2UsImlzUHJvZmVzc2lvbmFsIjp0cnVlfSwiaWF0IjoxNTI0NjAyMTczLCJleHAiOjE1MjQ3NzQ5NzN9.E9XGqRy3_YOhdwVJvF1Ar6UfHfueK8UoJVl1iTx6uH8"
     
@@ -34,7 +34,7 @@ class AppoitmentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=\(appointment.lat),\(appointment.long)&zoom=16&size=320x220&scale=2&markers=color:blue%7C\(appointment.lat),\(appointment.long)"
+        let mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=\(appointment.latitude),\(appointment.longitude)&zoom=16&size=320x220&scale=2&markers=color:blue%7C\(appointment.latitude),\(appointment.longitude)"
         let url = URL(string: mapURL)
         var imageData = NSData(contentsOf: url!)
         var image = #imageLiteral(resourceName: "map_placeholder.gif")
@@ -43,9 +43,10 @@ class AppoitmentViewController: UIViewController {
         }
         
         map.image = image
-        customer.text = appointment.customer
+        let customerName = appointment.customer.name + " " + appointment.customer.lastName
+        customer.text = customerName
         address.text = appointment.address
-        price.text = "\(appointment.price)€"
+        price.text = "\(appointment.service.price)€"
         confirmedSwitch.isOn = appointment.isConfirmed
         cancelledSwitch.isOn = appointment.isCancelled
         //extraInfo.text = appointment.extraInfo
