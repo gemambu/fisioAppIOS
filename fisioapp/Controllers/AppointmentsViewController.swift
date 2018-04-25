@@ -61,7 +61,7 @@ class AppoitmentsViewController: UIViewController {
 
 
 // MARK: - checkLogin
-extension AppointmentsViewController {
+extension AppoitmentsViewController {
     func checkLogin()  {
         if let navigator = navigationController {
             navigator.pushViewController(LoginAndRegisterController(), animated: false)
