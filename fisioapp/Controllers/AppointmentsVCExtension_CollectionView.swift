@@ -1,6 +1,6 @@
 import UIKit
 
-extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension AppointmentsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     /******** CollectionView DataSource ********/
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -12,7 +12,7 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
         
         let appointmentToShow = appointmentsForCV[indexPath.row]
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: appoitmentsCellID, for: indexPath) as! AppoitmentsViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: appointmentsCellID, for: indexPath) as! AppointmentsViewCell
         
         cell.backgroundColor = UIColor.orange
         let customerName = appointmentToShow.customer.name.capitalized + " " + appointmentToShow.customer.lastName.capitalized
@@ -27,7 +27,7 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
         
         let selected = appointmentsForCV[indexPath.row]
         
-        let appointment = AppoitmentViewController()
+        let appointment = AppointmentViewController()
         appointment.appointment = selected
         print(selected.id)
         print(selected.isConfirmed)
@@ -54,7 +54,7 @@ extension AppoitmentsViewController: UICollectionViewDelegate, UICollectionViewD
         
         refreshControl.addTarget(self, action: #selector(refreshCVData(_:)), for: .valueChanged)
         
-        collectionView!.register(UINib(nibName: "AppoitmentsViewCell", bundle: nil), forCellWithReuseIdentifier: appoitmentsCellID)
+        collectionView!.register(UINib(nibName: "AppoitmentsViewCell", bundle: nil), forCellWithReuseIdentifier: appointmentsCellID)
         collectionView.backgroundColor = UIColor.white
     }
     

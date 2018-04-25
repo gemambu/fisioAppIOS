@@ -10,7 +10,7 @@ import UIKit
 
 let appointmentsCellID = "AppointmentsViewCell"
 
-class AppoitmentsViewController: UIViewController {
+class AppointmentsViewController: UIViewController {
     
     var collectionView: UICollectionView!
     var datePicker: UIDatePicker!
@@ -61,7 +61,7 @@ class AppoitmentsViewController: UIViewController {
 
 
 // MARK: - checkLogin
-extension AppoitmentsViewController {
+extension AppointmentsViewController {
     func checkLogin()  {
         if let navigator = navigationController {
             navigator.pushViewController(LoginAndRegisterController(), animated: false)

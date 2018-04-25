@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension AppoitmentsViewController {
+extension AppointmentsViewController {
     
     /******** DatePicker ********/
     func initializeDatePicker() {
