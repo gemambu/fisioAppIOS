@@ -44,10 +44,8 @@ extension AppoitmentsViewController {
                                         } else {
                                             self.appointmentsForCV.removeAll()
                                             for appointment in appointmentsFromDomain {
-                                                //let appointment = self.appointmentMapper(appointment: appointment)
                                                 let appointment = appointment
                                                 self.appointmentsForCV.append(appointment)
-                                                print(self.appointmentsForCV.count)
                                             }
                                         }
                                         self.collectionView.reloadData()

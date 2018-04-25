@@ -280,9 +280,9 @@
 		51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppoitmentsViewCell.xib; sourceTree = "<group>"; };
 		5B036C54208A2EB4008284DD /* map_placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = map_placeholder.gif; sourceTree = "<group>"; };
 		5B036C5E208BFC3E008284DD /* GetAppointmentsForDateFromBackEndInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAppointmentsForDateFromBackEndInteractor.swift; sourceTree = "<group>"; };
-		5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppoitmentViewController.swift; path = fisioapp/Appointments/AppointmentDetail/AppoitmentViewController.swift; sourceTree = SOURCE_ROOT; };
-		5B036C66208BFCE6008284DD /* AppointmentsVCExtension_CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppointmentsVCExtension_CollectionView.swift; path = fisioapp/Appointments/Appointments/AppointmentsVCExtension_CollectionView.swift; sourceTree = SOURCE_ROOT; };
-		5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppoitmentsViewController.swift; path = fisioapp/Appointments/Appointments/AppoitmentsViewController.swift; sourceTree = SOURCE_ROOT; };
+		5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppoitmentViewController.swift; path = fisioapp/Controllers/AppoitmentViewController.swift; sourceTree = SOURCE_ROOT; };
+		5B036C66208BFCE6008284DD /* AppointmentsVCExtension_CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppointmentsVCExtension_CollectionView.swift; path = fisioapp/Controllers/AppointmentsVCExtension_CollectionView.swift; sourceTree = SOURCE_ROOT; };
+		5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppoitmentsViewController.swift; path = fisioapp/Controllers/AppoitmentsViewController.swift; sourceTree = SOURCE_ROOT; };
 		5B036C6C208C00FD008284DD /* AppoitmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppoitmentViewController.xib; sourceTree = "<group>"; };
 		5B036C6E208E190C008284DD /* AppointmentsVCExtension_DatePicker + Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentsVCExtension_DatePicker + Utils.swift"; sourceTree = "<group>"; };
 		5B5824DB2084DC9E006399A1 /* AppointmentDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDomain.swift; sourceTree = "<group>"; };
@@ -508,7 +508,6 @@
 		076E05182072AAFB00554F97 /* fisioapp */ = {
 			isa = PBXGroup;
 			children = (
-				5B5824ED208948AE006399A1 /* Appointments */,
 				076E05192072AAFB00554F97 /* AppDelegate.swift */,
 				076E051E2072AAFB00554F97 /* Assets.xcassets */,
 				076E05232072AAFB00554F97 /* Info.plist */,
@@ -702,6 +701,10 @@
 		51266D9120760FF600CB3756 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
+				5B036C6C208C00FD008284DD /* AppoitmentViewController.xib */,
+				5B036C54208A2EB4008284DD /* map_placeholder.gif */,
+				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
 				513B29C52088F56C008D5394 /* UserPictureViewController.xib */,
 				513B29BF2088E4E0008D5394 /* UserProfileViewController.xib */,
 				076E05202072AAFB00554F97 /* LaunchScreen.storyboard */,
@@ -720,6 +723,11 @@
 		51266D922076100A00CB3756 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */,
+				5B036C66208BFCE6008284DD /* AppointmentsVCExtension_CollectionView.swift */,
+				5B036C6E208E190C008284DD /* AppointmentsVCExtension_DatePicker + Utils.swift */,
+				5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */,
+				51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */,
 				513B29BE2088E4E0008D5394 /* UserProfileViewController.swift */,
 				513B29C42088F56C008D5394 /* UserPictureViewController.swift */,
 				5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */,
@@ -771,26 +779,6 @@
 			path = UpdateUserImage;
 			sourceTree = "<group>";
 		};
-		5B036C62208BFCB1008284DD /* AppointmentDetail */ = {
-			isa = PBXGroup;
-			children = (
-				5B036C63208BFCC0008284DD /* AppoitmentViewController.swift */,
-			);
-			name = AppointmentDetail;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		5B036C65208BFCD8008284DD /* Appointments */ = {
-			isa = PBXGroup;
-			children = (
-				5B036C6A208BFD72008284DD /* AppoitmentsViewController.swift */,
-				5B036C66208BFCE6008284DD /* AppointmentsVCExtension_CollectionView.swift */,
-				5B036C6E208E190C008284DD /* AppointmentsVCExtension_DatePicker + Utils.swift */,
-			);
-			name = Appointments;
-			path = "New Group1";
-			sourceTree = "<group>";
-		};
 		5B5824E32084DCED006399A1 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,36 +799,6 @@
 				5B5824F420895532006399A1 /* UpdateAppointmentInBackEndIntImpl.swift */,
 			);
 			path = Appointments;
-			sourceTree = "<group>";
-		};
-		5B5824ED208948AE006399A1 /* Appointments */ = {
-			isa = PBXGroup;
-			children = (
-				5B036C65208BFCD8008284DD /* Appointments */,
-				5B036C62208BFCB1008284DD /* AppointmentDetail */,
-				5B5824F0208948EB006399A1 /* Utils */,
-				5B5824F120894926006399A1 /* Views */,
-			);
-			path = Appointments;
-			sourceTree = "<group>";
-		};
-		5B5824F0208948EB006399A1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				51FA46292076A15E005F317F /* AppoitmentsViewCell.swift */,
-				5B036C54208A2EB4008284DD /* map_placeholder.gif */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		5B5824F120894926006399A1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				51FA46262076A139005F317F /* AppoitmentsViewController.xib */,
-				5B036C6C208C00FD008284DD /* AppoitmentViewController.xib */,
-				51FA462A2076A15E005F317F /* AppoitmentsViewCell.xib */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		632DB832EEE9DD1879261B40 /* Frameworks */ = {
