@@ -34,6 +34,10 @@ class AppointmentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (!CustomUserDefaults.checkToken()) {
+            checkLogin()
+        }
+        
         let mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=\(appointment.latitude),\(appointment.longitude)&zoom=16&size=320x220&scale=2&markers=color:blue%7C\(appointment.latitude),\(appointment.longitude)"
         let url = URL(string: mapURL)
         var imageData = NSData(contentsOf: url!)
@@ -49,7 +53,6 @@ class AppointmentViewController: UIViewController {
         price.text = "\(appointment.service.price)€"
         confirmedSwitch.isOn = appointment.isConfirmed
         cancelledSwitch.isOn = appointment.isCancelled
-        //extraInfo.text = appointment.extraInfo
         
         if (appointment.extraInfo == "false"){
             extraInfo.text = "No extra info provided"
@@ -71,7 +74,7 @@ class AppointmentViewController: UIViewController {
     
     func statusChanged(isConfirmed: Bool, isCancelled: Bool){
         let updateAppointment: UpdateAppointmentInteractor = UpdateAppointmentIntImpl()
-        updateAppointment.execute(token: token,
+        updateAppointment.execute(token: CustomUserDefaults.token,
                                   id: appointment.id,
                                   isConfirmed: isConfirmed,
                                   isCancelled: isCancelled,
@@ -84,12 +87,13 @@ class AppointmentViewController: UIViewController {
                                     self.alertControllerToView(message: errorMessage)
         })
     }
-    
-    
-    
-    
-    
+}
 
-   
 
+extension AppointmentViewController {
+    func checkLogin()  {
+        if let navigator = navigationController {
+            navigator.pushViewController(LoginAndRegisterController(), animated: false)
+        }
+    }
 }

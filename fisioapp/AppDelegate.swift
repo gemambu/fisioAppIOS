@@ -13,8 +13,8 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    //var cds = CoreDataStack()
-    //var context: NSManagedObjectContext?
+    var cds = CoreDataStack()
+    var context: NSManagedObjectContext?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -24,15 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Old main view
-        /*
+        
          let loginVC = LoginAndRegisterController()
-         window?.rootViewController = loginVC
-         */
+         //window?.rootViewController = loginVC
+        
         
         
         // New main view
         
-        //self.context = cds.createContainer(dbName: "FisioApp").viewContext
+        self.context = cds.createContainer(dbName: "FisioApp").viewContext
         
         //********************  UITabBarController  ********************//
         let appointmentsCollection = AppointmentsViewController()

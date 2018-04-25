@@ -35,9 +35,11 @@ extension AppointmentsViewController {
     func getAppointmentsForDate(date: String){
         let getAppointmentsForDate: GetAppointmentsForDateInteractor = GetAppointmentsForDateIntImpl()
         
-        getAppointmentsForDate.execute(token: myToken,
+        getAppointmentsForDate.execute(token: CustomUserDefaults.token,
                                        date: date,
                                        onSuccess: { (appointmentsFromDomain: [AppointmentDomain]) in
+                                        
+                                        print("RODRIGO 😱 " + CustomUserDefaults.token)
                                         
                                         if (appointmentsFromDomain.count == 0) {
                                             self.appointmentsForCV.removeAll()

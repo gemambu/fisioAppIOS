@@ -16,7 +16,7 @@ class CacheIntImpl: CacheInteractor {
     
     init() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        //self.context = appDelegate.context
+        self.context = appDelegate.context
     }
     
     
