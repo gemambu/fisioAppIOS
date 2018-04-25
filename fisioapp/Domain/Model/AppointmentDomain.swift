@@ -10,9 +10,9 @@ import Foundation
 
 public class AppointmentDomain {
     var id: String = ""
-    var service: CatalogData
-    var customer: UserData
-    var professional: UserData
+    var service: Catalog
+    var customer: User
+    var professional: User
     var date: String = ""
     var latitude: Float = 0
     var longitude: Float = 0
@@ -21,7 +21,7 @@ public class AppointmentDomain {
     var isCancelled: Bool = false
     var isConfirmed: Bool = false
     
-    public init (id: String, service: CatalogData, customer: UserData, professional: UserData, date: String, latitude: Float, longitude: Float, address: String, extraInfo: String, isCancelled: Bool, isConfirmed: Bool){
+    public init (id: String, service: Catalog, customer: User, professional: User, date: String, latitude: Float, longitude: Float, address: String, extraInfo: String, isCancelled: Bool, isConfirmed: Bool){
         
         self.id = id
         self.service = service

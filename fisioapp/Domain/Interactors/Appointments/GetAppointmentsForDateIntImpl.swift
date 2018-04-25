@@ -19,7 +19,7 @@ class GetAppointmentsForDateIntImpl: GetAppointmentsForDateInteractor {
                                                         var appointmentsResult = [AppointmentDomain]()
                                                         
                                                         for appointment in appointments {
-                                                            let appointment = self.entityMapper(appointmentData: appointment)
+                                                            let appointment = convert(appointmentData: appointment)
                                                             
                                                             appointmentsResult.append(appointment)
                                                         }
@@ -29,31 +29,6 @@ class GetAppointmentsForDateIntImpl: GetAppointmentsForDateInteractor {
                                                     })
     }
     
-
-    private func entityMapper(appointmentData: AppointmentData) -> AppointmentDomain {
-        let appointment = AppointmentDomain(
-                                      id: appointmentData.id,
-                                      service: CatalogData(databaseID: appointmentData.service.databaseID,
-                                                           name: appointmentData.service.name,
-                                                           description: appointmentData.service.description,
-                                                           price: appointmentData.service.price,
-                                                           professional: appointmentData.professional,
-                                                           isActive: appointmentData.service.isActive,
-                                                           type: appointmentData.service.type),
-                                      customer: UserData(id: appointmentData.customer.id,
-                                                         name: appointmentData.customer.name,
-                                                         lastName: appointmentData.customer.lastName),
-                                      professional: appointmentData.professional,
-                                      date: appointmentData.date,
-                                      latitude: appointmentData.latitude,
-                                      longitude: appointmentData.longitude,
-                                      address: appointmentData.address,
-                                      extraInfo: appointmentData.extraInfo,
-                                      isCancelled: appointmentData.isCancelled,
-                                      isConfirmed: appointmentData.isConfirmed)
-        
-        return appointment
-    }
     
     
 }

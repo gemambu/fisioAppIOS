@@ -35,3 +35,26 @@ func convert(item: CatalogData) -> Catalog {
                        isActive: item.isActive,
                        type: item.type)
 }
+
+func convert(appointmentData: AppointmentData) -> AppointmentDomain {
+    let appointment = AppointmentDomain(
+        id: appointmentData.id,
+        service: Catalog(id: appointmentData.service.databaseID,
+                             name: appointmentData.service.name,
+                             description: appointmentData.service.description,
+                             price: appointmentData.service.price,
+                             professional: convert(user: appointmentData.professional),
+                             isActive: appointmentData.service.isActive,
+                             type: appointmentData.service.type),
+        customer: convert(user: appointmentData.customer),
+        professional: convert(user: appointmentData.professional),
+        date: appointmentData.date,
+        latitude: appointmentData.latitude,
+        longitude: appointmentData.longitude,
+        address: appointmentData.address,
+        extraInfo: appointmentData.extraInfo,
+        isCancelled: appointmentData.isCancelled,
+        isConfirmed: appointmentData.isConfirmed)
+    
+    return appointment
+}

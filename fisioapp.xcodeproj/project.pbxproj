@@ -51,8 +51,6 @@
 		07B93562208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93560208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift */; };
 		07B93566208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93564208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift */; };
 		07B93567208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B93565208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift */; };
-		07B9356D208CD7D0004F5DF8 /* CacheInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9356C208CD7D0004F5DF8 /* CacheInteractor.swift */; };
-		07B9356F208CD7DA004F5DF8 /* CacheIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B9356E208CD7DA004F5DF8 /* CacheIntImpl.swift */; };
 		07BAE7BA2072BEB500BDA03E /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BAE7B12072BEB500BDA03E /* domain.framework */; };
 		07BAE7C12072BEB500BDA03E /* domainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAE7C02072BEB500BDA03E /* domainTests.swift */; };
 		07BAE7C32072BEB500BDA03E /* domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 07BAE7B32072BEB500BDA03E /* domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,9 +80,6 @@
 		1FA574D8208C9A080092427C /* UpdateProductIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA574D7208C9A080092427C /* UpdateProductIntImpl.swift */; };
 		1FA574DA208C9A130092427C /* InsertProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA574D9208C9A130092427C /* InsertProductInteractor.swift */; };
 		1FA574DC208C9A270092427C /* InsertProductIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA574DB208C9A270092427C /* InsertProductIntImpl.swift */; };
-		1FDE3C9C208D00C40028786D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE3C9B208D00C40028786D /* CoreDataStack.swift */; };
-		1FDE3CA0208D03480028786D /* FisioApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE3C9E208D03480028786D /* FisioApp.xcdatamodeld */; };
-		1FDE3CA8208E76780028786D /* CDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDE3CA7208E76780028786D /* CDMapper.swift */; };
 		51266D8320760F8400CB3756 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8120760F8400CB3756 /* ProductViewController.swift */; };
 		51266D8420760F8400CB3756 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51266D8220760F8400CB3756 /* ProductViewController.xib */; };
 		51266D8720760F9500CB3756 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51266D8520760F9500CB3756 /* ServiceViewController.swift */; };
@@ -112,7 +107,6 @@
 		51FA461620769AD4005F317F /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA461420769AD4005F317F /* ProductsViewController.xib */; };
 		51FA461920769B24005F317F /* ProductsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461720769B24005F317F /* ProductsViewCell.swift */; };
 		51FA461A20769B24005F317F /* ProductsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA461820769B24005F317F /* ProductsViewCell.xib */; };
-		51FA461C20769BC5005F317F /* DummyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461B20769BC5005F317F /* DummyModel.swift */; };
 		51FA461F20769DB6005F317F /* ServicesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA461D20769DB6005F317F /* ServicesViewCell.swift */; };
 		51FA462020769DB6005F317F /* ServicesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA461E20769DB6005F317F /* ServicesViewCell.xib */; };
 		51FA462320769E07005F317F /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA462120769E07005F317F /* ServicesViewController.swift */; };
@@ -133,7 +127,6 @@
 		5BBB1B732090E02400497825 /* AppointmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB1B722090E02400497825 /* AppointmentData.swift */; };
 		5BBB1B752090E04E00497825 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB1B742090E04E00497825 /* UserData.swift */; };
 		5BBB1B772090E06000497825 /* AppointmentDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB1B762090E06000497825 /* AppointmentDomain.swift */; };
-		5BBB1B792090E1CA00497825 /* fisioapp.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB1B782090E1CA00497825 /* fisioapp.xcdatamodel */; };
 		5BED8A062090A30100B39116 /* AppointmentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8A032090A30100B39116 /* AppointmentsViewCell.swift */; };
 		5BED8A072090A30100B39116 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8A042090A30100B39116 /* AppointmentViewController.swift */; };
 		5BED8A082090A30100B39116 /* AppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8A052090A30100B39116 /* AppointmentsViewController.swift */; };
@@ -258,8 +251,6 @@
 		07B93560208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertServiceFromBackendInteractor.swift; sourceTree = "<group>"; };
 		07B93564208CB114004F5DF8 /* InsertProductFromBackendInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertProductFromBackendInteractor.swift; sourceTree = "<group>"; };
 		07B93565208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertProductFromBackendIntImpl.swift; sourceTree = "<group>"; };
-		07B9356C208CD7D0004F5DF8 /* CacheInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheInteractor.swift; sourceTree = "<group>"; };
-		07B9356E208CD7DA004F5DF8 /* CacheIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheIntImpl.swift; sourceTree = "<group>"; };
 		07BAE7B12072BEB500BDA03E /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAE7B32072BEB500BDA03E /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; };
 		07BAE7B42072BEB500BDA03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -291,9 +282,6 @@
 		1FA574D7208C9A080092427C /* UpdateProductIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductIntImpl.swift; sourceTree = "<group>"; };
 		1FA574D9208C9A130092427C /* InsertProductInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertProductInteractor.swift; sourceTree = "<group>"; };
 		1FA574DB208C9A270092427C /* InsertProductIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertProductIntImpl.swift; sourceTree = "<group>"; };
-		1FDE3C9B208D00C40028786D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		1FDE3C9F208D03480028786D /* FisioApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FisioApp.xcdatamodel; sourceTree = "<group>"; };
-		1FDE3CA7208E76780028786D /* CDMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMapper.swift; sourceTree = "<group>"; };
 		3E2EFB7C8A21C8FEA12FC4B5 /* Pods-fisioappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fisioappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fisioappTests/Pods-fisioappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51266D8120760F8400CB3756 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		51266D8220760F8400CB3756 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
@@ -321,7 +309,6 @@
 		51FA461420769AD4005F317F /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
 		51FA461720769B24005F317F /* ProductsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewCell.swift; sourceTree = "<group>"; };
 		51FA461820769B24005F317F /* ProductsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewCell.xib; sourceTree = "<group>"; };
-		51FA461B20769BC5005F317F /* DummyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyModel.swift; sourceTree = "<group>"; };
 		51FA461D20769DB6005F317F /* ServicesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewCell.swift; sourceTree = "<group>"; };
 		51FA461E20769DB6005F317F /* ServicesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesViewCell.xib; sourceTree = "<group>"; };
 		51FA462120769E07005F317F /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
@@ -342,7 +329,6 @@
 		5BBB1B722090E02400497825 /* AppointmentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentData.swift; sourceTree = "<group>"; };
 		5BBB1B742090E04E00497825 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		5BBB1B762090E06000497825 /* AppointmentDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentDomain.swift; sourceTree = "<group>"; };
-		5BBB1B782090E1CA00497825 /* fisioapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fisioapp.xcdatamodel; sourceTree = "<group>"; };
 		5BED8A032090A30100B39116 /* AppointmentsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentsViewCell.swift; sourceTree = "<group>"; };
 		5BED8A042090A30100B39116 /* AppointmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		5BED8A052090A30100B39116 /* AppointmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentsViewController.swift; sourceTree = "<group>"; };
@@ -496,7 +482,7 @@
 			children = (
 				5BBB1B722090E02400497825 /* AppointmentData.swift */,
 				5B5824E52084DD63006399A1 /* CatalogData.swift */,
-				075DA5FA207D623000199EFC /* User */,
+				5BBB1B742090E04E00497825 /* UserData.swift */,
 			);
 			path = EntityModel;
 			sourceTree = "<group>";
@@ -527,7 +513,6 @@
 		075DA5EE207D2C7500199EFC /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				07B93569208CD77F004F5DF8 /* Cache */,
 				075DA5E5207D268800199EFC /* EntityModel */,
 				075DA5FF207D655700199EFC /* Network */,
 				075DA5F1207D2CB800199EFC /* RepositoryFakeInteractor.swift */,
@@ -545,14 +530,6 @@
 				1FA57499208B69610092427C /* Catalog.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		075DA5FA207D623000199EFC /* User */ = {
-			isa = PBXGroup;
-			children = (
-				5BBB1B742090E04E00497825 /* UserData.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		075DA5FF207D655700199EFC /* Network */ = {
@@ -639,8 +616,6 @@
 				076E05192072AAFB00554F97 /* AppDelegate.swift */,
 				076E051E2072AAFB00554F97 /* Assets.xcassets */,
 				076E05232072AAFB00554F97 /* Info.plist */,
-				51FA461B20769BC5005F317F /* DummyModel.swift */,
-				5BBB1B782090E1CA00497825 /* fisioapp.xcdatamodel */,
 				51266D922076100A00CB3756 /* Controllers */,
 				51266D9120760FF600CB3756 /* View */,
 				075DA5E6207D271B00199EFC /* Domain */,
@@ -734,18 +709,6 @@
 			);
 			name = Insert;
 			path = Products/Insert;
-			sourceTree = "<group>";
-		};
-		07B93569208CD77F004F5DF8 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				1FDE3CA6208E76690028786D /* Mapper */,
-				1FDE3C9D208D03300028786D /* Model */,
-				07B9356C208CD7D0004F5DF8 /* CacheInteractor.swift */,
-				07B9356E208CD7DA004F5DF8 /* CacheIntImpl.swift */,
-				1FDE3C9B208D00C40028786D /* CoreDataStack.swift */,
-			);
-			path = Cache;
 			sourceTree = "<group>";
 		};
 		07BAE7B22072BEB500BDA03E /* domain */ = {
@@ -893,22 +856,6 @@
 			isa = PBXGroup;
 			children = (
 				1FA574CF208C91750092427C /* ModelConverter.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
-		1FDE3C9D208D03300028786D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1FDE3C9E208D03480028786D /* FisioApp.xcdatamodeld */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		1FDE3CA6208E76690028786D /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				1FDE3CA7208E76780028786D /* CDMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -1423,7 +1370,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B9356F208CD7DA004F5DF8 /* CacheIntImpl.swift in Sources */,
 				075DA607207D65E900199EFC /* GetUserFromBackendIntImpl.swift in Sources */,
 				070B33EB208CAA1C00C06852 /* UpdateServiceFromBackendIntImpl.swift in Sources */,
 				513B29C02088E4E0008D5394 /* UserProfileViewController.swift in Sources */,
@@ -1438,7 +1384,6 @@
 				5B5824F9208A0212006399A1 /* UpdateAppointmentIntImpl.swift in Sources */,
 				075DA609207D660300199EFC /* GetUserFromBackendFakeInteractor.swift in Sources */,
 				075DA605207D65DD00199EFC /* GetUserFromBackendInteractor.swift in Sources */,
-				51FA461C20769BC5005F317F /* DummyModel.swift in Sources */,
 				5B036C6F208E190C008284DD /* AppointmentsVCExtension_DatePicker + Utils.swift in Sources */,
 				07B6344D207EC19E00DBB501 /* AuthenticateUserIntImpl.swift in Sources */,
 				07B93567208CB114004F5DF8 /* InsertProductFromBackendIntImpl.swift in Sources */,
@@ -1467,10 +1412,8 @@
 				5BBB1B752090E04E00497825 /* UserData.swift in Sources */,
 				5B5824EC2084DD9B006399A1 /* GetAppointmentsForDateFromBackEndIntImpl.swift in Sources */,
 				5BBB1B712090E00200497825 /* ProductsViewController.swift in Sources */,
-				1FDE3C9C208D00C40028786D /* CoreDataStack.swift in Sources */,
 				1FA574D8208C9A080092427C /* UpdateProductIntImpl.swift in Sources */,
 				075DA5F0207D2CA500199EFC /* RepositoryInteractor.swift in Sources */,
-				1FDE3CA8208E76780028786D /* CDMapper.swift in Sources */,
 				070B33EF208CAA1C00C06852 /* DeleteServiceFromBackendInteractor.swift in Sources */,
 				5BED8A082090A30100B39116 /* AppointmentsViewController.swift in Sources */,
 				519D19752089FD060049FB00 /* RepositoryUserPictureInteractorImplementation.swift in Sources */,
@@ -1499,13 +1442,11 @@
 				1FA574CD208C90CE0092427C /* UpdateServiceIntImpl.swift in Sources */,
 				07B6344F207EC1CD00DBB501 /* RegisterUserIntImpl.swift in Sources */,
 				1FA574D2208C93CB0092427C /* InsertServiceInteractor.swift in Sources */,
-				1FDE3CA0208D03480028786D /* FisioApp.xcdatamodeld in Sources */,
 				1FA574C7208BA2450092427C /* DeleteProductInteractor.swift in Sources */,
 				075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */,
 				5BED8A062090A30100B39116 /* AppointmentsViewCell.swift in Sources */,
 				51266D8F20760FD700CB3756 /* EditProfileViewController.swift in Sources */,
 				070B33E1208CAA0700C06852 /* DeleteProductFromBackendInteractor.swift in Sources */,
-				5BBB1B792090E1CA00497825 /* fisioapp.xcdatamodel in Sources */,
 				5176A058207F4F6400F3C81E /* RemoteBackEndConections.swift in Sources */,
 				07B93562208CB104004F5DF8 /* InsertServiceFromBackendInteractor.swift in Sources */,
 				076E051A2072AAFB00554F97 /* AppDelegate.swift in Sources */,
@@ -1525,7 +1466,6 @@
 				1FA574DC208C9A270092427C /* InsertProductIntImpl.swift in Sources */,
 				5B5824E22084DCDD006399A1 /* GetAppointmentsForDateInteractor.swift in Sources */,
 				1FA574BC208B9ECB0092427C /* GetServicesInteractor.swift in Sources */,
-				07B9356D208CD7D0004F5DF8 /* CacheInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1736,7 +1676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3A5KS2DHER;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = fisioapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp;
@@ -1752,7 +1692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3A5KS2DHER;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = fisioapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.projectx.fisioapp;
@@ -2015,19 +1955,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1FDE3C9E208D03480028786D /* FisioApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1FDE3C9F208D03480028786D /* FisioApp.xcdatamodel */,
-			);
-			currentVersion = 1FDE3C9F208D03480028786D /* FisioApp.xcdatamodel */;
-			path = FisioApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 076E050E2072AAFB00554F97 /* Project object */;
 }

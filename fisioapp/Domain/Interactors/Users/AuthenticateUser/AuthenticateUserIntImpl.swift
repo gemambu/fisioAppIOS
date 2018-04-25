@@ -14,7 +14,7 @@ class AuthenticateUserIntImpl: AuthenticateUserInteractor {
         let repositoryInteractor: RepositoryInteractor = RepositoryIntImpl()
         repositoryInteractor.authenticateUser(email: email, password: password,
                                               onSuccess: { (userData: UserData, token: String) -> Void in
-                                                let user = self.entityMapper(userData: userData)
+                                                let user = convert(user: userData)
                                                 onSuccess(user, token)
                                                 },
                                               onError: { (msg: String) -> Void in
@@ -23,24 +23,5 @@ class AuthenticateUserIntImpl: AuthenticateUserInteractor {
         
     }
     
-    private func entityMapper(userData: UserData) -> User {
-        let user = User(
-            id: userData.id,
-            name: userData.name,
-            lastName: userData.lastName,
-            email: userData.email,
-            isProfessional: userData.isProfessional,
-            fellowshipNumber: userData.fellowshipNumber,
-            gender: userData.gender,
-            address: userData.address,
-            phone: userData.phone,
-            birthDate: userData.birthDate,
-            nationalId: userData.nationalId,
-            registrationDate: userData.registrationDate,
-            lastLoginDate: userData.lastLoginDate
-        )
-        
-        return user
-    }
     
 }

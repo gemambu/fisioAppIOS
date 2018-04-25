@@ -116,8 +116,6 @@ extension UserPictureViewController {
 extension UserPictureViewController {
     @objc func savePicture() {
         print("savePicture pulsado")
-        
-        let updateUserInteractorImplementation: DomainUserPictureInteractor = DomainUserPictureInteractorImplementation()
 
         if userImage.image == nil {
             userImage.image = #imageLiteral(resourceName: "no-image")

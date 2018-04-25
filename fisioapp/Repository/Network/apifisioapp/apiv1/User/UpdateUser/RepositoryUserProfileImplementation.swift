@@ -45,16 +45,8 @@ class RepositoryUserProfileImplementation : RepositoryUserProfileInteractor {
                 if let value = response.data {
                     let json = JSON(data: value)
                     let ok = json["ok"].bool ?? false
-                    var msg = json["message"].string ?? ""
-                    if (msg == "") {
-//                        let errors = json["error"]["err"]["errors"].array
-//                        errors!.forEach({ (json) in
-//                            var jsonArray = json["message"].string
-//                            print(jsonArray!)
-//                            msg.append(jsonArray!)
-//                        })
-                    }
-                    
+                    let msg = json["message"].string ?? ""
+
                     onSuccess(ok, msg)
                 }
                 break

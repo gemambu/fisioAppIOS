@@ -20,9 +20,7 @@ class GetUserFromBackendFakeInteractor: GetUserFromBackendInteractor {
         if (allOk) {
             let userData = createFakeUser()
             onSuccess(userData)
-        } else {
-            onError("Error while getting user")
-        }
+        } 
         
     }
     

@@ -27,7 +27,7 @@ class BlankViewController: UIViewController {
         // Fake data for testing
         let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImZlbGxvd3NoaXBOdW1iZXIiOjMzLCJnZW5kZXIiOiJtYWxlIiwibmFtZSI6ImZpc2lvIiwibGFzdE5hbWUiOiJsYXN0bmFtZSIsImVtYWlsIjoiZmlzaW9AaW52YWxpZC5jb20iLCJwYXNzd29yZCI6ImVmNzk3YzgxMThmMDJkZmI2NDk2MDdkZDVkM2Y4Yzc2MjMwNDhjOWMwNjNkNTMyY2M5NWM1ZWQ3YTg5OGE2NGYiLCJhZGRyZXNzIjoiRmlzaW8gQWRkcmVzcywgMzMiLCJwaG9uZSI6IjYyNjYyNjYyNiIsImJpcnRoRGF0ZSI6IjE5NzAtMTItMzBUMDA6MDA6MDAuMDAwWiIsIm5hdGlvbmFsSWQiOiIxMjM0NTY3OFoiLCJyZWdpc3RyYXRpb25EYXRlIjoiMjAxOC0wMS0wMVQwMTowMTowMC4wMDBaIiwibGFzdExvZ2luRGF0ZSI6IjIwMTgtMDMtMDdUMTY6MDA6MDAuMDAwWiIsIl9fdiI6MCwiaW1nIjoiNWE5ZjA1NGY2MDJkZDBlNTQwYzcxYmM2LTE4LmpwZyIsImRlbGV0ZWQiOmZhbHNlLCJpc1Byb2Zlc3Npb25hbCI6dHJ1ZX0sImlhdCI6MTUyNDMxODI2NSwiZXhwIjoxNTMyMDk0MjY1fQ.EiE86zqmlY-Ok-Vm_8k7nxPyN8HeOuT5PwXdS2_xZY0"
         let userId = "5a9f054f602dd0e540c71bc6"
-        let name = "Fisio"
+        let _ = "Fisio"
         let newName = "NewFisio"
         let email = "fisio@invalid.com"
         let newEmail = "newfisio@invalid.com"

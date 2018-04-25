@@ -40,7 +40,7 @@ class AppointmentViewController: UIViewController {
         
         let mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=\(appointment.latitude),\(appointment.longitude)&zoom=16&size=320x220&scale=2&markers=color:blue%7C\(appointment.latitude),\(appointment.longitude)"
         let url = URL(string: mapURL)
-        var imageData = NSData(contentsOf: url!)
+        let imageData = NSData(contentsOf: url!)
         var image = #imageLiteral(resourceName: "map_placeholder.gif")
         if (imageData != nil){
             image = UIImage.init(data: imageData! as Data)!

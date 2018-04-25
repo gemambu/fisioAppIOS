@@ -18,7 +18,6 @@ class UpdateAppointmentInBackEndIntImpl: UpdateAppointmentInBackEndInteractor {
         let parameters = ["isConfirmed": isConfirmed, "isCancelled": isCancelled] as [String : Any]
         
         Alamofire.request(urlAPI!, method: .put, parameters: parameters, headers: headers).validate().responseJSON { (response) in
-            print(response.request?.url)
             
             switch response.result {
             case .success:

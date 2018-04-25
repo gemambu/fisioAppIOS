@@ -31,7 +31,7 @@ class RepositoryUserPictureInteractorImplementation : RepositoryUserPictureInter
 
         let imageData = UIImageJPEGRepresentation(image, 0.5)
 
-        let parameters = [ "image" : image ] as [String : Any]
+        let _ = [ "image" : image ] as [String : Any]
         
         Alamofire.upload(multipartFormData: { (form: MultipartFormData) in
             

@@ -11,8 +11,6 @@ import Foundation
 
 class RepositoryIntImpl: RepositoryInteractor {
     
-    private var cache: CacheInteractor = CacheIntImpl() as CacheInteractor
-    
     let authenticateUserInBackendInteractor: AuthenticateUserInBackendInteractor = AuthenticateUserInBackendIntImpl()
     let getUserFromBackendInteractor: GetUserFromBackendInteractor = GetUserFromBackendIntImpl()
     let registerUserInBackendInteractor: RegisterUserInBackendInteractor = RegisterUserInBackendIntImpl()
@@ -120,35 +118,23 @@ class RepositoryIntImpl: RepositoryInteractor {
     
     func getProducts(token: String,  onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void) {
 
-        cache.getProducts(onSuccess:
-            {
-                (itemsFromBackend: [CatalogData]) -> Void in
-                onSuccess(itemsFromBackend)
-                
-        },onError: {_ in 
-            self.populateProductsCache(token: token, onSuccess: onSuccess, onError: onError)
-            
-        })
-    
         
-    }
-    
-    private func populateProductsCache(token: String, onSuccess: @escaping ([CatalogData]) -> Void, onError: @escaping (String) -> Void){
         getProductsFromBackendInteractor.execute(token: token,
                                                  onSuccess: {(itemsFromBackend: [CatalogData]) -> Void in
-                                                    self.cache.saveAllProducts(products: itemsFromBackend)
                                                     onSuccess(itemsFromBackend)
         },
                                                  onError: { (msg: String) -> Void in
                                                     onError(msg)
         })
+    
+        
     }
+    
     
     func insertProduct(token: String, item: CatalogData, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void){
         
         insertProductInteractor.execute(token: token, item: item,
                                         onSuccess: { (itemCatalogData: CatalogData) -> Void in
-                                            //insertCatalogInCache(it, success)
                                             onSuccess("Item \(item.name) inserted successfully")
         },
                                         onError: { (msg: String) -> Void in
@@ -160,7 +146,6 @@ class RepositoryIntImpl: RepositoryInteractor {
         
         insertServiceInteractor.execute(token: token, item: item,
                                         onSuccess: { (itemCatalogData: CatalogData) -> Void in
-                                            //insertCatalogInCache(it, success)
                                             onSuccess("Item \(item.name) inserted successfully")
         },
                                         onError: { (msg: String) -> Void in

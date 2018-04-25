@@ -62,8 +62,6 @@ class RepositoryFakeInteractor: RepositoryInteractor {
             let userData = createFakeUser()
             let token = createFakeToken()
             onSuccess(userData, token)
-        } else {
-            onError("Error while authenticating user")
         }
         
     }
@@ -78,9 +76,7 @@ class RepositoryFakeInteractor: RepositoryInteractor {
         if (allOk) {
             let userData = createFakeUser()
             onSuccess(userData)
-        } else {
-            onError("Error while getting user")
-        }
+        } 
         
     }
     
@@ -95,9 +91,7 @@ class RepositoryFakeInteractor: RepositoryInteractor {
             let ok = allOk
             let msg = "user created"
             onSuccess(ok, msg)
-        } else {
-            onError("Error while authenticating user")
-        }
+        } 
         
     }
 

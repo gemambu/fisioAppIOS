@@ -13,7 +13,7 @@ class GetUserIntImpl: GetUserInteractor {
         let repositoryInteractor: RepositoryInteractor = RepositoryIntImpl()
         repositoryInteractor.getUser(token: token, id: id,
                                      onSuccess: { (userData: UserData) -> Void in
-                                        let user = self.entityMapper(userData: userData)
+                                        let user = convert(user: userData)
                                         onSuccess(user)
                                         },
                                      onError: { (msg: String) -> Void in
@@ -21,25 +21,6 @@ class GetUserIntImpl: GetUserInteractor {
                                         })
 
     }
-    
-    private func entityMapper(userData: UserData) -> User {
-        let user = User(
-            id: userData.id,
-            name: userData.name,
-            lastName: userData.lastName,
-            email: userData.email,
-            isProfessional: userData.isProfessional,
-            fellowshipNumber: userData.fellowshipNumber,
-            gender: userData.gender,
-            address: userData.address,
-            phone: userData.phone,
-            birthDate: userData.birthDate,
-            nationalId: userData.nationalId,
-            registrationDate: userData.registrationDate,
-            lastLoginDate: userData.lastLoginDate
-        )
-        
-        return user
-    }
+
 
 }

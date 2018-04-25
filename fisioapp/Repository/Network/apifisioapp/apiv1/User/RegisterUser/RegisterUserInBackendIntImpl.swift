@@ -32,7 +32,7 @@ class RegisterUserInBackendIntImpl: RegisterUserInBackendInteractor {
                     if (msg == "") {
                         let errors = json["error"]["err"]["errors"].array
                         errors!.forEach({ (json) in
-                            var jsonArray = json["message"].string
+                            let jsonArray = json["message"].string
                             print(jsonArray!)
                             msg.append(jsonArray!)
                         })
