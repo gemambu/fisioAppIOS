@@ -10,16 +10,19 @@ import UIKit
 
 let appointmentsCellID = "AppointmentsViewCell"
 
-class AppointmentsViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class AppoitmentsViewController: UIViewController {
     
     var collectionView: UICollectionView!
     var datePicker: UIDatePicker!
+    let refreshControl = UIRefreshControl()
+    let dateFormatter = DateFormatter()
     
-    var appointments: [AppointmentModel] = []
-    let appointment1 = AppointmentModel(customer: "Alan Casas", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
-    let appointment2 = AppointmentModel(customer: "Rodrigo Limpias", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
-    let appointment3 = AppointmentModel(customer: "Gema Martínez", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
-    let appointment4 = AppointmentModel(customer: "Carlos Company", address: "Goya # 15", isConfirmed: true, isCancelled: false, price: 35, lat: 40.451563, long: -3.866120)
+    var appointmentsForCV: [AppointmentDomain] = []
+    lazy var selectedDate = String()
+    
+    
+    
+    let myToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7Il9pZCI6IjVhOWYwNTRmNjAyZGQwZTU0MGM3MWJjNiIsImZlbGxvd3NoaXBOdW1iZXIiOjMzLCJnZW5kZXIiOiJtYWxlIiwibmFtZSI6ImFsYW4iLCJsYXN0TmFtZSI6ImNhc2FzIiwiZW1haWwiOiJmaXNpb0BpbnZhbGlkLmNvbSIsInBhc3N3b3JkIjoiZWY3OTdjODExOGYwMmRmYjY0OTYwN2RkNWQzZjhjNzYyMzA0OGM5YzA2M2Q1MzJjYzk1YzVlZDdhODk4YTY0ZiIsImFkZHJlc3MiOiJBdi4gRmVsaXBlIElJLCBzL24iLCJwaG9uZSI6IjYyNjYyNjYyNiIsImJpcnRoRGF0ZSI6IjE5NzgtMTItMzBUMTI6MzA6MDAuMDAwWiIsIm5hdGlvbmFsSWQiOiIxMjM0NTY3OFoiLCJyZWdpc3RyYXRpb25EYXRlIjoiMjAxOC0wMS0wMVQwMTowMTowMC4wMDBaIiwibGFzdExvZ2luRGF0ZSI6IjIwMTgtMDMtMDdUMTY6MDA6MDAuMDAwWiIsIl9fdiI6MCwiZGVsZXRlZCI6ZmFsc2UsImlzUHJvZmVzc2lvbmFsIjp0cnVlfSwiaWF0IjoxNTI0NjAyMTczLCJleHAiOjE1MjQ3NzQ5NzN9.E9XGqRy3_YOhdwVJvF1Ar6UfHfueK8UoJVl1iTx6uH8"
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -28,85 +31,34 @@ class AppointmentsViewController: UIViewController, UICollectionViewDelegateFlow
         tabBarItem.image = #imageLiteral(resourceName: "008-call-center-worker-with-headset")
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (!CustomUserDefaults.checkToken()) {
-            checkLogin()
-        }
-        
         title = "Citas"
 
-        appointments.append(appointment1)
-        appointments.append(appointment2)
-        appointments.append(appointment3)
-        appointments.append(appointment4)
-        appointments.append(appointment1)
-        appointments.append(appointment2)
-        appointments.append(appointment3)
-        appointments.append(appointment4)
-        
-        
-        
-        let frame = CGRect(x: 0, y: self.view.frame.height/2, width: self.view.frame.width, height: self.view.frame.height)
-        
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: frame.width, height: 200)
-        
-        collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView!.register(UINib(nibName: "AppointmentsViewCell", bundle: nil), forCellWithReuseIdentifier: appointmentsCellID)
-        collectionView.backgroundColor = UIColor.white
-        
         initializeDatePicker()
-        self.view.addSubview(collectionView)
+        initializeCollectionView()
         self.view.addSubview(datePicker)
+        self.view.addSubview(collectionView)
+        
+        getAppointmentsForDate(date: selectedDate)
         
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return appointments.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let appointmentToShow = appointments[indexPath.row]
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: appointmentsCellID, for: indexPath) as! AppointmentsViewCell
-        
-        cell.backgroundColor = UIColor.orange
-        cell.nameLabel.text = appointmentToShow.customer
-        cell.commentLabel.text = appointmentToShow.address
-        
-        return cell
-    }
-    
-    func initializeDatePicker() {
-        
-        let datePickerFrame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/2)
-        
-        datePicker = UIDatePicker(frame: datePickerFrame)
-        datePicker.datePickerMode = .date
-        datePicker.addTarget(self, action: #selector(selectedDate(sender:)), for: .allEvents)
-    }
-    
-    @objc func selectedDate(sender: UIDatePicker){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-    }
-
 }
+
+
 
 // MARK: - checkLogin
 extension AppointmentsViewController {
@@ -116,12 +68,3 @@ extension AppointmentsViewController {
         }
     }
 }
-
-
-
-
-
-
-
-
-

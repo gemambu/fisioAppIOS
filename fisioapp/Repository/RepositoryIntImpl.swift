@@ -70,21 +70,34 @@ class RepositoryIntImpl: RepositoryInteractor {
         
        
         
-//        getAppointmentsForDateFromBackendInteractor.execute(token: token,
-//                                                            date: date,
-//                                                            onSuccess: {([AppointmentData]) -> Void in
-//                                                                onSuccess([AppointmentData])
-//        },
-//                                                            onError: { (msg: String) -> Void in
-//                                                                onError(msg)
-//        })
-        
-        getAppointmentsForDateFromBackendInteractor.execute(token: "", date: "", onSuccess: {_ in
-            
-        }, onError: {_ in
-            
+       getAppointmentsForDateFromBackendInteractor.execute(token: token,
+                                                            date: date,
+                                                            onSuccess: {(appointmentsFromBackend: [AppointmentData]) -> Void in
+                                                                onSuccess(appointmentsFromBackend)
+        },
+                                                            onError: { (msg: String) -> Void in
+                                                                onError(msg)
         })
+ 
         
+    }
+    
+    
+    func updateAppointment(token: String, id: String, isConfirmed: Bool, isCancelled: Bool, onSuccess: @escaping (Bool, String) -> Void, onError: @escaping (String) -> Void) {
+        
+        let updateAppointmentInBackEnd: UpdateAppointmentInBackEndInteractor = UpdateAppointmentInBackEndIntImpl()
+        
+        updateAppointmentInBackEnd.execute(token: token,
+                                           id: id,
+                                           isConfirmed: isConfirmed,
+                                           isCancelled: isCancelled,
+                                           onSuccess: { (ok: Bool, msg: String) -> Void in
+                                                onSuccess(ok, msg)
+        },
+                                           onError: { (msg: String) -> Void in
+                                                onError(msg)
+        
+        })
     }
     
     /******** catalog ********/

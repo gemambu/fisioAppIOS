@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Appointment {
+public class AppointmentDomain {
     var id: String = ""
     var service: CatalogData
     var customer: UserData

@@ -11,19 +11,22 @@ import Alamofire
 import SwiftyJSON
 
 class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEndInteractor {
+    
     func execute(token: String, date: String, onSuccess: @escaping ([AppointmentData]) -> Void, onError: @escaping (String) -> Void) {
         
         let urlAPI = URL(string: DEBUG_HTTP_SERVER + FISIOAPP_APPOINTMENTS_PROFESSIONAL_SERVER_PATH)
         let headers = [ "x-access-token" : token ]
-        let queryParams = ["dateFrom": date, "dateTo": date]
+        let queryParams: Parameters = ["dateFrom": date, "dateTo": date]
         
-        Alamofire.request(urlAPI!, method: .get, parameters: queryParams, headers: headers).validate().responseJSON { (response) in
+        Alamofire.request(urlAPI!, method: .get, parameters: queryParams, encoding: URLEncoding.default, headers: headers).validate().responseJSON { (response) in
+            //print("\(urlAPI) : \(queryParams)")
+           //print(response.request)
             switch response.result{
             case .success:
                 if let value = response.data {
                     let json = JSON(data: value)
                     
-                    var appointments = [AppointmentData]()
+                    var appointmentsFromJson = [AppointmentData]()
                     
                     let rows = json["result"]["rows"].arrayValue
                     
@@ -33,7 +36,7 @@ class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEn
                             name: appointment["professional"]["name"].stringValue,
                             lastName: appointment["professional"]["lastName"].stringValue)
                         
-                        let appointment = AppointmentData(
+                        let appointmentParsed = AppointmentData(
                             id: appointment["_id"].stringValue,
                             service: CatalogData(
                                 databaseID: appointment["service"]["_id"].stringValue,
@@ -56,10 +59,10 @@ class GetAppointmentsForDateFromBackEndIntImpl: GetAppointmentsForDateFromBackEn
                             isCancelled: appointment["isCancelled"].boolValue,
                             isConfirmed: appointment["isConfirmed"].boolValue)
                         
-                        appointments.append(appointment)
+                        appointmentsFromJson.append(appointmentParsed)
                     }
                     
-                    onSuccess(appointments)
+                    onSuccess(appointmentsFromJson)
                 }
                 
                 break
