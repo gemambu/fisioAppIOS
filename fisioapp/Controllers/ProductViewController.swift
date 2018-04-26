@@ -31,6 +31,17 @@ class ProductViewController: UIViewController {
         self.isActiveSwitch.isOn =  self.product?.isActive == 1
         
         setButtonStates(isNew: self.product === nil)
+        
+        let cancel = UIBarButtonItem(title: "Cancel",
+            style: .plain,
+            target: self,
+            action: #selector(cancelNewProduct))
+        
+        navigationItem.leftBarButtonItem = cancel
+    }
+    
+    @objc private func cancelNewProduct() {
+        dismiss(animated: true, completion: nil)
     }
     
     private func setButtonStates(isNew: Bool) {
