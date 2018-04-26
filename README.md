@@ -1,5 +1,9 @@
 # FisioApp Project For iOS
 
+## Installation
+
+- Open the project workspace: FisioAppIOS/fisioapp.xcworkspace
+
 ## Deploy
 
 ### Verify the name / IP of your backend's servers.
@@ -16,4 +20,5 @@ let RELEASE_HTTP_SERVER = "http://fisioapp.styleapps.es"
 ```
 
 If you change the routes to the endpoints, you must also change it in this file.
+
 
