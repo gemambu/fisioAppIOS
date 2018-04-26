@@ -14,12 +14,6 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     var collectionView: UICollectionView!
     
-    @IBOutlet weak var addButton: UIButton!
-    @IBAction func buttonClick(_ sender: UIButton) {
-        let detailVC = ProductViewController()
-        self.present(detailVC, animated: true, completion: nil)
-    }
-    
     var itemsArray: [Catalog] = []
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -53,10 +47,19 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView!.register(UINib(nibName: "ProductsViewCell", bundle: nil), forCellWithReuseIdentifier: productCellID)
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = UIColor.lightGray
         self.view.addSubview(collectionView)
-        self.view.addSubview(addButton)
         
+        // New Product Button
+        let addNewProduct = UIBarButtonItem(title: "New product", style: .plain, target: self, action: #selector(newProductButtonClick))
+        navigationItem.rightBarButtonItem = addNewProduct
+        
+    }
+    
+    @objc func newProductButtonClick() {
+        let detailVC = ProductViewController()
+        let tabBarDetailVC = UINavigationController(rootViewController: detailVC)
+        self.present(tabBarDetailVC, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,7 +100,9 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         let item = itemsArray[indexPath.row]
         let detailVC = ProductViewController()
         detailVC.loadProductInfo(product: item)
-        self.present(detailVC, animated: true, completion: nil)
+        let tabBarDetailVC = UINavigationController(rootViewController: detailVC)
+  
+        self.present(tabBarDetailVC, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -16,11 +16,6 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     var itemsArray: [Catalog] = []
     
-    @IBOutlet weak var addButton: UIButton!
-    @IBAction func buttonClick(_ sender: UIButton) {
-        let detailVC = ServiceViewController()
-        self.present(detailVC, animated: true, completion: nil)
-    }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         title = "Servicios"
@@ -53,10 +48,19 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView!.register(UINib(nibName: "ServicesViewCell", bundle: nil), forCellWithReuseIdentifier: serviceCellID)
-        collectionView.backgroundColor = UIColor.yellow
+        collectionView.backgroundColor = UIColor.lightGray
         self.view.addSubview(collectionView)
-        self.view.addSubview(addButton)
         
+        // New Service Button
+        let addNewService = UIBarButtonItem(title: "New service", style: .plain, target: self, action: #selector(newServiceButtonClick))
+        navigationItem.rightBarButtonItem = addNewService
+        
+    }
+    
+    @objc func newServiceButtonClick() {
+        let detailVC = ServiceViewController()
+        let tabBarDetailVC = UINavigationController(rootViewController: detailVC)
+        self.present(tabBarDetailVC, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,7 +76,9 @@ class ServicesViewController: UIViewController, UICollectionViewDelegateFlowLayo
         let item = itemsArray[indexPath.row]
         let detailVC = ServiceViewController()
         detailVC.loadServiceInfo(service: item)
-        self.present(detailVC, animated: true, completion: nil)
+        let tabBarDetailVC = UINavigationController(rootViewController: detailVC)
+  
+        self.present(tabBarDetailVC, animated: true, completion: nil)
     }
     
     func getServicesList() {

@@ -30,6 +30,17 @@ class ServiceViewController: UIViewController {
         self.isActiveSwitch.isOn =  self.service?.isActive == 1
         
         setButtonStates(isNew: self.service === nil)
+        
+        let cancel = UIBarButtonItem(title: "Cancel",
+                                     style: .plain,
+                                     target: self,
+                                     action: #selector(cancelNewService))
+
+        navigationItem.leftBarButtonItem = cancel
+    }
+    
+    @objc private func cancelNewService() {
+        dismiss(animated: true, completion: nil)
     }
     
     private func setButtonStates(isNew: Bool) {
