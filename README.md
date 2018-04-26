@@ -11,7 +11,7 @@ You can see an example here:
 ```
 // FIXME: Cambiar ip
 // Server
-let DEBUG_HTTP_SERVER = "http://your.amazing.ip-here:3000"
+let DEBUG_HTTP_SERVER = "http://your.amazing.ip.here:3000"
 let RELEASE_HTTP_SERVER = "http://fisioapp.styleapps.es"
 ```
 
