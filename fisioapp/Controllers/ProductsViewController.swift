@@ -84,7 +84,6 @@ class ProductsViewController: UIViewController, UICollectionViewDelegateFlowLayo
                                                 for product in itemsFromDomain {
                                                     self.itemsArray.append(product)
                                                 }
-                                                print(self.itemsArray.count)
                                                 self.collectionView.reloadData()
                                             }
                                             

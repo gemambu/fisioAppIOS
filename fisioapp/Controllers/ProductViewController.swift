@@ -17,6 +17,7 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
+    
     var product: Catalog?
     
     override func viewDidLoad() {

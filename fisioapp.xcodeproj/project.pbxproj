@@ -20,7 +20,6 @@
 		070B33EE208CAA1C00C06852 /* GetServicesFromBackEndIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B33E7208CAA1C00C06852 /* GetServicesFromBackEndIntImpl.swift */; };
 		070B33EF208CAA1C00C06852 /* DeleteServiceFromBackendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B33E9208CAA1C00C06852 /* DeleteServiceFromBackendInteractor.swift */; };
 		070B33F0208CAA1C00C06852 /* DeleteServiceFromBackendIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070B33EA208CAA1C00C06852 /* DeleteServiceFromBackendIntImpl.swift */; };
-		075DA5E4207D1CCB00199EFC /* BlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5E3207D1CCB00199EFC /* BlankViewController.swift */; };
 		075DA5E9207D278500199EFC /* GetUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5E8207D278500199EFC /* GetUserInteractor.swift */; };
 		075DA5EB207D2A5400199EFC /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5EA207D2A5400199EFC /* Typealias.swift */; };
 		075DA5ED207D2B4F00199EFC /* GetUserIntImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DA5EC207D2B4F00199EFC /* GetUserIntImpl.swift */; };
@@ -216,7 +215,6 @@
 		070B33E7208CAA1C00C06852 /* GetServicesFromBackEndIntImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetServicesFromBackEndIntImpl.swift; sourceTree = "<group>"; };
 		070B33E9208CAA1C00C06852 /* DeleteServiceFromBackendInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteServiceFromBackendInteractor.swift; sourceTree = "<group>"; };
 		070B33EA208CAA1C00C06852 /* DeleteServiceFromBackendIntImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteServiceFromBackendIntImpl.swift; sourceTree = "<group>"; };
-		075DA5E3207D1CCB00199EFC /* BlankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankViewController.swift; sourceTree = "<group>"; };
 		075DA5E8207D278500199EFC /* GetUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInteractor.swift; sourceTree = "<group>"; };
 		075DA5EA207D2A5400199EFC /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		075DA5EC207D2B4F00199EFC /* GetUserIntImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserIntImpl.swift; sourceTree = "<group>"; };
@@ -890,7 +888,6 @@
 				5B036C6E208E190C008284DD /* AppointmentsVCExtension_DatePicker + Utils.swift */,
 				5BED8A042090A30100B39116 /* AppointmentViewController.swift */,
 				5BED8A032090A30100B39116 /* AppointmentsViewCell.swift */,
-				075DA5E3207D1CCB00199EFC /* BlankViewController.swift */,
 				51266D8D20760FD700CB3756 /* EditProfileViewController.swift */,
 				5164749F207609A900DCFA9B /* LoginAndRegisterController.swift */,
 				51FA461720769B24005F317F /* ProductsViewCell.swift */,
@@ -1432,7 +1429,6 @@
 				07B63443207EBDEB00DBB501 /* RegisterUserInBackendInteractor.swift in Sources */,
 				1FA574D4208C93DF0092427C /* InsertServiceIntImpl.swift in Sources */,
 				5BED8A072090A30100B39116 /* AppointmentViewController.swift in Sources */,
-				075DA5E4207D1CCB00199EFC /* BlankViewController.swift in Sources */,
 				5B036C5F208BFC3F008284DD /* GetAppointmentsForDateFromBackEndInteractor.swift in Sources */,
 				51666FB1208A65BB0085D0D5 /* DomainUserProfileImplementation.swift in Sources */,
 				070B33DD208CAA0700C06852 /* UpdateProductFromBackendIntImpl.swift in Sources */,
